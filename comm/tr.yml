@@ -49,7 +49,7 @@ comm_tr:
     text: |
       *🌟 Hoş geldiniz! 🌟*
 
-      [Community VPN](https://bestvpn.ai) seçtiğiniz için teşekkür ederiz. VPN kullanmaya başlamak için aşağıdaki *Konfigürasyonlar* düğmesine basmanız ve cihazınıza kurmanız gereken yapılandırma dosyasını almanız gerekiyor. Ayrıntılı kılavuz https://bestvpn.ai adresinde bulunmaktadır. Tüm seçenekler, /help komutunu çalıştırarak kullanılabilir.
+      [Best VPN](https://bestvpn.ai) seçtiğiniz için teşekkür ederiz. VPN kullanmaya başlamak için aşağıdaki *Konfigürasyonlar* düğmesine basmanız ve cihazınıza kurmanız gereken yapılandırma dosyasını almanız gerekiyor. Ayrıntılı kılavuz https://bestvpn.ai adresinde bulunmaktadır. Tüm seçenekler, /help komutunu çalıştırarak kullanılabilir.
   # --------------------------------------------------------
   sub_extended:
     text: |

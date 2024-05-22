@@ -49,7 +49,7 @@ comm_en:
     text: |
       *🌟 Welcome! 🌟*
 
-      Thank you for choosing [Community VPN](https://bestvpn.ai). To start using VPN, you need to press the *Configurations* button below and you will get the configuration file which you need to install to your device. Detailed guide is available at https://bestvpn.ai. All options are available by running /help command.
+      Thank you for choosing [Best VPN](https://bestvpn.ai). To start using VPN, you need to press the *Configurations* button below and you will get the configuration file which you need to install to your device. Detailed guide is available at https://bestvpn.ai. All options are available by running /help command.
   # --------------------------------------------------------
   sub_extended:
     text: |
