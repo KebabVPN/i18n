@@ -1,0 +1,160 @@
+vpnremy_fa:
+  menu:
+    home: 🏠 خانه
+    home_short: 🏠 خانه
+    config: ⚙️ پیکربندی‌ها
+    subscription: 💸 اشتراک
+    subscription_back: 💸 بازگشت به اشتراک
+    subscription_back_short: 💸 اشتراک
+    lang: 🌎 زبان
+    lang_back: 🌎 بازگشت به زبان‌ها
+    lang_custom: 🔧 زبان جدید
+    help: ℹ️ راهنما
+    delete_message: 🥷 حذف پیام
+    settings: 🔧 تنظیمات
+    settings_notifications_enable: 🔕 اعلان ها را فعال کنید
+    settings_notifications_disable: 🔔 غیر فعال کردن اعلانها
+    subscription_management_stripe: 💸 اشتراک (Stripe)
+    referral: 💰 Referral
+  # --------------------------------------------------------
+  help:
+    text: |
+      *دستورات در دسترس:*
+
+      🏠 /start - راه‌اندازی و ثبت‌نام
+
+      ⚙️ /config - پیکربندی‌ها
+
+      💸 /subscription - اشتراک
+
+      🌎 /lang - زبان
+
+      🔧 /settings - تنظیمات را مدیریت کنید
+
+      ℹ️ /help - راهنما
+
+      🤖 @tolyhan - پشتیبانی
+  # --------------------------------------------------------
+  start:
+    text: |
+      *🌟 خوش‌آمدید! 🌟*
+
+      از انتخاب [VPNREMY](https://vpnremy.com) متشکریم. برای استفاده از VPN، باید دکمه *پیکربندی‌ها* را بزنید تا فایل مورد نیاز را دانلود و روی دستگاه خود نصب کنید. دستورالعمل‌های مفصل در https://vpnremy.com موجود هستند. تمامی دستورات موجود برای ربات - /help.
+  # --------------------------------------------------------
+  sub_extended:
+    text: |
+      🌟 *تبریک!* 🌟
+
+      شما *%<days>s* روز از استفاده از VPN به دست آوردید! تجربه‌تان را با @tolyhan به اشتراک بگذارید! 🫶
+
+      اشتراک شما تا تاریخ *%<exp>s* فعال است.
+  # --------------------------------------------------------
+  sub_expired:
+    text: |
+      ❌ *Subscription Expired!* ❌
+
+      We're sorry to find your subscription expired at *%<exp>s*
+
+      You need to follow /subscription command to continue using services.
+
+      Please write us to @tolyhan if you have any questions! 🫶
+  # --------------------------------------------------------
+  subscription:
+    ico_yes: ✅
+    ico_no: ❌
+    menu:
+      crypto: 🤑 پرداخت با USDT (TRC-20, مبلغ دلخواه)
+      plan_1_mo: 💵 1 ماه - 4.99 دلار
+      plan_12_mo: 💵 12 ماه - 49.99 دلار (تخفیف 20%)
+      plan_36_mo: 💵 36 ماه - 89.99 دلار (تخفیف 50%)
+    text: |
+      *اشتراک شما:*
+
+      تا تاریخ: *%<exp>s* %<ico>s (%<days>s روز)
+      با پرداخت موافقت می‌کنید با [شرایط سرویس](https://vpnremy.com/terms).
+  # --------------------------------------------------------
+  payment_options:
+    menu:
+      pm_stripe_payment: 💳 Card, WeChat, Alipay, ApplePay, GPay
+      pm_stripe_subscription: 💳 Card (subscription)
+    text: |
+      *Your subscription:*
+
+      Expiration date: *%<exp>s* %<ico>s (%<days>s active days)
+      By making a payment you agree with our [Terms and Conditions](https://vpnremy.com/terms).
+
+      You're buying: *%<description>s*
+
+      Please, choose payment method:
+  # --------------------------------------------------------
+  plan_unknown:
+    text: |
+      Plan is disabled or unknown! Run /subscription command to get plans available for purchase.
+  # --------------------------------------------------------
+  sub_crypto:
+    text: |
+      *آدرس TRC-20 برای پرداخت*:
+
+      `%<addr_trc20>s`
+      (برای کپی کردن آن، روی آن کلیک کنید)
+
+      مقادیر پرداخت USDT بر اساس دلار محاسبه می‌شوند. به عنوان مثال، برای پرداخت به مدت 12 ماه، فقط کافیست `49.99` USDT ارسال کنید. می‌توانید مقدار دلخواهی ارسال کنید و مدت اشتراک شما به نسبت هزینه آن محاسبه می‌شود.
+
+      برای تایید پرداخت، نیاز به *20 تایید* تراکنش دارید که ممکن است کمی زمان ببرد. بعد از تایید تراکنش، اطلاعاتی دریافت خواهید کرد. اگر تراکنش شما پس از 10 دقیقه منتظره هنوز تایید نشده باشد، لطفاً با @tolyhan تماس بگیرید.
+  # --------------------------------------------------------
+  config:
+    text: |
+      *پیکربندی VPN شما*
+
+      لطفاً یک پیکربندی مناسب برای دستگاه خود انتخاب کنید. اکثر تلفن‌ها و سیستم‌ها پروتکل IPSec را پشتیبانی می‌کنند. دستورالعمل‌های مفصل در [مستندات](https://vpnremy.com/guide) موجود است.
+  # --------------------------------------------------------
+  config_manual:
+    text: |
+      *اطلاعات کاربری شما*
+
+      نام کاربری: `%<username>s`
+
+      رمز عبور: `%<password>s`
+  # --------------------------------------------------------
+  config_file:
+    text: |
+      فایل را دانلود کرده و روی دستگاه خود نصب کنید. پس از انجام این کار، به شدت توصیه می‌شود با کلیک بر روی دکمه زیر این پیام را حذف کنید.
+    error: |
+      پیکربندی یافت نشد!
+  # --------------------------------------------------------
+  lang:
+    text: |
+      *🌎 زبان را انتخاب کنید:*
+    en: 🇬🇧 English
+    ru: 🇷🇺 Русский
+    tr: 🇹🇷 Türkiye
+    zh: 🇨🇳 中文
+    fa: 🇮🇷 فارسی
+  # --------------------------------------------------------
+  lang_custom:
+    text: |
+      *🔧 زبان جدید*
+
+      شما می‌توانید زبان جدیدی را به ربات اضافه کنید، برای این کار کافیست یک فایل مناسب در مخزن ما ایجاد کنید. لطفاً دستورالعمل‌ها را دنبال کنید: https://github.com/KebabVPN/i18n
+  # --------------------------------------------------------
+  referral:
+    text: |
+      *💰 Referral*
+
+      Your personal invite link is: `%<link>s`
+      Click to copy and send to your friends!
+
+      Users invited: *%<users_invited_count>s*
+      Referral balance: *%<ref_balance_usd>s*
+      VPN time earn rate: *%<ref_time_percent>s*
+      Money earn rate: *%<ref_money_percent>s*
+
+      Contact @tolyhan to provide your requisites for money withdrawal.
+  # --------------------------------------------------------
+  settings:
+    text: |
+      *🔧 تنظیمات*
+  # --------------------------------------------------------
+  unknown:
+    text: |
+      دستور ناشناخته، برای دیدن تمام دستورات /help را اجرا کنید!

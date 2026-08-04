@@ -1,0 +1,209 @@
+vpnremy_tr:
+  menu:
+    back: ⬅️ Geri
+    home: 🏠 Ana Menü
+    home_short: 🏠 Ana Sayfa
+    config: ⚙️ Konfigürasyonlar
+    subscription: 💸 Abonelik
+    subscription_back: 💸 Aboneliğe Geri
+    subscription_back_short: 💸 Geri Dön
+    lang: 🌎 Dil
+    lang_back: 🌎 Dillere Geri Dön
+    lang_custom: 🔧 Yeni Dil
+    help: ℹ️ Yardım
+    delete_message: 🥷 Mesajı Sil
+    settings: 🔧 Ayarlar
+    settings_notifications_enable: 🔕 Bildirimleri Etkinleştir
+    settings_notifications_disable: 🔔 Bildirimleri Devre Dışı Bırak
+    subscription_management_stripe: 💸 Abonelik (Stripe)
+    referral: 💰 Referans
+    platform_apple:  Apple (iOS, MacOS)
+    platform_android: 📱 Android
+    platform_custom: 🔑 Diğer
+  # --------------------------------------------------------
+  platforms:
+    text: |
+      *Platformunuzu Seçin:*
+
+      Kurmak istediğiniz işletim sistemini seçin. Kullanmanız gereken kimlik bilgileri ve yapılandırma dosyalarını alacaksınız. Lütfen dikkatli olun, hassas bilgiler görüntülenebilir.
+  # --------------------------------------------------------
+  help:
+    text: |
+      *Kullanılabilir Komutlar:*
+
+      🏠 /start - Botu başlatın ve kaydolun
+
+      ⚙️ /config - Yapılandırmaları yönetin
+
+      💸 /subscription - Aboneliğinizi yönetin
+
+      🌎 /lang - Bot dilini yönetin
+
+      🔧 /settings - Ayarları yönetin
+
+      ℹ️ /help - Komut listesini alın
+
+      🤖 @tolyhan - Destek alın
+  # --------------------------------------------------------
+  start:
+    text: |
+      *🌟 Hoş geldiniz! 🌟*
+
+      [VPNREMY](https://vpnremy.com) seçtiğiniz için teşekkür ederiz. VPN kullanmaya başlamak için aşağıdaki *Konfigürasyonlar* düğmesine basmanız ve cihazınıza kurmanız gereken yapılandırma dosyasını almanız gerekiyor. Ayrıntılı kılavuz https://vpnremy.com adresinde bulunmaktadır. Tüm seçenekler, /help komutunu çalıştırarak kullanılabilir.
+  # --------------------------------------------------------
+  sub_extended:
+    text: |
+      🌟 *Tebrikler!* 🌟
+
+      *%<days>s* gün VPN kullanımı kazandınız! Geri bildiriminizi @tolyhan'ta bize yazmaktan çekinmeyin! 🫶
+
+      Aboneliğiniz *%<exp>s* tarihinde sona eriyor.
+  # --------------------------------------------------------
+  sub_expired:
+    text: |
+      ❌ *Abonelik Süresi Doldu!* ❌
+
+      Aboneliğinizin süresinin *%<exp>s* tarihinde dolduğunu üzülerek öğrendik.
+
+      Hizmetleri kullanmaya devam etmek için /subscription komutunu izlemeniz gerekiyor.
+
+      Herhangi bir sorunuz varsa lütfen bize @tolyhan üzerinden yazın! 🫶
+  # --------------------------------------------------------
+  subscription:
+    ico_yes: ✅
+    ico_no: ❌
+    menu:
+      crypto: 🤑 USDT ile ödeme yapın (TRC-20, herhangi bir miktar)
+      plan_1_mo: 💵 1 Ay - 4.99 USD
+      plan_12_mo: 💵 12 Ay - 49.99 USD (20% İNDİRİM)
+      plan_36_mo: 💵 36 Ay - 89.99 USD (50% İNDİRİM)
+    text: |
+      *Aboneliğiniz:*
+
+      Bitiş tarihi: *%<exp>s* %<ico>s (%<days>s aktif gün)
+      Ödeme yaparak [Kullanım Koşulları](https://vpnremy.com/terms) ile anlaştığınızı kabul edersiniz.
+  # --------------------------------------------------------
+  payment_options:
+    menu:
+      pm_stripe_payment: 💳 Kart, WeChat, Alipay, ApplePay, GPay
+      pm_stripe_subscription: 💳 Kart (abonelik)
+    text: |
+      *Aboneliğiniz:*
+
+      Bitiş tarihi: *%<exp>s* %<ico>s (%<days>s aktif gün)
+      Ödeme yaparak [Kullanım Koşulları](https://vpnremy.com/terms) ile anlaştığınızı kabul edersiniz.
+
+      Satın alıyorsunuz: *%<description>s*
+
+      Lütfen ödeme yöntemini seçin:
+  # --------------------------------------------------------
+  plan_unknown:
+    text: |
+      Plan devre dışı bırakıldı veya bilinmiyor! Satın alınabilir planları görmek için /subscription komutunu çalıştırın.
+  # --------------------------------------------------------
+  sub_crypto:
+    text: |
+      *TRC-20 adresinize yatırım yapın*:
+
+      `%<addr_trc20>s`
+      (kopyalamak için tıklayın)
+
+      USDT yatırımları etkin fiyatlandırmaya göre USD olarak hesaplanır. Örneğin, 12 ay için ödeme yapmak istiyorsanız, sadece `49.99` USDT transfer edin. Herhangi bir miktarı transfer edebilirsiniz, abonelik bitiş tarihi bu oranda hesaplanacaktır.
+
+      İşlemin işlenmesi için *20 onayı* bekliyoruz, bu nedenle bir süre beklemeniz gerekebilir. İşlem işlendikten sonra, yatırımınızın onayını içeren bir bildirim alacaksınız. Yatırımınız hesaba geçmezse, lütfen bize @tolyhan üzerinden yazın.
+  # --------------------------------------------------------
+  config:
+    text: |
+      *Konumunuzu Seçin:*
+
+      Lütfen VPN yapılandırma dosyasını kurmak istediğiniz konumu seçin. Kullandığınız işletim sisteminden size sorulacaktır.
+  # --------------------------------------------------------
+  config_manual:
+    text: |
+      *Kimlik Bilgileriniz*
+
+      Kullanıcı Adı: `%<username>s`
+
+      Şifre: `%<password>s`
+  # --------------------------------------------------------
+  config_not_found:
+    text: |
+      Konfigürasyon bulunamadı!
+  # --------------------------------------------------------
+  config_apple:
+    text: |
+      Lütfen dosyayı indirip cihazınıza kurun. Dosya kurulduktan sonra, sistem ayarlarında bir profilin kurulumunu onaylamanız gerekecektir.
+  # --------------------------------------------------------
+  config_android:
+    text: |
+      Lütfen dosyayı indirin ve şu uygulama kullanılarak açın: https://play.google.com/store/apps/details?id=org.strongswan.android
+      Aşağıda listelenen kullanıcı adı ve şifre istenecektir.
+
+      Kullanıcı Adı:
+      `%<username>s`
+
+      Şifre:
+      `%<password>s`
+
+      (kopyalamak için tıklayın ^^)
+  # --------------------------------------------------------
+  config_custom:
+    text: |
+      *Özel Ayarlar*
+
+      Sistem ayarlarını kullanarak ve aşağıdaki kimlik bilgilerini kullanarak bağlanabilirsiniz:
+
+      Bağlantı Adı: `%<name>s`
+
+      Tür: `%<type>s`
+
+      Sunucu Hostu: `%<host>s`
+
+      Sunucu Kimliği: `%<host>s`
+
+      IPSec Tanımlayıcı: `%<username>s`
+
+      Kullanıcı Adı: `%<username>s`
+
+      Şifre: `%<password>s`
+
+      CA sertifikası: (boş bırakın, kullanılmaz)
+
+      Sunucu sertifikası: (boş bırakın, kullanılmaz)
+  # --------------------------------------------------------
+  lang:
+    text: |
+      *🌎 Dilinizi Seçin:*
+    en: 🇬🇧 English
+    ru: 🇷🇺 Русский
+    tr: 🇹🇷 Türkiye
+    zh: 🇨🇳 中文
+    fa: 🇮🇷 فارسی
+  # --------------------------------------------------------
+  lang_custom:
+    text: |
+      *🔧 Yeni Dil*
+
+      Lütfen daha fazla dil keşfetmek veya yazım hatalarını düzeltmek için bize katkıda bulunmaktan çekinmeyin. Daha fazla bilgi https://github.com/KebabVPN/i18n adresindedir.
+  # --------------------------------------------------------
+  referral:
+    text: |
+      *💰 Referans*
+
+      Kişisel davet bağlantınız: `%<link>s`
+      Kopyalamak ve arkadaşlarınıza göndermek için tıklayın!
+
+      Davet edilen kullanıcılar: *%<users_invited_count>s*
+      Referans bakiyesi: *%<ref_balance_usd>s*
+      VPN süresi kazanma oranı: *%<ref_time_percent>s*
+      Para kazanma oranı: *%<ref_money_percent>s*
+
+      Para çekme için bilgilerinizi sağlamak için @tolyhan ile iletişime geçin.
+  # --------------------------------------------------------
+  settings:
+    text: |
+      *🔧 Ayarlar*
+  # --------------------------------------------------------
+  unknown:
+    text: |
+      Bilinmeyen komut, lütfen tüm komutları listelemek için /help komutunu çalıştırın!

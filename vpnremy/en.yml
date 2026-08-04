@@ -1,0 +1,209 @@
+vpnremy_en:
+  menu:
+    back: ⬅️ Back
+    home: 🏠 Home Menu
+    home_short: 🏠 Home
+    config: ⚙️ Configurations
+    subscription: 💸 Subscription
+    subscription_back: 💸 Back to Subscription
+    subscription_back_short: 💸 Return Back
+    lang: 🌎 Language
+    lang_back: 🌎 Back to languages
+    lang_custom: 🔧 New Language
+    help: ℹ️ Help
+    delete_message: 🥷 Delete Message
+    settings: 🔧 Settings
+    settings_notifications_enable: 🔕 Enable Notifications
+    settings_notifications_disable: 🔔 Disable Notifications
+    subscription_management_stripe: 💸 Subscription (Stripe)
+    referral: 💰 Referral
+    platform_apple:  Apple (iOS, MacOS)
+    platform_android: 📱 Android
+    platform_custom: 🔑 Other
+  # --------------------------------------------------------
+  platforms:
+    text: |
+      *Choose your platform:*
+
+      Choose the operating system you want to setup. You will get credentials and configuration files you need to use. Please be careful, a sensitive information might be displayed.
+  # --------------------------------------------------------
+  help:
+    text: |
+      *Available commands:*
+
+      🏠 /start - Start the bot and register
+
+      ⚙️ /config - Manage configurations
+
+      💸 /subscription - Manage your subscription
+
+      🌎 /lang - Manage the bot language
+
+      🔧 /settings - Manage the settings
+
+      ℹ️ /help - Get the commands list
+
+      🤖 @tolyhan - Get a support
+  # --------------------------------------------------------
+  start:
+    text: |
+      *🌟 Welcome! 🌟*
+
+      Thank you for choosing [VPNREMY](https://vpnremy.com). To start using VPN, you need to press the *Configurations* button below and you will get the configuration file which you need to install to your device. Detailed guide is available at https://vpnremy.com. All options are available by running /help command.
+  # --------------------------------------------------------
+  sub_extended:
+    text: |
+      🌟 *Congratulations!* 🌟
+
+      You have got *%<days>s* days of VPN usage! Feel free to write us your feedback in @tolyhan! 🫶
+
+      Your subscription ends at: *%<exp>s*
+  # --------------------------------------------------------
+  sub_expired:
+    text: |
+      ❌ *Subscription Expired!* ❌
+
+      We're sorry to find your subscription expired at *%<exp>s*
+
+      You need to follow /subscription command to continue using services.
+
+      Please write us to @tolyhan if you have any questions! 🫶
+  # --------------------------------------------------------
+  subscription:
+    ico_yes: ✅
+    ico_no: ❌
+    menu:
+      crypto: 🤑 Pay using USDT (TRC-20, any amount)
+      plan_1_mo: 💵 1 Month - 4.99 USD
+      plan_12_mo: 💵 12 Months - 49.99 USD (20% OFF)
+      plan_36_mo: 💵 36 Months - 89.99 USD (50% OFF)
+    text: |
+      *Your subscription:*
+
+      Expiration date: *%<exp>s* %<ico>s (%<days>s active days)
+      By making a payment you agree with our [Terms and Conditions](https://vpnremy.com/terms).
+  # --------------------------------------------------------
+  payment_options:
+    menu:
+      pm_stripe_payment: 💳 Card, WeChat, Alipay, ApplePay, GPay
+      pm_stripe_subscription: 💳 Card (subscription)
+    text: |
+      *Your subscription:*
+
+      Expiration date: *%<exp>s* %<ico>s (%<days>s active days)
+      By making a payment you agree with our [Terms and Conditions](https://vpnremy.com/terms).
+
+      You're buying: *%<description>s*
+
+      Please, choose payment method:
+  # --------------------------------------------------------
+  plan_unknown:
+    text: |
+      Plan is disabled or unknown! Run /subscription command to get plans available for purchase.
+  # --------------------------------------------------------
+  sub_crypto:
+    text: |
+      *Your top-up TRC-20 address*:
+
+      `%<addr_trc20>s`
+      (click to copy)
+
+      USDT deposits are calculated like USD according to effective pricing. For example, if you want to pay for 12 months, just transfer `49.99` USDT. You may transfer any amount you want, the subscription end date will be calculated accordingly in a proportion.
+
+      We wait for *20 confirmations* for transaction to be processed, so you have to wait for a while. Once the transaction is processed, you will receive a notification with confirmation of your deposit. If your deposit is not credited, feel free to write us in @tolyhan.
+  # --------------------------------------------------------
+  config:
+    text: |
+      *Choose Location:*
+
+      Please choose the location you want to setup VPN configuration for. You will be asked for an operating system you use.
+  # --------------------------------------------------------
+  config_manual:
+    text: |
+      *Your Credentials*
+
+      Username: `%<username>s`
+
+      Password: `%<password>s`
+  # --------------------------------------------------------
+  config_not_found:
+    text: |
+      Configuration is not found!
+  # --------------------------------------------------------
+  config_apple:
+    text: |
+      Please download the file and install it to your device. Once the file is installed you need to confirm the installation of a profile in system settings.
+  # --------------------------------------------------------
+  config_android:
+    text: |
+      Please download the file and open it using the application https://play.google.com/store/apps/details?id=org.strongswan.android
+      You will be asked for username and password which are listed below.
+
+      Username:
+      `%<username>s`
+
+      Password:
+      `%<password>s`
+
+      (click to copy ^^)
+  # --------------------------------------------------------
+  config_custom:
+    text: |
+      *Custom Settings*
+
+      You can connect using system setting and following credentials:
+
+      Connection Name: `%<name>s`
+
+      Type: `%<type>s`
+
+      Server Host: `%<host>s`
+
+      Server Identity: `%<host>s`
+
+      IPSec Identifier: `%<username>s`
+
+      Username: `%<username>s`
+
+      Password: `%<password>s`
+
+      CA certificate: (leave empty, not used)
+
+      Server certificate: (leave empty, not used)
+  # --------------------------------------------------------
+  lang:
+    text: |
+      *🌎 Choose your language:*
+    en: 🇬🇧 English
+    ru: 🇷🇺 Русский
+    tr: 🇹🇷 Türkiye
+    zh: 🇨🇳 中文
+    fa: 🇮🇷 فارسی
+  # --------------------------------------------------------
+  lang_custom:
+    text: |
+      *🔧 New Language*
+
+      Please feel free to contribute us to explore more languages or fixing typos. More information is available at the page: https://github.com/KebabVPN/i18n
+  # --------------------------------------------------------
+  referral:
+    text: |
+      *💰 Referral*
+
+      Your personal invite link is: `%<link>s`
+      Click to copy and send to your friends!
+
+      Users invited: *%<users_invited_count>s*
+      Referral balance: *%<ref_balance_usd>s*
+      VPN time earn rate: *%<ref_time_percent>s*
+      Money earn rate: *%<ref_money_percent>s*
+
+      Contact @tolyhan to provide your requisites for money withdrawal.
+  # --------------------------------------------------------
+  settings:
+    text: |
+      *🔧 Settings*
+  # --------------------------------------------------------
+  unknown:
+    text: |
+      Unknown command, please run /help to list all commands available!
