@@ -74,9 +74,9 @@ vpnremy_ru:
     ico_no: ❌
     menu:
       crypto: 🤑 USDT (TRC-20, любая сумма)
-      plan_1_mo: 💵 1 мес. - 4.99 USD
-      plan_12_mo: 💵 12 мес. - 49.99 USD (20% скидка)
-      plan_36_mo: 💵 36 мес. - 89.99 USD (50% скидка)
+      plan_1_mo: 💵 1 месяц - 299.00 RUB
+      plan_6_mo: 💵 6 месяцев - 1614.00 RUB
+      plan_12_mo: 💵 12 месяцев - 2988.00 RUB
     text: |
       *Ваша подписка:*
 
