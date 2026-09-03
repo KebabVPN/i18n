@@ -87,6 +87,7 @@ ru:
     menu:
       pm_stripe_payment: 💳 Карта, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Карта (подписка)
+      pm_pay2day: 🇷🇺 СБП (RUB)
     text: |
       *Ваша подписка:*
 

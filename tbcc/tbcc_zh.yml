@@ -91,6 +91,7 @@ tbcc_zh:
     menu:
       pm_stripe_payment: 💳 信用卡, 微信, 支付宝, Apple Pay, GPay
       pm_stripe_subscription: 💳 信用卡 (订阅)
+      pm_pay2day: 🇷🇺 SBP (RUB)
     text: |
       *您的订阅:*
 

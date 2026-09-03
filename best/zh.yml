@@ -87,6 +87,7 @@ best_zh:
     menu:
       pm_stripe_payment: 💳 信用卡，WeChat，Alipay，ApplePay，GPay
       pm_stripe_subscription: 💳 信用卡 (订阅)
+      pm_pay2day: 🇷🇺 SBP (RUB)
     text: |
       *您的订阅:*
 
