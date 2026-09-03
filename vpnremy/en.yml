@@ -87,6 +87,7 @@ vpnremy_en:
     menu:
       pm_stripe_payment: 💳 Card, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Card (subscription)
+      pm_pay2day: 🇷🇺 SBP (RUB)
     text: |
       *Your subscription:*
 

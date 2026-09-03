@@ -87,6 +87,7 @@ vpnremy_tr:
     menu:
       pm_stripe_payment: 💳 Kart, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Kart (abonelik)
+      pm_pay2day: 🇷🇺 SBP (RUB)
     text: |
       *Aboneliğiniz:*
 
