@@ -196,7 +196,6 @@ vpnremy_ru:
 
       Приглашенные пользователи: *%<users_invited_count>s*
       Баланс реферала: *%<ref_balance_usd>s*
-      Ставка получения VPN-времени: *%<ref_time_percent>s*
       Ставка получения денег: *%<ref_money_percent>s*
 
       Свяжитесь с @tolyhan, чтобы предоставить ваши реквизиты для вывода денег.
