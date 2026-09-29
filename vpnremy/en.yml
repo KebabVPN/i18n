@@ -69,6 +69,16 @@ vpnremy_en:
 
       Please write us to @tolyhan if you have any questions! 🫶
   # --------------------------------------------------------
+  sub_expiring:
+    text: |
+      ⏰ *Your subscription ends soon* ⏰
+
+      Days left: *%<days>s*. Your subscription ends at: *%<exp>s*
+
+      Renew it with the /subscription command to keep your VPN running without interruption.
+
+      Please write us to @tolyhan if you have any questions! 🫶
+  # --------------------------------------------------------
   subscription:
     ico_yes: ✅
     ico_no: ❌

@@ -69,6 +69,16 @@ vpnremy_tr:
 
       Herhangi bir sorunuz varsa lütfen bize @tolyhan üzerinden yazın! 🫶
   # --------------------------------------------------------
+  sub_expiring:
+    text: |
+      ⏰ *Aboneliğiniz yakında sona eriyor* ⏰
+
+      Kalan gün: *%<days>s*. Aboneliğiniz *%<exp>s* tarihinde sona eriyor.
+
+      VPN'i kesintisiz kullanmak için aboneliğinizi /subscription komutuyla yenileyin.
+
+      Herhangi bir sorunuz varsa lütfen bize @tolyhan üzerinden yazın! 🫶
+  # --------------------------------------------------------
   subscription:
     ico_yes: ✅
     ico_no: ❌
