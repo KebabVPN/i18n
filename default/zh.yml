@@ -208,3 +208,49 @@ zh:
   unknown:
     text: |
       未知命令，请运行 /help 以列出所有可用命令！
+  # --------------------------------------------------------
+  # Customer cabinet on the web
+  web:
+    log_in: 登录
+    sign_up: 注册
+    sign_out: 退出登录
+    email: 邮箱
+    password: 密码
+    remember_me: 记住我
+    forgot_password: 忘记密码？
+    resend_confirmation_link: 没有收到确认邮件？
+    back_to_account: 返回账户
+    create_account: 创建账户
+    confirm_password: 确认密码
+    password_min: "至少 %{count} 个字符"
+    reset_password_title: 重置密码
+    reset_password_hint: 我们会通过邮件发送设置新密码的链接。
+    send_link: 发送链接
+    new_password_title: 设置新密码
+    new_password: 新密码
+    confirm_new_password: 确认新密码
+    save: 保存
+    resend_title: 重新发送确认邮件
+    resend: 重新发送
+    current_password: 当前密码
+    current_password_hint: 用于确认是您本人
+    change_password: 修改密码
+    subscription_title: 您的订阅
+    status: 状态
+    active: 有效
+    expired: 已过期
+    valid_until: 有效期至
+    expired_on: 过期于
+    days_left: 剩余天数
+    configurations: 配置文件
+    expired_warning: 订阅已结束，续订之前这些配置无法连接。
+    manual_setup: 手动设置
+    manual_name: 名称
+    manual_type: 类型
+    manual_server: 服务器
+    manual_username: 用户名
+    manual_password: 密码
+    apple: Apple
+    android: Android
+    language: 语言
+    turnstile_failed: 请确认您不是机器人，然后重试。

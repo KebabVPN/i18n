@@ -159,3 +159,49 @@ fa:
   unknown:
     text: |
       دستور ناشناخته، برای دیدن تمام دستورات /help را اجرا کنید!
+  # --------------------------------------------------------
+  # Customer cabinet on the web
+  web:
+    log_in: ورود
+    sign_up: ثبت‌نام
+    sign_out: خروج
+    email: ایمیل
+    password: رمز عبور
+    remember_me: مرا به خاطر بسپار
+    forgot_password: رمز عبور را فراموش کرده‌اید؟
+    resend_confirmation_link: ایمیل تأیید را دریافت نکردید؟
+    back_to_account: بازگشت به حساب کاربری
+    create_account: ایجاد حساب کاربری
+    confirm_password: تکرار رمز عبور
+    password_min: "حداقل %{count} کاراکتر"
+    reset_password_title: بازیابی رمز عبور
+    reset_password_hint: پیوند انتخاب رمز جدید را به ایمیل شما می‌فرستیم.
+    send_link: ارسال پیوند
+    new_password_title: انتخاب رمز عبور جدید
+    new_password: رمز عبور جدید
+    confirm_new_password: تکرار رمز عبور جدید
+    save: ذخیره
+    resend_title: ارسال دوبارهٔ ایمیل تأیید
+    resend: ارسال دوباره
+    current_password: رمز عبور فعلی
+    current_password_hint: برای تأیید هویت شما لازم است
+    change_password: تغییر رمز عبور
+    subscription_title: اشتراک شما
+    status: وضعیت
+    active: فعال
+    expired: منقضی شده
+    valid_until: معتبر تا
+    expired_on: منقضی شده در
+    days_left: روزهای باقی‌مانده
+    configurations: پیکربندی‌ها
+    expired_warning: اشتراک شما به پایان رسیده است و تا زمان تمدید، این پیکربندی‌ها متصل نمی‌شوند.
+    manual_setup: تنظیم دستی
+    manual_name: نام
+    manual_type: نوع
+    manual_server: سرور
+    manual_username: نام کاربری
+    manual_password: رمز عبور
+    apple: Apple
+    android: Android
+    language: زبان
+    turnstile_failed: لطفاً تأیید کنید که ربات نیستید و دوباره تلاش کنید.

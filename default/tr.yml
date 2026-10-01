@@ -208,3 +208,49 @@ tr:
   unknown:
     text: |
       Bilinmeyen komut, lütfen tüm komutları listelemek için /help komutunu çalıştırın!
+  # --------------------------------------------------------
+  # Customer cabinet on the web
+  web:
+    log_in: Giriş yap
+    sign_up: Kayıt ol
+    sign_out: Çıkış yap
+    email: E-posta
+    password: Parola
+    remember_me: Beni hatırla
+    forgot_password: Parolanızı mı unuttunuz?
+    resend_confirmation_link: Doğrulama e-postası gelmedi mi?
+    back_to_account: Hesabınıza dönün
+    create_account: Hesap oluştur
+    confirm_password: Parolayı doğrulayın
+    password_min: "en az %{count} karakter"
+    reset_password_title: Parolanızı sıfırlayın
+    reset_password_hint: Yeni bir parola belirlemeniz için e-posta ile bağlantı göndereceğiz.
+    send_link: Bağlantıyı gönder
+    new_password_title: Yeni parola belirleyin
+    new_password: Yeni parola
+    confirm_new_password: Yeni parolayı doğrulayın
+    save: Kaydet
+    resend_title: Doğrulama e-postasını yeniden gönder
+    resend: Yeniden gönder
+    current_password: Mevcut parola
+    current_password_hint: Kimliğinizi doğrulamak için gerekli
+    change_password: Parolanızı değiştirin
+    subscription_title: Aboneliğiniz
+    status: Durum
+    active: Etkin
+    expired: Süresi doldu
+    valid_until: Geçerlilik tarihi
+    expired_on: Sona erdi
+    days_left: Kalan gün
+    configurations: Yapılandırmalar
+    expired_warning: Aboneliğiniz sona erdi, yenileyene kadar bu yapılandırmalar bağlanmayacak.
+    manual_setup: Elle kurulum
+    manual_name: Ad
+    manual_type: Tür
+    manual_server: Sunucu
+    manual_username: Kullanıcı adı
+    manual_password: Parola
+    apple: Apple
+    android: Android
+    language: Dil
+    turnstile_failed: Lütfen robot olmadığınızı doğrulayın ve tekrar deneyin.

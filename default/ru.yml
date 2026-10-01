@@ -208,3 +208,49 @@ ru:
   unknown:
     text: |
       Неизвестная команда, выполните /help, чтобы получить список всех доступных команд!
+  # --------------------------------------------------------
+  # Customer cabinet on the web
+  web:
+    log_in: Войти
+    sign_up: Регистрация
+    sign_out: Выйти
+    email: Почта
+    password: Пароль
+    remember_me: Запомнить меня
+    forgot_password: Забыли пароль?
+    resend_confirmation_link: Не пришло письмо с подтверждением?
+    back_to_account: Вернуться в кабинет
+    create_account: Создать аккаунт
+    confirm_password: Повторите пароль
+    password_min: "минимум %{count} символов"
+    reset_password_title: Восстановление пароля
+    reset_password_hint: Пришлём на почту ссылку для смены пароля.
+    send_link: Отправить ссылку
+    new_password_title: Новый пароль
+    new_password: Новый пароль
+    confirm_new_password: Повторите новый пароль
+    save: Сохранить
+    resend_title: Отправить подтверждение ещё раз
+    resend: Отправить
+    current_password: Текущий пароль
+    current_password_hint: Нужен, чтобы подтвердить, что это вы
+    change_password: Сменить пароль
+    subscription_title: Ваша подписка
+    status: Статус
+    active: Активна
+    expired: Истекла
+    valid_until: Действует до
+    expired_on: Истекла
+    days_left: Осталось дней
+    configurations: Конфигурации
+    expired_warning: Подписка закончилась — эти конфигурации не подключатся, пока вы её не продлите.
+    manual_setup: Настроить вручную
+    manual_name: Название
+    manual_type: Тип
+    manual_server: Сервер
+    manual_username: Логин
+    manual_password: Пароль
+    apple: Apple
+    android: Android
+    language: Язык
+    turnstile_failed: Подтвердите, что вы не робот, и попробуйте ещё раз.
