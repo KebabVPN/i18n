@@ -254,3 +254,128 @@ en:
     android: Android
     language: Language
     turnstile_failed: Please confirm you are not a robot and try again.
+    # Cabinet shell: section tabs and shared controls.
+    nav:
+      account: Subscription
+      devices: Devices
+      payments: Payments
+      partner: Partners
+      settings: Settings
+      copy: Copy
+    # Cabinet sections: subscription, payments, partner program, bot sign-in.
+    login_link_invalid: This sign-in link is invalid or has already been used. Get a new one in the bot or sign in with your email.
+    plans:
+      title: Plans
+      none: No plans are available right now.
+      period: "%{count} days"
+      best: Best value
+      promo_note: Price with your promo code
+      bonus_note: "%{bonus} with your promo code"
+      unavailable: This plan or payment method is not available.
+    pm:
+      stripe_payment: Card
+      stripe_subscription: Card, auto-renewal
+      pay2day: Russian bank card
+    promo:
+      title: Promo code
+      placeholder: Enter a promo code
+      apply: Apply
+      applied: The promo code is applied. It will be used on your next payment.
+      current: "Applied: %{code} (%{bonus})"
+      current_hint: Works with one-time card payments. Auto-renewal and USDT payments are charged at the full price.
+      bonus_percent: "−%{value}%"
+      bonus_days: "+%{count} days"
+      errors:
+        not_found: There is no such promo code.
+        expired: This promo code has expired.
+        used_up: This promo code has already been used up.
+        own_code: You can not use your own promo code.
+        already_used: You have already received a promo code bonus.
+        not_partner: Promo codes become available to you after your first payment.
+        template: Choose a promotion.
+        count: Choose from 1 to 500 codes.
+        form: Please check the form and try again.
+    usdt:
+      title: Pay with USDT (TRC20)
+      hint: Send USDT on the TRON network (TRC20) to your personal address. The subscription is extended automatically, in proportion to the amount.
+      pending: Your address is being prepared. Refresh the page in a minute.
+      no_promo: Promo codes do not apply to USDT payments.
+    payments:
+      title: Payments
+      empty: No payments yet.
+      date: Date
+      what: Plan
+      amount: Amount
+      method: Method
+      promo: Promo code
+      usdt_deposit: USDT top-up
+      usdt_method: USDT (TRC20)
+    partner:
+      locked_title: Partner program
+      locked_text: Your referral link, promo codes and rewards become available after your first payment.
+      link_title: Your link and promo code
+      link: Referral link
+      code: Personal promo code
+      link_hint: Whoever signs up with your link gets your personal promo code applied to their first payment.
+      stats_title: Statistics
+      clicks: Link clicks
+      sales: Payments
+      earned: Earned in total
+      depth_1: Your clients — 60%
+      depth_2: Your clients' clients — 30%
+      depth_3: Third line — 10%
+      depth_count: "%{count} payments"
+      line_1: your client
+      line_2: 2nd line
+      line_3: 3rd line
+      balance_title: Balance
+      available: Available
+      on_hold: On hold
+      paid: Paid out
+      hold_hint: Rewards become available %{days} days after a payment.
+      address: TRC20 address for payouts
+      address_short: Address
+      address_hint: A USDT address on the TRON network, it starts with T.
+      address_saved: The payout address is saved.
+      request_payout: Request a payout
+      payout_requested: Payout requested. We will send it to your address and mark it here.
+      payout_open: A payout request is in progress
+      min_payout: "Minimum payout: %{min}"
+      payouts_title: Payouts
+      payouts_empty: No payouts yet.
+      status: Status
+      payout_status:
+        requested: Requested
+        paid: Paid
+        rejected: Rejected
+      accruals_title: Reward history
+      accruals_empty: No rewards yet.
+      kind: Type
+      base: Payment
+      accrual_kind:
+        sale: Client payment
+        opening: Opening balance
+        adjustment: Adjustment
+      accrual_state:
+        hold: "On hold until %{date}"
+        available: Available
+        cancelled: Cancelled
+      promo:
+        title: Promo codes
+        template: Promotion
+        count: Number of codes
+        max_uses: Uses per code
+        expires: Valid until (optional)
+        generate: Generate codes
+        generated: "Codes generated: %{count}."
+        no_templates: No promotions are available for generating codes right now.
+        batches: Batches
+        codes: Codes
+        used: "used %{used} of %{total}"
+        download: Download CSV
+        empty: No codes yet.
+      errors:
+        address_invalid: This does not look like a TRC20 address. It starts with T and is 34 characters long.
+        no_address: Add a TRC20 address for payouts first.
+        already_requested: You already have a payout request in progress.
+        below_minimum: "The minimum payout is %{min}."

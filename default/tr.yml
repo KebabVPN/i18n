@@ -254,3 +254,128 @@ tr:
     android: Android
     language: Dil
     turnstile_failed: Lütfen robot olmadığınızı doğrulayın ve tekrar deneyin.
+    # Cabinet shell: section tabs and shared controls.
+    nav:
+      account: Abonelik
+      devices: Cihazlar
+      payments: Ödemeler
+      partner: Ortaklık
+      settings: Ayarlar
+      copy: Kopyala
+    # Cabinet sections: subscription, payments, partner program, bot sign-in.
+    login_link_invalid: Bu giriş bağlantısı geçersiz veya zaten kullanılmış. Bottan yeni bir bağlantı alın ya da e-postanızla giriş yapın.
+    plans:
+      title: Planlar
+      none: Şu anda kullanılabilir plan yok.
+      period: "%{count} gün"
+      best: En avantajlı
+      promo_note: Promosyon kodunuzla fiyat
+      bonus_note: "Promosyon kodunuzla %{bonus}"
+      unavailable: Bu plan veya ödeme yöntemi kullanılamıyor.
+    pm:
+      stripe_payment: Kart
+      stripe_subscription: Kart, otomatik yenileme
+      pay2day: Rus banka kartı
+    promo:
+      title: Promosyon kodu
+      placeholder: Promosyon kodunu girin
+      apply: Uygula
+      applied: Promosyon kodu uygulandı. Bir sonraki ödemenizde kullanılacak.
+      current: "Uygulandı: %{code} (%{bonus})"
+      current_hint: Tek seferlik kart ödemelerinde geçerlidir. Otomatik yenileme ve USDT ödemeleri tam fiyattan alınır.
+      bonus_percent: "−%%%{value}"
+      bonus_days: "+%{count} gün"
+      errors:
+        not_found: Böyle bir promosyon kodu yok.
+        expired: Bu promosyon kodunun süresi dolmuş.
+        used_up: Bu promosyon kodu tükenmiş.
+        own_code: Kendi promosyon kodunuzu kullanamazsınız.
+        already_used: Promosyon kodu bonusunu zaten aldınız.
+        not_partner: Promosyon kodları ilk ödemenizden sonra kullanılabilir olur.
+        template: Bir kampanya seçin.
+        count: 1 ile 500 arasında kod seçin.
+        form: Lütfen formu kontrol edip tekrar deneyin.
+    usdt:
+      title: USDT (TRC20) ile öde
+      hint: TRON ağında (TRC20) USDT'yi kişisel adresinize gönderin. Abonelik, tutarla orantılı olarak otomatik uzatılır.
+      pending: Adresiniz hazırlanıyor. Bir dakika sonra sayfayı yenileyin.
+      no_promo: Promosyon kodları USDT ödemelerinde geçerli değildir.
+    payments:
+      title: Ödemeler
+      empty: Henüz ödeme yok.
+      date: Tarih
+      what: Plan
+      amount: Tutar
+      method: Yöntem
+      promo: Promosyon kodu
+      usdt_deposit: USDT yüklemesi
+      usdt_method: USDT (TRC20)
+    partner:
+      locked_title: Ortaklık programı
+      locked_text: Referans bağlantınız, promosyon kodlarınız ve ödülleriniz ilk ödemenizden sonra kullanılabilir olur.
+      link_title: Bağlantınız ve promosyon kodunuz
+      link: Referans bağlantısı
+      code: Kişisel promosyon kodu
+      link_hint: Bağlantınızla kaydolan herkesin ilk ödemesine kişisel promosyon kodunuz uygulanır.
+      stats_title: İstatistikler
+      clicks: Bağlantı tıklamaları
+      sales: Ödemeler
+      earned: Toplam kazanç
+      depth_1: Müşterileriniz — %60
+      depth_2: Müşterilerinizin müşterileri — %30
+      depth_3: Üçüncü seviye — %10
+      depth_count: "%{count} ödeme"
+      line_1: müşteriniz
+      line_2: 2. seviye
+      line_3: 3. seviye
+      balance_title: Bakiye
+      available: Kullanılabilir
+      on_hold: Beklemede
+      paid: Ödenen
+      hold_hint: Ödüller, ödemeden %{days} gün sonra kullanılabilir olur.
+      address: Ödemeler için TRC20 adresi
+      address_short: Adres
+      address_hint: TRON ağında bir USDT adresi, T ile başlar.
+      address_saved: Ödeme adresi kaydedildi.
+      request_payout: Ödeme talep et
+      payout_requested: Ödeme talebi alındı. Tutarı adresinize gönderip burada işaretleyeceğiz.
+      payout_open: Ödeme talebiniz işleniyor
+      min_payout: "Minimum ödeme: %{min}"
+      payouts_title: Ödemeler
+      payouts_empty: Henüz ödeme yapılmadı.
+      status: Durum
+      payout_status:
+        requested: Talep edildi
+        paid: Ödendi
+        rejected: Reddedildi
+      accruals_title: Ödül geçmişi
+      accruals_empty: Henüz ödül yok.
+      kind: Tür
+      base: Ödeme
+      accrual_kind:
+        sale: Müşteri ödemesi
+        opening: Açılış bakiyesi
+        adjustment: Düzeltme
+      accrual_state:
+        hold: "%{date} tarihine kadar beklemede"
+        available: Kullanılabilir
+        cancelled: İptal edildi
+      promo:
+        title: Promosyon kodları
+        template: Kampanya
+        count: Kod sayısı
+        max_uses: Kod başına kullanım
+        expires: Son geçerlilik tarihi (isteğe bağlı)
+        generate: Kod oluştur
+        generated: "Oluşturulan kod: %{count}."
+        no_templates: Şu anda kod oluşturmak için kampanya yok.
+        batches: Paketler
+        codes: Kodlar
+        used: "%{total} koddan %{used} kullanıldı"
+        download: CSV indir
+        empty: Henüz kod yok.
+      errors:
+        address_invalid: Bu bir TRC20 adresine benzemiyor. T ile başlar ve 34 karakter uzunluğundadır.
+        no_address: Önce ödemeler için bir TRC20 adresi ekleyin.
+        already_requested: Zaten işlenmekte olan bir ödeme talebiniz var.
+        below_minimum: "Minimum ödeme tutarı %{min}."

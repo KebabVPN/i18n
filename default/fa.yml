@@ -205,3 +205,128 @@ fa:
     android: Android
     language: زبان
     turnstile_failed: لطفاً تأیید کنید که ربات نیستید و دوباره تلاش کنید.
+    # Cabinet shell: section tabs and shared controls.
+    nav:
+      account: اشتراک
+      devices: دستگاه‌ها
+      payments: پرداخت‌ها
+      partner: همکاری
+      settings: تنظیمات
+      copy: کپی
+    # Cabinet sections: subscription, payments, partner program, bot sign-in.
+    login_link_invalid: این لینک ورود نامعتبر است یا قبلاً استفاده شده است. از ربات لینک جدیدی بگیرید یا با ایمیل وارد شوید.
+    plans:
+      title: طرح‌ها
+      none: در حال حاضر طرحی در دسترس نیست.
+      period: "%{count} روز"
+      best: به‌صرفه‌ترین
+      promo_note: قیمت با کد تخفیف شما
+      bonus_note: "%{bonus} با کد تخفیف شما"
+      unavailable: این طرح یا روش پرداخت در دسترس نیست.
+    pm:
+      stripe_payment: کارت بانکی
+      stripe_subscription: کارت بانکی، تمدید خودکار
+      pay2day: کارت بانکی روسیه
+    promo:
+      title: کد تخفیف
+      placeholder: کد تخفیف را وارد کنید
+      apply: اعمال
+      applied: کد تخفیف اعمال شد و در پرداخت بعدی استفاده می‌شود.
+      current: "اعمال‌شده: %{code} (%{bonus})"
+      current_hint: فقط برای پرداخت یک‌باره با کارت. تمدید خودکار و پرداخت USDT با قیمت کامل است.
+      bonus_percent: "−%{value}٪"
+      bonus_days: "+%{count} روز"
+      errors:
+        not_found: چنین کد تخفیفی وجود ندارد.
+        expired: مهلت این کد تخفیف تمام شده است.
+        used_up: ظرفیت این کد تخفیف تمام شده است.
+        own_code: نمی‌توانید از کد تخفیف خودتان استفاده کنید.
+        already_used: شما قبلاً از پاداش کد تخفیف استفاده کرده‌اید.
+        not_partner: کدهای تخفیف پس از اولین پرداخت شما در دسترس قرار می‌گیرند.
+        template: یک کمپین انتخاب کنید.
+        count: بین ۱ تا ۵۰۰ کد انتخاب کنید.
+        form: لطفاً فرم را بررسی کرده و دوباره تلاش کنید.
+    usdt:
+      title: پرداخت با USDT (TRC20)
+      hint: USDT را در شبکه TRON (TRC20) به آدرس شخصی خود ارسال کنید. اشتراک به‌طور خودکار و متناسب با مبلغ تمدید می‌شود.
+      pending: آدرس شما در حال آماده‌سازی است. یک دقیقه دیگر صفحه را تازه کنید.
+      no_promo: کدهای تخفیف برای پرداخت با USDT اعمال نمی‌شوند.
+    payments:
+      title: پرداخت‌ها
+      empty: هنوز پرداختی انجام نشده است.
+      date: تاریخ
+      what: طرح
+      amount: مبلغ
+      method: روش
+      promo: کد تخفیف
+      usdt_deposit: شارژ USDT
+      usdt_method: USDT (TRC20)
+    partner:
+      locked_title: برنامه همکاری
+      locked_text: لینک معرفی، کدهای تخفیف و پاداش‌ها پس از اولین پرداخت شما در دسترس قرار می‌گیرند.
+      link_title: لینک و کد تخفیف شما
+      link: لینک معرفی
+      code: کد تخفیف شخصی
+      link_hint: هر کسی که با لینک شما ثبت‌نام کند، کد تخفیف شخصی شما روی اولین پرداختش اعمال می‌شود.
+      stats_title: آمار
+      clicks: کلیک‌های لینک
+      sales: پرداخت‌ها
+      earned: مجموع درآمد
+      depth_1: مشتریان شما — ۶۰٪
+      depth_2: مشتریانِ مشتریان شما — ۳۰٪
+      depth_3: سطح سوم — ۱۰٪
+      depth_count: "%{count} پرداخت"
+      line_1: مشتری شما
+      line_2: سطح ۲
+      line_3: سطح ۳
+      balance_title: موجودی
+      available: قابل برداشت
+      on_hold: در انتظار
+      paid: پرداخت‌شده
+      hold_hint: پاداش‌ها %{days} روز پس از پرداخت قابل برداشت می‌شوند.
+      address: آدرس TRC20 برای دریافت
+      address_short: آدرس
+      address_hint: آدرس USDT در شبکه TRON که با T شروع می‌شود.
+      address_saved: آدرس دریافت ذخیره شد.
+      request_payout: درخواست برداشت
+      payout_requested: درخواست برداشت ثبت شد. مبلغ را به آدرس شما می‌فرستیم و اینجا علامت می‌زنیم.
+      payout_open: درخواست برداشت در حال بررسی است
+      min_payout: "حداقل برداشت: %{min}"
+      payouts_title: برداشت‌ها
+      payouts_empty: هنوز برداشتی انجام نشده است.
+      status: وضعیت
+      payout_status:
+        requested: درخواست‌شده
+        paid: پرداخت‌شده
+        rejected: ردشده
+      accruals_title: تاریخچه پاداش‌ها
+      accruals_empty: هنوز پاداشی ثبت نشده است.
+      kind: نوع
+      base: پرداخت
+      accrual_kind:
+        sale: پرداخت مشتری
+        opening: موجودی اولیه
+        adjustment: اصلاحیه
+      accrual_state:
+        hold: "در انتظار تا %{date}"
+        available: قابل برداشت
+        cancelled: لغوشده
+      promo:
+        title: کدهای تخفیف
+        template: کمپین
+        count: تعداد کدها
+        max_uses: دفعات استفاده از هر کد
+        expires: معتبر تا (اختیاری)
+        generate: ساخت کدها
+        generated: "%{count} کد ساخته شد."
+        no_templates: در حال حاضر کمپینی برای ساخت کد تخفیف وجود ندارد.
+        batches: دسته‌ها
+        codes: کدها
+        used: "%{used} از %{total} استفاده شده"
+        download: دانلود CSV
+        empty: هنوز کدی ساخته نشده است.
+      errors:
+        address_invalid: این شبیه آدرس TRC20 نیست. آدرس با T شروع می‌شود و ۳۴ کاراکتر دارد.
+        no_address: ابتدا یک آدرس TRC20 برای دریافت وارد کنید.
+        already_requested: شما یک درخواست برداشت در حال بررسی دارید.
+        below_minimum: "حداقل مبلغ برداشت %{min} است."

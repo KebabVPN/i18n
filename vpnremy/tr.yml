@@ -17,6 +17,9 @@ vpnremy_tr:
     settings_notifications_disable: 🔔 Bildirimleri Devre Dışı Bırak
     subscription_management_stripe: 💸 Abonelik (Stripe)
     referral: 💰 Referans
+    cabinet: 👤 Kişisel hesap
+    cabinet_open: 🔐 Hesabınıza giriş yapın
+    promo_generate: 🎟 Promosyon kodu oluştur
     platform_apple:  Apple (iOS, MacOS)
     platform_android: 📱 Android
     platform_custom: 🔑 Diğer
@@ -210,6 +213,62 @@ vpnremy_tr:
       Para kazanma oranı: *%<ref_money_percent>s*
 
       Para çekme için bilgilerinizi sağlamak için @tolyhan ile iletişime geçin.
+  # --------------------------------------------------------
+  cabinet:
+    text: |
+      *👤 Kişisel hesap*
+
+      Giriş yapmak için aşağıdaki düğmeye dokunun. Bağlantı yalnızca bir kez çalışır ve 10 dakika geçerlidir.
+  # --------------------------------------------------------
+  referral_v2:
+    text: |
+      *💰 Referans*
+
+      Davet bağlantınız: `%<link>s`
+      Promosyon kodunuz: `%<code>s`
+      Kopyalamak için dokunun ve arkadaşlarınızla paylaşın: ilk ödemelerinde bonus kazanırlar, siz de yaptıkları her ödemeden kazanırsınız.
+
+      İstatistikler, bakiye ve para çekme işlemleri kişisel hesabınızda.
+  # --------------------------------------------------------
+  referral_v2_inactive:
+    text: |
+      *💰 Referans*
+
+      Ortaklık programı ilk ödemenizden sonra açılır. Davet bağlantınız ve promosyon kodunuz o zaman burada ve kişisel hesabınızda görünecek.
+  # --------------------------------------------------------
+  promo_templates:
+    text: |
+      *🎟 Promosyon kodları*
+
+      Yeni kodlar için bir kampanya seçin:
+  # --------------------------------------------------------
+  promo_templates_empty:
+    text: |
+      *🎟 Promosyon kodları*
+
+      Şu anda uygun kampanya yok. Lütfen daha sonra tekrar bakın.
+  # --------------------------------------------------------
+  promo_count:
+    text: |
+      *🎟 %<name>s*
+
+      Kaç kod oluşturulsun? Her kod yalnızca bir kez kullanılabilir ve süresi dolmaz.
+  # --------------------------------------------------------
+  promo_codes:
+    text: |
+      *🎟 %<name>s*
+
+      Oluşturulan kod sayısı: %<count>s
+
+      %<codes>s
+
+      Kopyalamak için bir koda dokunun. Tüm kodlarınız ve kullanımları kişisel hesabınızda.
+  # --------------------------------------------------------
+  promo_codes_file:
+    text: |
+      *🎟 %<name>s*
+
+      Oluşturulan kod sayısı: %<count>s. Liste dosyada.
   # --------------------------------------------------------
   settings:
     text: |

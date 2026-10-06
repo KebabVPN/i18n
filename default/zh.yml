@@ -254,3 +254,128 @@ zh:
     android: Android
     language: 语言
     turnstile_failed: 请确认您不是机器人，然后重试。
+    # Cabinet shell: section tabs and shared controls.
+    nav:
+      account: 订阅
+      devices: 设备
+      payments: 付款记录
+      partner: 合作伙伴
+      settings: 设置
+      copy: 复制
+    # Cabinet sections: subscription, payments, partner program, bot sign-in.
+    login_link_invalid: 此登录链接无效或已被使用。请在机器人中获取新链接，或使用邮箱登录。
+    plans:
+      title: 套餐
+      none: 目前没有可用的套餐。
+      period: "%{count} 天"
+      best: 最划算
+      promo_note: 使用优惠码后的价格
+      bonus_note: "优惠码赠送 %{bonus}"
+      unavailable: 该套餐或付款方式不可用。
+    pm:
+      stripe_payment: 银行卡
+      stripe_subscription: 银行卡，自动续费
+      pay2day: 俄罗斯银行卡
+    promo:
+      title: 优惠码
+      placeholder: 输入优惠码
+      apply: 使用
+      applied: 优惠码已生效，将在下次付款时使用。
+      current: "已使用：%{code}（%{bonus}）"
+      current_hint: 仅适用于银行卡一次性付款。自动续费和 USDT 付款按原价收费。
+      bonus_percent: "−%{value}%"
+      bonus_days: "+%{count} 天"
+      errors:
+        not_found: 优惠码不存在。
+        expired: 优惠码已过期。
+        used_up: 该优惠码已被用完。
+        own_code: 不能使用自己的优惠码。
+        already_used: 您已经领取过优惠码奖励。
+        not_partner: 首次付款后即可使用优惠码功能。
+        template: 请选择一个活动。
+        count: 可生成 1 到 500 个优惠码。
+        form: 请检查表单后重试。
+    usdt:
+      title: 使用 USDT（TRC20）付款
+      hint: 将 TRON 网络（TRC20）上的 USDT 发送到您的专属地址。订阅将按金额比例自动延长。
+      pending: 您的地址正在生成中，请一分钟后刷新页面。
+      no_promo: 优惠码不适用于 USDT 付款。
+    payments:
+      title: 付款记录
+      empty: 暂无付款记录。
+      date: 日期
+      what: 套餐
+      amount: 金额
+      method: 方式
+      promo: 优惠码
+      usdt_deposit: USDT 充值
+      usdt_method: USDT（TRC20）
+    partner:
+      locked_title: 合作伙伴计划
+      locked_text: 首次付款后，您即可获得推荐链接、优惠码和奖励。
+      link_title: 您的链接和优惠码
+      link: 推荐链接
+      code: 专属优惠码
+      link_hint: 通过您的链接注册的用户，首次付款时将自动使用您的专属优惠码。
+      stats_title: 统计
+      clicks: 链接点击
+      sales: 付款次数
+      earned: 累计收益
+      depth_1: 您的客户 — 60%
+      depth_2: 客户的客户 — 30%
+      depth_3: 第三级 — 10%
+      depth_count: "%{count} 笔付款"
+      line_1: 您的客户
+      line_2: 第二级
+      line_3: 第三级
+      balance_title: 余额
+      available: 可提现
+      on_hold: 冻结中
+      paid: 已支付
+      hold_hint: 奖励在付款 %{days} 天后可提现。
+      address: 用于收款的 TRC20 地址
+      address_short: 地址
+      address_hint: TRON 网络上的 USDT 地址，以 T 开头。
+      address_saved: 收款地址已保存。
+      request_payout: 申请提现
+      payout_requested: 提现申请已提交。我们会将款项发送到您的地址并在此处标记。
+      payout_open: 提现申请处理中
+      min_payout: "最低提现金额：%{min}"
+      payouts_title: 提现记录
+      payouts_empty: 暂无提现记录。
+      status: 状态
+      payout_status:
+        requested: 已申请
+        paid: 已支付
+        rejected: 已拒绝
+      accruals_title: 奖励记录
+      accruals_empty: 暂无奖励。
+      kind: 类型
+      base: 付款
+      accrual_kind:
+        sale: 客户付款
+        opening: 期初余额
+        adjustment: 调整
+      accrual_state:
+        hold: "冻结至 %{date}"
+        available: 可提现
+        cancelled: 已取消
+      promo:
+        title: 优惠码
+        template: 活动
+        count: 优惠码数量
+        max_uses: 每个优惠码可用次数
+        expires: 有效期至（可选）
+        generate: 生成优惠码
+        generated: "已生成优惠码：%{count} 个。"
+        no_templates: 目前没有可用于生成优惠码的活动。
+        batches: 批次
+        codes: 优惠码
+        used: "已使用 %{used} / %{total}"
+        download: 下载 CSV
+        empty: 暂无优惠码。
+      errors:
+        address_invalid: 这不像是 TRC20 地址。它以 T 开头，共 34 个字符。
+        no_address: 请先填写用于收款的 TRC20 地址。
+        already_requested: 您已有一个正在处理的提现申请。
+        below_minimum: "最低提现金额为 %{min}。"

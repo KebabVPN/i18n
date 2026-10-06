@@ -254,3 +254,128 @@ ru:
     android: Android
     language: Язык
     turnstile_failed: Подтвердите, что вы не робот, и попробуйте ещё раз.
+    # Cabinet shell: section tabs and shared controls.
+    nav:
+      account: Подписка
+      devices: Устройства
+      payments: Платежи
+      partner: Партнёрам
+      settings: Настройки
+      copy: Скопировать
+    # Cabinet sections: subscription, payments, partner program, bot sign-in.
+    login_link_invalid: Ссылка для входа недействительна или уже использована. Получите новую в боте или войдите по email.
+    plans:
+      title: Тарифы
+      none: Сейчас нет доступных тарифов.
+      period: "%{count} дн."
+      best: Выгоднее всего
+      promo_note: Цена с вашим промокодом
+      bonus_note: "%{bonus} по вашему промокоду"
+      unavailable: Этот тариф или способ оплаты недоступен.
+    pm:
+      stripe_payment: Карта
+      stripe_subscription: Карта, автопродление
+      pay2day: Карта российского банка
+    promo:
+      title: Промокод
+      placeholder: Введите промокод
+      apply: Применить
+      applied: Промокод применён. Он сработает при следующей оплате.
+      current: "Применён: %{code} (%{bonus})"
+      current_hint: Действует при разовой оплате картой. Автопродление и USDT — по полной цене.
+      bonus_percent: "−%{value}%"
+      bonus_days: "+%{count} дн."
+      errors:
+        not_found: Такого промокода нет.
+        expired: Срок действия промокода истёк.
+        used_up: Этот промокод уже израсходован.
+        own_code: Нельзя применить собственный промокод.
+        already_used: Вы уже получали бонус по промокоду.
+        not_partner: Промокоды станут доступны после вашей первой оплаты.
+        template: Выберите акцию.
+        count: Можно сгенерировать от 1 до 500 кодов.
+        form: Проверьте форму и попробуйте ещё раз.
+    usdt:
+      title: Оплата USDT (TRC20)
+      hint: Отправьте USDT в сети TRON (TRC20) на ваш личный адрес. Подписка продлится автоматически, пропорционально сумме.
+      pending: Адрес готовится. Обновите страницу через минуту.
+      no_promo: Промокоды не действуют при оплате USDT.
+    payments:
+      title: Платежи
+      empty: Платежей пока нет.
+      date: Дата
+      what: Тариф
+      amount: Сумма
+      method: Способ
+      promo: Промокод
+      usdt_deposit: Пополнение USDT
+      usdt_method: USDT (TRC20)
+    partner:
+      locked_title: Партнёрская программа
+      locked_text: Реферальная ссылка, промокоды и вознаграждения станут доступны после вашей первой оплаты.
+      link_title: Ваша ссылка и промокод
+      link: Реферальная ссылка
+      code: Личный промокод
+      link_hint: Кто зарегистрируется по вашей ссылке, получит ваш личный промокод на первую оплату.
+      stats_title: Статистика
+      clicks: Переходы
+      sales: Оплаты
+      earned: Заработано всего
+      depth_1: Ваши клиенты — 60%
+      depth_2: Клиенты ваших клиентов — 30%
+      depth_3: Третья линия — 10%
+      depth_count: "оплат: %{count}"
+      line_1: ваш клиент
+      line_2: 2-я линия
+      line_3: 3-я линия
+      balance_title: Баланс
+      available: Доступно
+      on_hold: В холде
+      paid: Выплачено
+      hold_hint: Вознаграждение становится доступным через %{days} дн. после оплаты.
+      address: Адрес TRC20 для выплат
+      address_short: Адрес
+      address_hint: Адрес USDT в сети TRON, начинается с T.
+      address_saved: Адрес для выплат сохранён.
+      request_payout: Запросить выплату
+      payout_requested: Запрос на выплату отправлен. Мы переведём средства на ваш адрес и отметим это здесь.
+      payout_open: Запрос на выплату обрабатывается
+      min_payout: "Минимальная выплата: %{min}"
+      payouts_title: Выплаты
+      payouts_empty: Выплат пока не было.
+      status: Статус
+      payout_status:
+        requested: Запрошена
+        paid: Выплачена
+        rejected: Отклонена
+      accruals_title: История начислений
+      accruals_empty: Начислений пока нет.
+      kind: Тип
+      base: Оплата
+      accrual_kind:
+        sale: Оплата клиента
+        opening: Перенос баланса
+        adjustment: Корректировка
+      accrual_state:
+        hold: "В холде до %{date}"
+        available: Доступно
+        cancelled: Аннулировано
+      promo:
+        title: Промокоды
+        template: Акция
+        count: Количество кодов
+        max_uses: Активаций на код
+        expires: Действует до (необязательно)
+        generate: Сгенерировать коды
+        generated: "Сгенерировано кодов: %{count}."
+        no_templates: Сейчас нет акций для генерации промокодов.
+        batches: Пачки
+        codes: Коды
+        used: "использовано %{used} из %{total}"
+        download: Скачать CSV
+        empty: Кодов пока нет.
+      errors:
+        address_invalid: Это не похоже на адрес TRC20. Он начинается с T и состоит из 34 символов.
+        no_address: Сначала укажите адрес TRC20 для выплат.
+        already_requested: У вас уже есть необработанный запрос на выплату.
+        below_minimum: "Минимальная сумма выплаты — %{min}."

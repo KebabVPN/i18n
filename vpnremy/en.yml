@@ -17,6 +17,9 @@ vpnremy_en:
     settings_notifications_disable: 🔔 Disable Notifications
     subscription_management_stripe: 💸 Subscription (Stripe)
     referral: 💰 Referral
+    cabinet: 👤 Personal account
+    cabinet_open: 🔐 Sign in to your account
+    promo_generate: 🎟 Generate promo codes
     platform_apple:  Apple (iOS, MacOS)
     platform_android: 📱 Android
     platform_custom: 🔑 Other
@@ -210,6 +213,62 @@ vpnremy_en:
       Money earn rate: *%<ref_money_percent>s*
 
       Contact @tolyhan to provide your requisites for money withdrawal.
+  # --------------------------------------------------------
+  cabinet:
+    text: |
+      *👤 Personal account*
+
+      Tap the button below to sign in. The link works once and expires in 10 minutes.
+  # --------------------------------------------------------
+  referral_v2:
+    text: |
+      *💰 Referral*
+
+      Your invite link: `%<link>s`
+      Your promo code: `%<code>s`
+      Tap to copy and share with friends: they get a bonus on their first payment, and you earn from every payment they make.
+
+      Statistics, balance and withdrawals are in your personal account.
+  # --------------------------------------------------------
+  referral_v2_inactive:
+    text: |
+      *💰 Referral*
+
+      The partner program opens after your first payment. Then your invite link and promo code will appear here and in your personal account.
+  # --------------------------------------------------------
+  promo_templates:
+    text: |
+      *🎟 Promo codes*
+
+      Choose a promotion for the new codes:
+  # --------------------------------------------------------
+  promo_templates_empty:
+    text: |
+      *🎟 Promo codes*
+
+      There are no promotions available right now. Please check back later.
+  # --------------------------------------------------------
+  promo_count:
+    text: |
+      *🎟 %<name>s*
+
+      How many codes to create? Each code works once and does not expire.
+  # --------------------------------------------------------
+  promo_codes:
+    text: |
+      *🎟 %<name>s*
+
+      Codes created: %<count>s
+
+      %<codes>s
+
+      Tap a code to copy it. All your codes and their usage are in your personal account.
+  # --------------------------------------------------------
+  promo_codes_file:
+    text: |
+      *🎟 %<name>s*
+
+      Codes created: %<count>s. The list is in the file.
   # --------------------------------------------------------
   settings:
     text: |
