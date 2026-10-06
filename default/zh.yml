@@ -219,7 +219,6 @@ zh:
     remember_me: 记住我
     forgot_password: 忘记密码？
     resend_confirmation_link: 没有收到确认邮件？
-    back_to_account: 返回账户
     create_account: 创建账户
     confirm_password: 确认密码
     password_min: "至少 %{count} 个字符"
@@ -235,29 +234,16 @@ zh:
     current_password: 当前密码
     current_password_hint: 用于确认是您本人
     change_password: 修改密码
-    subscription_title: 您的订阅
-    status: 状态
-    active: 有效
-    expired: 已过期
-    valid_until: 有效期至
-    expired_on: 过期于
-    days_left: 剩余天数
-    configurations: 配置文件
     expired_warning: 订阅已结束，续订之前这些配置无法连接。
-    manual_setup: 手动设置
-    manual_name: 名称
-    manual_type: 类型
     manual_server: 服务器
     manual_username: 用户名
     manual_password: 密码
-    apple: Apple
-    android: Android
     language: 语言
     turnstile_failed: 请确认您不是机器人，然后重试。
     # Cabinet shell: section tabs and shared controls.
     nav:
-      account: 订阅
-      devices: 设备
+      home: "首页"
+      plans: "套餐"
       payments: 付款记录
       partner: 合作伙伴
       settings: 设置
@@ -265,18 +251,32 @@ zh:
     # Cabinet sections: subscription, payments, partner program, bot sign-in.
     login_link_invalid: 此登录链接无效或已被使用。请在机器人中获取新链接，或使用邮箱登录。
     plans:
+      lead: "所有套餐均可使用全部服务器。"
+      choose: "选择套餐"
+      months:
+        one: "%{count} 个月"
+        few: "%{count} 个月"
+        many: "%{count} 个月"
+        other: "%{count} 个月"
+      per_month: "%{price}/月"
+      promo_chip: "%{code}：%{bonus}"
+      method_title: "支付方式"
+      recommended: "推荐"
+      no_promo: "不适用优惠码"
+      pay: "支付"
+      pay_amount: "支付 %{amount}"
       title: 套餐
       none: 目前没有可用的套餐。
       period: "%{count} 天"
       best: 最划算
-      promo_note: 使用优惠码后的价格
-      bonus_note: "优惠码赠送 %{bonus}"
       unavailable: 该套餐或付款方式不可用。
     pm:
-      stripe_payment: 银行卡
-      stripe_subscription: 银行卡，自动续费
-      pay2day: 俄罗斯银行卡
+      stripe_payment: "境外银行卡"
+      stripe_subscription: "自动续费（境外银行卡）"
+      pay2day: "SBP（俄罗斯银行）"
+      usdt: "USDT (TRC20)"
     promo:
+      have_code: "有优惠码？"
       title: 优惠码
       placeholder: 输入优惠码
       apply: 使用
@@ -296,11 +296,12 @@ zh:
         count: 可生成 1 到 500 个优惠码。
         form: 请检查表单后重试。
     usdt:
-      title: 使用 USDT（TRC20）付款
+      any_amount: "任意金额"
       hint: 将 TRON 网络（TRC20）上的 USDT 发送到您的专属地址。订阅将按金额比例自动延长。
       pending: 您的地址正在生成中，请一分钟后刷新页面。
       no_promo: 优惠码不适用于 USDT 付款。
     payments:
+      to_plans: "选择套餐"
       title: 付款记录
       empty: 暂无付款记录。
       date: 日期
@@ -309,7 +310,6 @@ zh:
       method: 方式
       promo: 优惠码
       usdt_deposit: USDT 充值
-      usdt_method: USDT（TRC20）
     partner:
       locked_title: 合作伙伴计划
       locked_text: 首次付款后，您即可获得推荐链接、优惠码和奖励。
@@ -328,7 +328,6 @@ zh:
       line_1: 您的客户
       line_2: 第二级
       line_3: 第三级
-      balance_title: 余额
       available: 可提现
       on_hold: 冻结中
       paid: 已支付
@@ -379,3 +378,124 @@ zh:
         no_address: 请先填写用于收款的 TRC20 地址。
         already_requested: 您已有一个正在处理的提现申请。
         below_minimum: "最低提现金额为 %{min}。"
+    date: "%{year}年%{month}%{day}日"
+    months:
+      - "1月"
+      - "2月"
+      - "3月"
+      - "4月"
+      - "5月"
+      - "6月"
+      - "7月"
+      - "8月"
+      - "9月"
+      - "10月"
+      - "11月"
+      - "12月"
+    ago:
+      now: "刚刚"
+      minutes: "%{n} 分钟前"
+      hours: "%{n} 小时前"
+      days: "%{n} 天前"
+    cancel: "取消"
+    home:
+      state:
+        active: "订阅有效"
+        expiring: "订阅即将到期"
+        expired: "订阅已到期"
+      until: "有效期至 %{date}"
+      days_left:
+        zero: "剩余不到一天"
+        one: "剩余 %{count} 天"
+        few: "剩余 %{count} 天"
+        many: "剩余 %{count} 天"
+        other: "剩余 %{count} 天"
+      renew: "续订"
+      from: "%{price} 起"
+      promo: "优惠码 %{code}：下次付款 %{bonus}"
+    connect:
+      title: "连接设备"
+      server: "服务器"
+      apple: "iPhone / iPad / Mac"
+      apple_note: "安装配置文件"
+      android: "Android"
+      android_note: "strongSwan 配置文件"
+      manual: "手动设置"
+      manual_note: "服务器、用户名、密码"
+      step_1: "下载配置文件"
+      step_2: "打开它"
+      step_3: "开启 VPN"
+    devices:
+      title: "我的设备"
+      period: "最近 30 天"
+      empty: "还没有任何连接。请先在上方设置设备。"
+      last_seen: "最近连接"
+      connections: "连接次数"
+      reset: "重置 VPN 密码"
+      reset_hint: "如果设备丢失或有他人使用您的账号，请重置密码。"
+      reset_title: "重置 VPN 密码？"
+      reset_text: "VPN 密码将被更改：所有设备在下次连接时都需要新密码，必须重新设置。"
+      reset_confirm: "重置密码"
+      reset_done: "VPN 密码已重置。请重新设置您的设备。"
+    program:
+      title: "与 %{brand} 一起赚钱"
+      lead: "向朋友和粉丝推荐我们，只要他们继续使用，您就能从他们的每笔付款中获得分成。"
+      example: "一笔 %{price} 的订阅，您可获得 %{reward}。"
+      example_fixed: "您的客户每付款一次，您可获得 %{reward}。"
+      cta: "订阅并成为合作伙伴"
+      how_title: "如何运作"
+      step_1: "订阅：首次付款后开放合作伙伴页面。"
+      step_2: "分享您的链接或专属优惠码，通过它们而来的用户可享受折扣。"
+      step_3: "从客户的每笔付款中获得奖励，并以 USDT 提现。"
+      shares_title: "您能获得多少"
+      share_1: "来自您的客户"
+      share_2: "来自您客户的客户"
+      share_3: "第三级"
+      shares_hint: "只要客户持续付款，您就能从每笔付款的奖励中获得相应分成。"
+      discount: "受邀用户折扣"
+      payouts: "提现"
+      payouts_value: "USDT (TRC20)，最低 %{min}"
+      hold: "奖励可用时间"
+      hold_value:
+        one: "付款后 %{count} 天"
+        few: "付款后 %{count} 天"
+        many: "付款后 %{count} 天"
+        other: "付款后 %{count} 天"
+    settings:
+      title: "设置"
+      account: "账户"
+  # Devise flash messages, in the language of the cabinet.
+  devise:
+    confirmations:
+      confirmed: "您的邮箱地址已确认。"
+      send_instructions: "几分钟后您将收到一封确认邮箱地址的邮件。"
+      send_paranoid_instructions: "如果您的邮箱地址存在于我们的数据库中，几分钟后您将收到一封确认邮箱地址的邮件。"
+    failure:
+      already_authenticated: "您已登录。"
+      inactive: "您的账户尚未激活。"
+      invalid: "%{authentication_keys} 或密码错误。"
+      locked: "您的账户已被锁定。"
+      last_attempt: "您还有一次尝试机会，之后账户将被锁定。"
+      not_found_in_database: "%{authentication_keys} 或密码错误。"
+      timeout: "会话已过期，请重新登录。"
+      unauthenticated: "请先登录或注册。"
+      unconfirmed: "请先确认您的邮箱地址。"
+    passwords:
+      no_token: "只能通过重置密码邮件中的链接访问此页面。如果您正是从该邮件进入，请确认打开的是完整链接。"
+      send_instructions: "几分钟后您将收到一封重置密码的邮件。"
+      send_paranoid_instructions: "如果您的邮箱地址存在于我们的数据库中，几分钟后您将收到一封包含密码重置链接的邮件。"
+      updated: "密码已修改，您已登录。"
+      updated_not_active: "密码已修改。"
+    registrations:
+      destroyed: "再见！您的账户已注销，期待再次见到您。"
+      signed_up: "欢迎！注册成功。"
+      signed_up_but_inactive: "注册成功，但账户尚未激活，暂时无法登录。"
+      signed_up_but_locked: "注册成功，但账户已被锁定，暂时无法登录。"
+      signed_up_but_unconfirmed: "我们已向您的邮箱发送了一封带有确认链接的邮件，请点击链接激活账户。"
+      update_needs_confirmation: "账户已更新，但需要确认新的邮箱地址。请查收邮件并点击确认链接。"
+      updated: "账户已更新。"
+      updated_but_not_signed_in: "账户已更新。由于密码已修改，请重新登录。"
+    sessions:
+      signed_in: "登录成功。"
+      signed_out: "已退出登录。"
+      already_signed_out: "已退出登录。"

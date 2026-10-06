@@ -219,7 +219,6 @@ en:
     remember_me: Remember me
     forgot_password: Forgot your password?
     resend_confirmation_link: Didn't receive confirmation instructions?
-    back_to_account: Back to your account
     create_account: Create an account
     confirm_password: Confirm password
     password_min: "%{count} characters minimum"
@@ -235,29 +234,16 @@ en:
     current_password: Current password
     current_password_hint: Needed to confirm it is you
     change_password: Change your password
-    subscription_title: Your subscription
-    status: Status
-    active: Active
-    expired: Expired
-    valid_until: Valid until
-    expired_on: Expired on
-    days_left: Days left
-    configurations: Configurations
     expired_warning: Your subscription has ended, so these will not connect until it is renewed.
-    manual_setup: Set up by hand
-    manual_name: Name
-    manual_type: Type
     manual_server: Server
     manual_username: Username
     manual_password: Password
-    apple: Apple
-    android: Android
     language: Language
     turnstile_failed: Please confirm you are not a robot and try again.
     # Cabinet shell: section tabs and shared controls.
     nav:
-      account: Subscription
-      devices: Devices
+      home: "Home"
+      plans: "Plans"
       payments: Payments
       partner: Partners
       settings: Settings
@@ -265,18 +251,32 @@ en:
     # Cabinet sections: subscription, payments, partner program, bot sign-in.
     login_link_invalid: This sign-in link is invalid or has already been used. Get a new one in the bot or sign in with your email.
     plans:
+      lead: "Every plan gives access to all servers."
+      choose: "Choose a plan"
+      months:
+        one: "%{count} month"
+        few: "%{count} months"
+        many: "%{count} months"
+        other: "%{count} months"
+      per_month: "%{price}/mo"
+      promo_chip: "%{code}: %{bonus}"
+      method_title: "Payment method"
+      recommended: "Recommended"
+      no_promo: "Promo codes do not apply"
+      pay: "Pay"
+      pay_amount: "Pay %{amount}"
       title: Plans
       none: No plans are available right now.
       period: "%{count} days"
       best: Best value
-      promo_note: Price with your promo code
-      bonus_note: "%{bonus} with your promo code"
       unavailable: This plan or payment method is not available.
     pm:
-      stripe_payment: Card
-      stripe_subscription: Card, auto-renewal
-      pay2day: Russian bank card
+      stripe_payment: "International card"
+      stripe_subscription: "Auto-renewal (international card)"
+      pay2day: "SBP (Russian banks)"
+      usdt: "USDT (TRC20)"
     promo:
+      have_code: "Have a promo code?"
       title: Promo code
       placeholder: Enter a promo code
       apply: Apply
@@ -296,11 +296,12 @@ en:
         count: Choose from 1 to 500 codes.
         form: Please check the form and try again.
     usdt:
-      title: Pay with USDT (TRC20)
+      any_amount: "Any amount"
       hint: Send USDT on the TRON network (TRC20) to your personal address. The subscription is extended automatically, in proportion to the amount.
       pending: Your address is being prepared. Refresh the page in a minute.
       no_promo: Promo codes do not apply to USDT payments.
     payments:
+      to_plans: "Choose a plan"
       title: Payments
       empty: No payments yet.
       date: Date
@@ -309,7 +310,6 @@ en:
       method: Method
       promo: Promo code
       usdt_deposit: USDT top-up
-      usdt_method: USDT (TRC20)
     partner:
       locked_title: Partner program
       locked_text: Your referral link, promo codes and rewards become available after your first payment.
@@ -328,7 +328,6 @@ en:
       line_1: your client
       line_2: 2nd line
       line_3: 3rd line
-      balance_title: Balance
       available: Available
       on_hold: On hold
       paid: Paid out
@@ -379,3 +378,124 @@ en:
         no_address: Add a TRC20 address for payouts first.
         already_requested: You already have a payout request in progress.
         below_minimum: "The minimum payout is %{min}."
+    date: "%{day} %{month} %{year}"
+    months:
+      - "January"
+      - "February"
+      - "March"
+      - "April"
+      - "May"
+      - "June"
+      - "July"
+      - "August"
+      - "September"
+      - "October"
+      - "November"
+      - "December"
+    ago:
+      now: "just now"
+      minutes: "%{n} min ago"
+      hours: "%{n} h ago"
+      days: "%{n} d ago"
+    cancel: "Cancel"
+    home:
+      state:
+        active: "Subscription active"
+        expiring: "Subscription ends soon"
+        expired: "Subscription has ended"
+      until: "until %{date}"
+      days_left:
+        zero: "less than a day left"
+        one: "%{count} day left"
+        few: "%{count} days left"
+        many: "%{count} days left"
+        other: "%{count} days left"
+      renew: "Renew"
+      from: "from %{price}"
+      promo: "Promo code %{code}: %{bonus} on your next payment"
+    connect:
+      title: "Connect a device"
+      server: "Server"
+      apple: "iPhone / iPad / Mac"
+      apple_note: "Install the profile"
+      android: "Android"
+      android_note: "strongSwan profile"
+      manual: "Manually"
+      manual_note: "Server, login, password"
+      step_1: "Download the profile"
+      step_2: "Open it"
+      step_3: "Turn the VPN on"
+    devices:
+      title: "My devices"
+      period: "last 30 days"
+      empty: "No connections yet. Set up a device above."
+      last_seen: "Last connected"
+      connections: "Connections"
+      reset: "Reset VPN password"
+      reset_hint: "If a device is lost or someone else uses your access, reset the password."
+      reset_title: "Reset the VPN password?"
+      reset_text: "Your VPN password will change: on their next connection all devices will need the new one and have to be set up again."
+      reset_confirm: "Reset password"
+      reset_done: "The VPN password is reset. Set your devices up again."
+    program:
+      title: "Earn with %{brand}"
+      lead: "Recommend us to friends and followers and get a share of every payment they make, for as long as they stay with us."
+      example: "From a %{price} subscription you get %{reward}."
+      example_fixed: "You get %{reward} from every payment of your client."
+      cta: "Subscribe and become a partner"
+      how_title: "How it works"
+      step_1: "Subscribe: the partner section opens after your first payment."
+      step_2: "Share your link or personal promo code. Whoever comes by them gets a discount."
+      step_3: "Get rewards for every payment of your clients and withdraw them in USDT."
+      shares_title: "How much you get"
+      share_1: "for your clients"
+      share_2: "for your clients' clients"
+      share_3: "for the third line"
+      shares_hint: "Your share of the reward from every payment, for as long as the clients pay."
+      discount: "Discount for those you invite"
+      payouts: "Payouts"
+      payouts_value: "USDT (TRC20), from %{min}"
+      hold: "Rewards become available"
+      hold_value:
+        one: "%{count} day after a payment"
+        few: "%{count} days after a payment"
+        many: "%{count} days after a payment"
+        other: "%{count} days after a payment"
+    settings:
+      title: "Settings"
+      account: "Account"
+  # Devise flash messages, in the language of the cabinet.
+  devise:
+    confirmations:
+      confirmed: "Your email address has been successfully confirmed."
+      send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+    failure:
+      already_authenticated: "You are already signed in."
+      inactive: "Your account is not activated yet."
+      invalid: "Invalid %{authentication_keys} or password."
+      locked: "Your account is locked."
+      last_attempt: "You have one more attempt before your account is locked."
+      not_found_in_database: "Invalid %{authentication_keys} or password."
+      timeout: "Your session expired. Please sign in again to continue."
+      unauthenticated: "You need to sign in or sign up before continuing."
+      unconfirmed: "You have to confirm your email address before continuing."
+    passwords:
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+      updated: "Your password has been changed successfully. You are now signed in."
+      updated_not_active: "Your password has been changed successfully."
+    registrations:
+      destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+      signed_up: "Welcome! You have signed up successfully."
+      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
+      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
+      updated: "Your account has been updated successfully."
+      updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again."
+    sessions:
+      signed_in: "Signed in successfully."
+      signed_out: "Signed out successfully."
+      already_signed_out: "Signed out successfully."

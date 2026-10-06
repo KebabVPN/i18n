@@ -219,7 +219,6 @@ tr:
     remember_me: Beni hatırla
     forgot_password: Parolanızı mı unuttunuz?
     resend_confirmation_link: Doğrulama e-postası gelmedi mi?
-    back_to_account: Hesabınıza dönün
     create_account: Hesap oluştur
     confirm_password: Parolayı doğrulayın
     password_min: "en az %{count} karakter"
@@ -235,29 +234,16 @@ tr:
     current_password: Mevcut parola
     current_password_hint: Kimliğinizi doğrulamak için gerekli
     change_password: Parolanızı değiştirin
-    subscription_title: Aboneliğiniz
-    status: Durum
-    active: Etkin
-    expired: Süresi doldu
-    valid_until: Geçerlilik tarihi
-    expired_on: Sona erdi
-    days_left: Kalan gün
-    configurations: Yapılandırmalar
     expired_warning: Aboneliğiniz sona erdi, yenileyene kadar bu yapılandırmalar bağlanmayacak.
-    manual_setup: Elle kurulum
-    manual_name: Ad
-    manual_type: Tür
     manual_server: Sunucu
     manual_username: Kullanıcı adı
     manual_password: Parola
-    apple: Apple
-    android: Android
     language: Dil
     turnstile_failed: Lütfen robot olmadığınızı doğrulayın ve tekrar deneyin.
     # Cabinet shell: section tabs and shared controls.
     nav:
-      account: Abonelik
-      devices: Cihazlar
+      home: "Ana sayfa"
+      plans: "Paketler"
       payments: Ödemeler
       partner: Ortaklık
       settings: Ayarlar
@@ -265,18 +251,32 @@ tr:
     # Cabinet sections: subscription, payments, partner program, bot sign-in.
     login_link_invalid: Bu giriş bağlantısı geçersiz veya zaten kullanılmış. Bottan yeni bir bağlantı alın ya da e-postanızla giriş yapın.
     plans:
+      lead: "Tüm paketler tüm sunuculara erişim sağlar."
+      choose: "Paket seçin"
+      months:
+        one: "%{count} ay"
+        few: "%{count} ay"
+        many: "%{count} ay"
+        other: "%{count} ay"
+      per_month: "%{price}/ay"
+      promo_chip: "%{code}: %{bonus}"
+      method_title: "Ödeme yöntemi"
+      recommended: "Önerilen"
+      no_promo: "Promosyon kodları geçerli değil"
+      pay: "Öde"
+      pay_amount: "%{amount} öde"
       title: Planlar
       none: Şu anda kullanılabilir plan yok.
       period: "%{count} gün"
       best: En avantajlı
-      promo_note: Promosyon kodunuzla fiyat
-      bonus_note: "Promosyon kodunuzla %{bonus}"
       unavailable: Bu plan veya ödeme yöntemi kullanılamıyor.
     pm:
-      stripe_payment: Kart
-      stripe_subscription: Kart, otomatik yenileme
-      pay2day: Rus banka kartı
+      stripe_payment: "Yurt dışı kartı"
+      stripe_subscription: "Otomatik yenileme (yurt dışı kartı)"
+      pay2day: "SBP (Rus bankaları)"
+      usdt: "USDT (TRC20)"
     promo:
+      have_code: "Promosyon kodunuz var mı?"
       title: Promosyon kodu
       placeholder: Promosyon kodunu girin
       apply: Uygula
@@ -296,11 +296,12 @@ tr:
         count: 1 ile 500 arasında kod seçin.
         form: Lütfen formu kontrol edip tekrar deneyin.
     usdt:
-      title: USDT (TRC20) ile öde
+      any_amount: "Herhangi bir tutar"
       hint: TRON ağında (TRC20) USDT'yi kişisel adresinize gönderin. Abonelik, tutarla orantılı olarak otomatik uzatılır.
       pending: Adresiniz hazırlanıyor. Bir dakika sonra sayfayı yenileyin.
       no_promo: Promosyon kodları USDT ödemelerinde geçerli değildir.
     payments:
+      to_plans: "Paket seçin"
       title: Ödemeler
       empty: Henüz ödeme yok.
       date: Tarih
@@ -309,7 +310,6 @@ tr:
       method: Yöntem
       promo: Promosyon kodu
       usdt_deposit: USDT yüklemesi
-      usdt_method: USDT (TRC20)
     partner:
       locked_title: Ortaklık programı
       locked_text: Referans bağlantınız, promosyon kodlarınız ve ödülleriniz ilk ödemenizden sonra kullanılabilir olur.
@@ -328,7 +328,6 @@ tr:
       line_1: müşteriniz
       line_2: 2. seviye
       line_3: 3. seviye
-      balance_title: Bakiye
       available: Kullanılabilir
       on_hold: Beklemede
       paid: Ödenen
@@ -379,3 +378,124 @@ tr:
         no_address: Önce ödemeler için bir TRC20 adresi ekleyin.
         already_requested: Zaten işlenmekte olan bir ödeme talebiniz var.
         below_minimum: "Minimum ödeme tutarı %{min}."
+    date: "%{day} %{month} %{year}"
+    months:
+      - "Ocak"
+      - "Şubat"
+      - "Mart"
+      - "Nisan"
+      - "Mayıs"
+      - "Haziran"
+      - "Temmuz"
+      - "Ağustos"
+      - "Eylül"
+      - "Ekim"
+      - "Kasım"
+      - "Aralık"
+    ago:
+      now: "az önce"
+      minutes: "%{n} dk önce"
+      hours: "%{n} sa önce"
+      days: "%{n} gün önce"
+    cancel: "İptal"
+    home:
+      state:
+        active: "Abonelik aktif"
+        expiring: "Abonelik yakında bitiyor"
+        expired: "Abonelik sona erdi"
+      until: "%{date} tarihine kadar"
+      days_left:
+        zero: "bir günden az kaldı"
+        one: "%{count} gün kaldı"
+        few: "%{count} gün kaldı"
+        many: "%{count} gün kaldı"
+        other: "%{count} gün kaldı"
+      renew: "Yenile"
+      from: "%{price} başlayan fiyatlarla"
+      promo: "%{code} promosyon kodu: sonraki ödemede %{bonus}"
+    connect:
+      title: "Cihaz bağla"
+      server: "Sunucu"
+      apple: "iPhone / iPad / Mac"
+      apple_note: "Profili yükleyin"
+      android: "Android"
+      android_note: "strongSwan profili"
+      manual: "Elle"
+      manual_note: "Sunucu, kullanıcı adı, şifre"
+      step_1: "Profili indirin"
+      step_2: "Açın"
+      step_3: "VPN'i açın"
+    devices:
+      title: "Cihazlarım"
+      period: "son 30 gün"
+      empty: "Henüz bağlantı yok. Yukarıdan bir cihaz kurun."
+      last_seen: "Son bağlantı"
+      connections: "Bağlantı"
+      reset: "VPN şifresini sıfırla"
+      reset_hint: "Bir cihaz kaybolduysa veya erişiminizi başkası kullanıyorsa şifreyi sıfırlayın."
+      reset_title: "VPN şifresi sıfırlansın mı?"
+      reset_text: "VPN şifreniz değişecek: tüm cihazlar bir sonraki bağlantıda yeni şifreyi isteyecek ve yeniden kurulmaları gerekecek."
+      reset_confirm: "Şifreyi sıfırla"
+      reset_done: "VPN şifresi sıfırlandı. Cihazlarınızı yeniden kurun."
+    program:
+      title: "%{brand} ile kazanın"
+      lead: "Bizi arkadaşlarınıza ve takipçilerinize önerin, bizimle kaldıkları sürece her ödemelerinden pay alın."
+      example: "%{price} tutarındaki bir abonelikten %{reward} kazanırsınız."
+      example_fixed: "Müşterinizin her ödemesinden %{reward} kazanırsınız."
+      cta: "Abone olun ve ortak olun"
+      how_title: "Nasıl çalışır"
+      step_1: "Abone olun: ortaklık bölümü ilk ödemenizden sonra açılır."
+      step_2: "Bağlantınızı veya kişisel promosyon kodunuzu paylaşın. Bunlarla gelenler indirim alır."
+      step_3: "Müşterilerinizin her ödemesinden ödül alın ve USDT olarak çekin."
+      shares_title: "Ne kadar kazanırsınız"
+      share_1: "müşterileriniz için"
+      share_2: "müşterilerinizin müşterileri için"
+      share_3: "üçüncü seviye"
+      shares_hint: "Müşteriler ödeme yaptıkça her ödemenin ödülünden aldığınız pay."
+      discount: "Davet ettiklerinize indirim"
+      payouts: "Ödemeler"
+      payouts_value: "USDT (TRC20), en az %{min}"
+      hold: "Ödüller kullanılabilir"
+      hold_value:
+        one: "ödemeden %{count} gün sonra"
+        few: "ödemeden %{count} gün sonra"
+        many: "ödemeden %{count} gün sonra"
+        other: "ödemeden %{count} gün sonra"
+    settings:
+      title: "Ayarlar"
+      account: "Hesap"
+  # Devise flash messages, in the language of the cabinet.
+  devise:
+    confirmations:
+      confirmed: "E-posta adresiniz onaylandı."
+      send_instructions: "Birkaç dakika içinde e-posta adresinizi nasıl onaylayacağınızı anlatan bir e-posta alacaksınız."
+      send_paranoid_instructions: "E-posta adresiniz veritabanımızda varsa, birkaç dakika içinde onay talimatlarını içeren bir e-posta alacaksınız."
+    failure:
+      already_authenticated: "Zaten giriş yaptınız."
+      inactive: "Hesabınız henüz etkinleştirilmedi."
+      invalid: "Geçersiz %{authentication_keys} veya şifre."
+      locked: "Hesabınız kilitlendi."
+      last_attempt: "Hesabınız kilitlenmeden önce bir deneme hakkınız kaldı."
+      not_found_in_database: "Geçersiz %{authentication_keys} veya şifre."
+      timeout: "Oturumunuzun süresi doldu. Devam etmek için tekrar giriş yapın."
+      unauthenticated: "Devam etmek için giriş yapın veya kaydolun."
+      unconfirmed: "Devam etmek için e-posta adresinizi onaylamanız gerekiyor."
+    passwords:
+      no_token: "Bu sayfaya yalnızca şifre sıfırlama e-postasındaki bağlantıyla erişebilirsiniz. O e-postadan geldiyseniz, bağlantının tamamını açtığınızdan emin olun."
+      send_instructions: "Birkaç dakika içinde şifrenizi nasıl sıfırlayacağınızı anlatan bir e-posta alacaksınız."
+      send_paranoid_instructions: "E-posta adresiniz veritabanımızda varsa, birkaç dakika içinde şifre sıfırlama bağlantısı içeren bir e-posta alacaksınız."
+      updated: "Şifreniz değiştirildi. Giriş yaptınız."
+      updated_not_active: "Şifreniz değiştirildi."
+    registrations:
+      destroyed: "Hoşça kalın! Hesabınız silindi. Sizi yeniden görmeyi umuyoruz."
+      signed_up: "Hoş geldiniz! Kaydınız tamamlandı."
+      signed_up_but_inactive: "Kaydınız tamamlandı, ancak hesabınız henüz etkinleştirilmediği için giriş yapamadınız."
+      signed_up_but_locked: "Kaydınız tamamlandı, ancak hesabınız kilitli olduğu için giriş yapamadınız."
+      signed_up_but_unconfirmed: "E-posta adresinize onay bağlantısı içeren bir mesaj gönderdik. Hesabınızı etkinleştirmek için bağlantıyı açın."
+      update_needs_confirmation: "Hesabınız güncellendi, ancak yeni e-posta adresinizi onaylamanız gerekiyor. E-postanızı kontrol edip onay bağlantısını açın."
+      updated: "Hesabınız güncellendi."
+      updated_but_not_signed_in: "Hesabınız güncellendi. Şifreniz değiştiği için yeniden giriş yapmanız gerekiyor."
+    sessions:
+      signed_in: "Giriş yapıldı."
+      signed_out: "Çıkış yapıldı."
+      already_signed_out: "Çıkış yapıldı."

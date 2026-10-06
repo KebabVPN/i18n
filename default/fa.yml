@@ -170,7 +170,6 @@ fa:
     remember_me: مرا به خاطر بسپار
     forgot_password: رمز عبور را فراموش کرده‌اید؟
     resend_confirmation_link: ایمیل تأیید را دریافت نکردید؟
-    back_to_account: بازگشت به حساب کاربری
     create_account: ایجاد حساب کاربری
     confirm_password: تکرار رمز عبور
     password_min: "حداقل %{count} کاراکتر"
@@ -186,29 +185,16 @@ fa:
     current_password: رمز عبور فعلی
     current_password_hint: برای تأیید هویت شما لازم است
     change_password: تغییر رمز عبور
-    subscription_title: اشتراک شما
-    status: وضعیت
-    active: فعال
-    expired: منقضی شده
-    valid_until: معتبر تا
-    expired_on: منقضی شده در
-    days_left: روزهای باقی‌مانده
-    configurations: پیکربندی‌ها
     expired_warning: اشتراک شما به پایان رسیده است و تا زمان تمدید، این پیکربندی‌ها متصل نمی‌شوند.
-    manual_setup: تنظیم دستی
-    manual_name: نام
-    manual_type: نوع
     manual_server: سرور
     manual_username: نام کاربری
     manual_password: رمز عبور
-    apple: Apple
-    android: Android
     language: زبان
     turnstile_failed: لطفاً تأیید کنید که ربات نیستید و دوباره تلاش کنید.
     # Cabinet shell: section tabs and shared controls.
     nav:
-      account: اشتراک
-      devices: دستگاه‌ها
+      home: "خانه"
+      plans: "تعرفه‌ها"
       payments: پرداخت‌ها
       partner: همکاری
       settings: تنظیمات
@@ -216,18 +202,32 @@ fa:
     # Cabinet sections: subscription, payments, partner program, bot sign-in.
     login_link_invalid: این لینک ورود نامعتبر است یا قبلاً استفاده شده است. از ربات لینک جدیدی بگیرید یا با ایمیل وارد شوید.
     plans:
+      lead: "همه تعرفه‌ها به همه سرورها دسترسی می‌دهند."
+      choose: "انتخاب تعرفه"
+      months:
+        one: "%{count} ماه"
+        few: "%{count} ماه"
+        many: "%{count} ماه"
+        other: "%{count} ماه"
+      per_month: "%{price}/ماه"
+      promo_chip: "%{code}: %{bonus}"
+      method_title: "روش پرداخت"
+      recommended: "پیشنهادی"
+      no_promo: "کد تخفیف اعمال نمی‌شود"
+      pay: "پرداخت"
+      pay_amount: "پرداخت %{amount}"
       title: طرح‌ها
       none: در حال حاضر طرحی در دسترس نیست.
       period: "%{count} روز"
       best: به‌صرفه‌ترین
-      promo_note: قیمت با کد تخفیف شما
-      bonus_note: "%{bonus} با کد تخفیف شما"
       unavailable: این طرح یا روش پرداخت در دسترس نیست.
     pm:
-      stripe_payment: کارت بانکی
-      stripe_subscription: کارت بانکی، تمدید خودکار
-      pay2day: کارت بانکی روسیه
+      stripe_payment: "کارت بین‌المللی"
+      stripe_subscription: "تمدید خودکار (کارت بین‌المللی)"
+      pay2day: "SBP (بانک‌های روسیه)"
+      usdt: "USDT (TRC20)"
     promo:
+      have_code: "کد تخفیف دارید؟"
       title: کد تخفیف
       placeholder: کد تخفیف را وارد کنید
       apply: اعمال
@@ -247,11 +247,12 @@ fa:
         count: بین ۱ تا ۵۰۰ کد انتخاب کنید.
         form: لطفاً فرم را بررسی کرده و دوباره تلاش کنید.
     usdt:
-      title: پرداخت با USDT (TRC20)
+      any_amount: "هر مبلغی"
       hint: USDT را در شبکه TRON (TRC20) به آدرس شخصی خود ارسال کنید. اشتراک به‌طور خودکار و متناسب با مبلغ تمدید می‌شود.
       pending: آدرس شما در حال آماده‌سازی است. یک دقیقه دیگر صفحه را تازه کنید.
       no_promo: کدهای تخفیف برای پرداخت با USDT اعمال نمی‌شوند.
     payments:
+      to_plans: "انتخاب تعرفه"
       title: پرداخت‌ها
       empty: هنوز پرداختی انجام نشده است.
       date: تاریخ
@@ -260,7 +261,6 @@ fa:
       method: روش
       promo: کد تخفیف
       usdt_deposit: شارژ USDT
-      usdt_method: USDT (TRC20)
     partner:
       locked_title: برنامه همکاری
       locked_text: لینک معرفی، کدهای تخفیف و پاداش‌ها پس از اولین پرداخت شما در دسترس قرار می‌گیرند.
@@ -279,7 +279,6 @@ fa:
       line_1: مشتری شما
       line_2: سطح ۲
       line_3: سطح ۳
-      balance_title: موجودی
       available: قابل برداشت
       on_hold: در انتظار
       paid: پرداخت‌شده
@@ -330,3 +329,124 @@ fa:
         no_address: ابتدا یک آدرس TRC20 برای دریافت وارد کنید.
         already_requested: شما یک درخواست برداشت در حال بررسی دارید.
         below_minimum: "حداقل مبلغ برداشت %{min} است."
+    date: "%{day} %{month} %{year}"
+    months:
+      - "ژانویه"
+      - "فوریه"
+      - "مارس"
+      - "آوریل"
+      - "مه"
+      - "ژوئن"
+      - "ژوئیه"
+      - "اوت"
+      - "سپتامبر"
+      - "اکتبر"
+      - "نوامبر"
+      - "دسامبر"
+    ago:
+      now: "همین الان"
+      minutes: "%{n} دقیقه پیش"
+      hours: "%{n} ساعت پیش"
+      days: "%{n} روز پیش"
+    cancel: "انصراف"
+    home:
+      state:
+        active: "اشتراک فعال است"
+        expiring: "اشتراک به‌زودی تمام می‌شود"
+        expired: "اشتراک تمام شده است"
+      until: "تا %{date}"
+      days_left:
+        zero: "کمتر از یک روز باقی مانده"
+        one: "%{count} روز باقی مانده"
+        few: "%{count} روز باقی مانده"
+        many: "%{count} روز باقی مانده"
+        other: "%{count} روز باقی مانده"
+      renew: "تمدید"
+      from: "از %{price}"
+      promo: "کد تخفیف %{code}: %{bonus} در پرداخت بعدی"
+    connect:
+      title: "اتصال دستگاه"
+      server: "سرور"
+      apple: "iPhone / iPad / Mac"
+      apple_note: "نصب پروفایل"
+      android: "Android"
+      android_note: "پروفایل strongSwan"
+      manual: "دستی"
+      manual_note: "سرور، نام کاربری، رمز عبور"
+      step_1: "پروفایل را دانلود کنید"
+      step_2: "آن را باز کنید"
+      step_3: "VPN را روشن کنید"
+    devices:
+      title: "دستگاه‌های من"
+      period: "۳۰ روز اخیر"
+      empty: "هنوز هیچ اتصالی نیست. یک دستگاه را در بالا تنظیم کنید."
+      last_seen: "آخرین اتصال"
+      connections: "تعداد اتصال"
+      reset: "بازنشانی رمز VPN"
+      reset_hint: "اگر دستگاهی گم شده یا شخص دیگری از دسترسی شما استفاده می‌کند، رمز را بازنشانی کنید."
+      reset_title: "رمز VPN بازنشانی شود؟"
+      reset_text: "رمز VPN تغییر می‌کند: همه دستگاه‌ها در اتصال بعدی به رمز جدید نیاز دارند و باید دوباره تنظیم شوند."
+      reset_confirm: "بازنشانی رمز"
+      reset_done: "رمز VPN بازنشانی شد. دستگاه‌های خود را دوباره تنظیم کنید."
+    program:
+      title: "با %{brand} درآمد کسب کنید"
+      lead: "ما را به دوستان و دنبال‌کنندگانتان معرفی کنید و تا زمانی که با ما هستند از هر پرداختشان سهم بگیرید."
+      example: "از اشتراکی به مبلغ %{price}، %{reward} دریافت می‌کنید."
+      example_fixed: "از هر پرداخت مشتری‌تان %{reward} دریافت می‌کنید."
+      cta: "اشتراک بگیرید و همکار شوید"
+      how_title: "چگونه کار می‌کند"
+      step_1: "اشتراک بگیرید: بخش همکاری پس از اولین پرداخت باز می‌شود."
+      step_2: "لینک یا کد تخفیف شخصی خود را به اشتراک بگذارید. کسانی که با آن‌ها بیایند تخفیف می‌گیرند."
+      step_3: "از هر پرداخت مشتریانتان پاداش بگیرید و آن را به USDT برداشت کنید."
+      shares_title: "چقدر دریافت می‌کنید"
+      share_1: "برای مشتریان شما"
+      share_2: "برای مشتریانِ مشتریان شما"
+      share_3: "سطح سوم"
+      shares_hint: "سهم شما از پاداش هر پرداخت، تا زمانی که مشتریان پرداخت می‌کنند."
+      discount: "تخفیف برای دعوت‌شدگان"
+      payouts: "برداشت‌ها"
+      payouts_value: "USDT (TRC20)، از %{min}"
+      hold: "پاداش در دسترس است"
+      hold_value:
+        one: "%{count} روز پس از پرداخت"
+        few: "%{count} روز پس از پرداخت"
+        many: "%{count} روز پس از پرداخت"
+        other: "%{count} روز پس از پرداخت"
+    settings:
+      title: "تنظیمات"
+      account: "حساب"
+  # Devise flash messages, in the language of the cabinet.
+  devise:
+    confirmations:
+      confirmed: "نشانی ایمیل شما تأیید شد."
+      send_instructions: "تا چند دقیقه دیگر ایمیلی با راهنمای تأیید نشانی ایمیل دریافت می‌کنید."
+      send_paranoid_instructions: "اگر نشانی ایمیل شما در سامانه ما باشد، تا چند دقیقه دیگر ایمیلی با راهنمای تأیید دریافت می‌کنید."
+    failure:
+      already_authenticated: "شما قبلاً وارد شده‌اید."
+      inactive: "حساب شما هنوز فعال نشده است."
+      invalid: "%{authentication_keys} یا رمز عبور نادرست است."
+      locked: "حساب شما قفل شده است."
+      last_attempt: "یک تلاش دیگر دارید، پس از آن حساب شما قفل می‌شود."
+      not_found_in_database: "%{authentication_keys} یا رمز عبور نادرست است."
+      timeout: "نشست شما منقضی شده است. برای ادامه دوباره وارد شوید."
+      unauthenticated: "برای ادامه وارد شوید یا ثبت‌نام کنید."
+      unconfirmed: "برای ادامه باید نشانی ایمیل خود را تأیید کنید."
+    passwords:
+      no_token: "این صفحه فقط از طریق لینک ایمیل بازنشانی رمز عبور باز می‌شود. اگر از همان ایمیل آمده‌اید، مطمئن شوید که لینک کامل را باز کرده‌اید."
+      send_instructions: "تا چند دقیقه دیگر ایمیلی با راهنمای بازنشانی رمز عبور دریافت می‌کنید."
+      send_paranoid_instructions: "اگر نشانی ایمیل شما در سامانه ما باشد، تا چند دقیقه دیگر لینک بازیابی رمز عبور را دریافت می‌کنید."
+      updated: "رمز عبور شما تغییر کرد و وارد شدید."
+      updated_not_active: "رمز عبور شما تغییر کرد."
+    registrations:
+      destroyed: "خداحافظ! حساب شما حذف شد. امیدواریم دوباره شما را ببینیم."
+      signed_up: "خوش آمدید! ثبت‌نام شما انجام شد."
+      signed_up_but_inactive: "ثبت‌نام انجام شد، اما چون حساب شما هنوز فعال نشده نمی‌توانید وارد شوید."
+      signed_up_but_locked: "ثبت‌نام انجام شد، اما چون حساب شما قفل است نمی‌توانید وارد شوید."
+      signed_up_but_unconfirmed: "پیامی با لینک تأیید به ایمیل شما فرستادیم. برای فعال‌سازی حساب روی لینک بزنید."
+      update_needs_confirmation: "حساب شما به‌روزرسانی شد، اما باید نشانی ایمیل جدید را تأیید کنید. ایمیل خود را بررسی کرده و روی لینک تأیید بزنید."
+      updated: "حساب شما به‌روزرسانی شد."
+      updated_but_not_signed_in: "حساب شما به‌روزرسانی شد. چون رمز عبور تغییر کرده، باید دوباره وارد شوید."
+    sessions:
+      signed_in: "با موفقیت وارد شدید."
+      signed_out: "با موفقیت خارج شدید."
+      already_signed_out: "با موفقیت خارج شدید."
