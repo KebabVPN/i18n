@@ -53,7 +53,7 @@ vpnremy_en:
     text: |
       *🌟 Welcome! 🌟*
 
-      Thank you for choosing [RemyVPN](https://vpnremy.com). To start using VPN, you need to press the *Configurations* button below and you will get the configuration file which you need to install to your device. Detailed guide is available at https://vpnremy.com. All options are available by running /help command.
+      Thank you for choosing [VPNRemy](https://vpnremy.com). To start using VPN, you need to press the *Configurations* button below and you will get the configuration file which you need to install to your device. Detailed guide is available at https://vpnremy.com. All options are available by running /help command.
   # --------------------------------------------------------
   sub_extended:
     text: |
