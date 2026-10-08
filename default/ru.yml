@@ -282,7 +282,7 @@ ru:
       apply: Применить
       applied: Промокод применён. Он сработает при следующей оплате.
       current: "Применён: %{code} (%{bonus})"
-      current_hint: Действует при разовой оплате картой. Автопродление и USDT — по полной цене.
+      current_hint: Действует при оплате по СБП и разовой оплате картой. Автопродление и USDT — по полной цене.
       bonus_percent: "−%{value}%"
       bonus_days: "+%{count} дн."
       errors:
@@ -464,6 +464,19 @@ ru:
     settings:
       title: "Настройки"
       account: "Аккаунт"
+      pending_email: "Ждёт подтверждения"
+      telegram: "Telegram"
+      telegram_link_hint: "Привяжите Telegram, чтобы входить через него и видеть здесь подписку из бота."
+      credentials: "Почта и пароль для входа"
+      credentials_hint: "На этот адрес придёт ссылка для подтверждения. Почта сменится после подтверждения, пароль — сразу."
+      email_taken: "Эта почта уже зарегистрирована. Войдите по почте и привяжите Telegram в настройках."
+    # Telegram Login Widget: signing in and linking in Settings.
+    tg_login:
+      invalid: "Не удалось войти через Telegram или ссылка устарела. Попробуйте ещё раз."
+      inactive: "Сейчас войти в этот аккаунт нельзя. Напишите в поддержку @Techru1."
+      linked: "Telegram привязан к аккаунту."
+      merged: "Telegram привязан, подписка и данные из бота теперь в этом аккаунте."
+      telegram_taken: "Этот Telegram уже привязан к другому аккаунту. Напишите в поддержку @Techru1."
   # Devise flash messages, in the language of the cabinet.
   devise:
     confirmations:

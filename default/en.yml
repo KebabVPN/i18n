@@ -282,7 +282,7 @@ en:
       apply: Apply
       applied: The promo code is applied. It will be used on your next payment.
       current: "Applied: %{code} (%{bonus})"
-      current_hint: Works with one-time card payments. Auto-renewal and USDT payments are charged at the full price.
+      current_hint: Works with SBP and one-time card payments. Auto-renewal and USDT are charged at the full price.
       bonus_percent: "−%{value}%"
       bonus_days: "+%{count} days"
       errors:
@@ -464,6 +464,19 @@ en:
     settings:
       title: "Settings"
       account: "Account"
+      pending_email: "Waiting for confirmation"
+      telegram: "Telegram"
+      telegram_link_hint: "Link Telegram to sign in with it and to see your subscription from the bot here."
+      credentials: "Email and password for signing in"
+      credentials_hint: "We will send a confirmation link to this address. The email changes once you confirm it, the password right away."
+      email_taken: "This email is already registered. Sign in with it and link Telegram in Settings."
+    # Telegram Login Widget: signing in and linking in Settings.
+    tg_login:
+      invalid: "Telegram sign-in failed or has expired. Please try again."
+      inactive: "This account can not sign in right now. Please contact support @Techru1."
+      linked: "Telegram is linked to your account."
+      merged: "Telegram is linked: your subscription and data from the bot are now in this account."
+      telegram_taken: "This Telegram is already linked to another account. Please contact support @Techru1."
   # Devise flash messages, in the language of the cabinet.
   devise:
     confirmations:

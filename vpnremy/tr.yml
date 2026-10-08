@@ -20,6 +20,7 @@ vpnremy_tr:
     cabinet: 👤 Kişisel hesap
     cabinet_open: 🔐 Hesabınıza giriş yapın
     promo_generate: 🎟 Promosyon kodu oluştur
+    promo_enter: 🎟 Promosyon kodu gir
     platform_apple:  Apple (iOS, MacOS)
     platform_android: 📱 Android
     platform_custom: 🔑 Diğer
@@ -46,19 +47,19 @@ vpnremy_tr:
 
       ℹ️ /help - Komut listesini alın
 
-      🤖 @tolyhan - Destek alın
+      🤖 @Techru1 - Destek alın
   # --------------------------------------------------------
   start:
     text: |
       *🌟 Hoş geldiniz! 🌟*
 
-      [VPNREMY](https://vpnremy.com) seçtiğiniz için teşekkür ederiz. VPN kullanmaya başlamak için aşağıdaki *Konfigürasyonlar* düğmesine basmanız ve cihazınıza kurmanız gereken yapılandırma dosyasını almanız gerekiyor. Ayrıntılı kılavuz https://vpnremy.com adresinde bulunmaktadır. Tüm seçenekler, /help komutunu çalıştırarak kullanılabilir.
+      [RemyVPN](https://vpnremy.com) seçtiğiniz için teşekkür ederiz. VPN kullanmaya başlamak için aşağıdaki *Konfigürasyonlar* düğmesine basmanız ve cihazınıza kurmanız gereken yapılandırma dosyasını almanız gerekiyor. Ayrıntılı kılavuz https://vpnremy.com adresinde bulunmaktadır. Tüm seçenekler, /help komutunu çalıştırarak kullanılabilir.
   # --------------------------------------------------------
   sub_extended:
     text: |
       🌟 *Tebrikler!* 🌟
 
-      *%<days>s* gün VPN kullanımı kazandınız! Geri bildiriminizi @tolyhan'ta bize yazmaktan çekinmeyin! 🫶
+      *%<days>s* gün VPN kullanımı kazandınız! Geri bildiriminizi @Techru1 üzerinden bize yazmaktan çekinmeyin! 🫶
 
       Aboneliğiniz *%<exp>s* tarihinde sona eriyor.
   # --------------------------------------------------------
@@ -70,7 +71,7 @@ vpnremy_tr:
 
       Hizmetleri kullanmaya devam etmek için /subscription komutunu izlemeniz gerekiyor.
 
-      Herhangi bir sorunuz varsa lütfen bize @tolyhan üzerinden yazın! 🫶
+      Herhangi bir sorunuz varsa lütfen bize @Techru1 üzerinden yazın! 🫶
   # --------------------------------------------------------
   sub_expiring:
     text: |
@@ -80,7 +81,7 @@ vpnremy_tr:
 
       VPN'i kesintisiz kullanmak için aboneliğinizi /subscription komutuyla yenileyin.
 
-      Herhangi bir sorunuz varsa lütfen bize @tolyhan üzerinden yazın! 🫶
+      Herhangi bir sorunuz varsa lütfen bize @Techru1 üzerinden yazın! 🫶
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅
@@ -124,7 +125,7 @@ vpnremy_tr:
 
       USDT yatırımları etkin fiyatlandırmaya göre USD olarak hesaplanır. Örneğin, 12 ay için ödeme yapmak istiyorsanız, sadece `49.99` USDT transfer edin. Herhangi bir miktarı transfer edebilirsiniz, abonelik bitiş tarihi bu oranda hesaplanacaktır.
 
-      İşlemin işlenmesi için *20 onayı* bekliyoruz, bu nedenle bir süre beklemeniz gerekebilir. İşlem işlendikten sonra, yatırımınızın onayını içeren bir bildirim alacaksınız. Yatırımınız hesaba geçmezse, lütfen bize @tolyhan üzerinden yazın.
+      İşlemin işlenmesi için *20 onayı* bekliyoruz, bu nedenle bir süre beklemeniz gerekebilir. İşlem işlendikten sonra, yatırımınızın onayını içeren bir bildirim alacaksınız. Yatırımınız hesaba geçmezse, lütfen bize @Techru1 üzerinden yazın.
   # --------------------------------------------------------
   config:
     text: |
@@ -212,7 +213,7 @@ vpnremy_tr:
       VPN süresi kazanma oranı: *%<ref_time_percent>s*
       Para kazanma oranı: *%<ref_money_percent>s*
 
-      Para çekme için bilgilerinizi sağlamak için @tolyhan ile iletişime geçin.
+      Para çekme için bilgilerinizi sağlamak için @Techru1 ile iletişime geçin.
   # --------------------------------------------------------
   cabinet:
     text: |
@@ -221,12 +222,19 @@ vpnremy_tr:
       Giriş yapmak için aşağıdaki düğmeye dokunun. Bağlantı yalnızca bir kez çalışır ve 10 dakika geçerlidir.
   # --------------------------------------------------------
   referral_v2:
+    example: "%<price>s tutarındaki bir abonelikten %<reward>s kazanırsınız."
+    example_fixed: "Müşterinizin her ödemesinden %<reward>s kazanırsınız."
+    friend: "Arkadaşınız ilk ödemesinde %<bonus>s kazanır."
     text: |
       *💰 Referans*
 
       Davet bağlantınız: `%<link>s`
       Promosyon kodunuz: `%<code>s`
       Kopyalamak için dokunun ve arkadaşlarınızla paylaşın: ilk ödemelerinde bonus kazanırlar, siz de yaptıkları her ödemeden kazanırsınız.
+
+      Müşterilerinizin ödemelerinden ödülün %%60'ını, onların müşterilerinden %%30'unu, üçüncü seviyeden %%10'unu alırsınız.
+      %<terms>s
+      Bakiye: kullanılabilir *%<available>s*, beklemede *%<on_hold>s*.
 
       İstatistikler, bakiye ve para çekme işlemleri kişisel hesabınızda.
   # --------------------------------------------------------
@@ -277,3 +285,27 @@ vpnremy_tr:
   unknown:
     text: |
       Bilinmeyen komut, lütfen tüm komutları listelemek için /help komutunu çalıştırın!
+  # --------------------------------------------------------
+  promo_enter:
+    text: |
+      *🎟 Promosyon kodu*
+
+      Promosyon kodunu tek bir mesaj olarak gönderin.
+  # --------------------------------------------------------
+  promo_applied:
+    text: |
+      ✅ `%<code>s` promosyon kodu uygulandı: %<bonus>s. SBP ile veya tek seferlik kart ödemesiyle ödediğinizde geçerli olur.
+  # --------------------------------------------------------
+  promo_current:
+    text: |
+      🎟 Uygulanan promosyon kodu `%<code>s`: %<bonus>s
+  # --------------------------------------------------------
+  promo:
+    bonus_percent: "−%%%<value>s"
+    bonus_days: "+%<count>s gün"
+    errors:
+      not_found: "❌ Böyle bir promosyon kodu yok."
+      expired: "❌ Bu promosyon kodunun süresi doldu."
+      used_up: "❌ Bu promosyon kodu zaten kullanıldı."
+      own_code: "❌ Kendi promosyon kodunuzu kullanamazsınız."
+      already_used: "❌ Daha önce bir promosyon kodu bonusu aldınız."

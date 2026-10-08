@@ -282,7 +282,7 @@ tr:
       apply: Uygula
       applied: Promosyon kodu uygulandı. Bir sonraki ödemenizde kullanılacak.
       current: "Uygulandı: %{code} (%{bonus})"
-      current_hint: Tek seferlik kart ödemelerinde geçerlidir. Otomatik yenileme ve USDT ödemeleri tam fiyattan alınır.
+      current_hint: SBP ve tek seferlik kart ödemelerinde geçerlidir. Otomatik yenileme ve USDT ödemeleri tam fiyattan alınır.
       bonus_percent: "−%%%{value}"
       bonus_days: "+%{count} gün"
       errors:
@@ -464,6 +464,19 @@ tr:
     settings:
       title: "Ayarlar"
       account: "Hesap"
+      pending_email: "Onay bekleniyor"
+      telegram: "Telegram"
+      telegram_link_hint: "Telegram ile giriş yapmak ve bottaki aboneliğinizi burada görmek için Telegram'ı bağlayın."
+      credentials: "Giriş için e-posta ve şifre"
+      credentials_hint: "Bu adrese bir onay bağlantısı göndereceğiz. E-posta adresiniz onaydan sonra, şifreniz ise hemen değişir."
+      email_taken: "Bu e-posta zaten kayıtlı. E-postayla giriş yapın ve Ayarlar'dan Telegram'ı bağlayın."
+    # Telegram Login Widget: signing in and linking in Settings.
+    tg_login:
+      invalid: "Telegram ile giriş başarısız oldu veya süresi doldu. Lütfen tekrar deneyin."
+      inactive: "Bu hesapla şu anda giriş yapılamıyor. Lütfen destekle iletişime geçin: @Techru1."
+      linked: "Telegram hesabınıza bağlandı."
+      merged: "Telegram bağlandı: bottaki aboneliğiniz ve verileriniz artık bu hesapta."
+      telegram_taken: "Bu Telegram zaten başka bir hesaba bağlı. Lütfen destekle iletişime geçin: @Techru1."
   # Devise flash messages, in the language of the cabinet.
   devise:
     confirmations:

@@ -233,7 +233,7 @@ fa:
       apply: اعمال
       applied: کد تخفیف اعمال شد و در پرداخت بعدی استفاده می‌شود.
       current: "اعمال‌شده: %{code} (%{bonus})"
-      current_hint: فقط برای پرداخت یک‌باره با کارت. تمدید خودکار و پرداخت USDT با قیمت کامل است.
+      current_hint: برای پرداخت با SBP و پرداخت یک‌باره با کارت. تمدید خودکار و پرداخت USDT با قیمت کامل است.
       bonus_percent: "−%{value}٪"
       bonus_days: "+%{count} روز"
       errors:
@@ -415,6 +415,19 @@ fa:
     settings:
       title: "تنظیمات"
       account: "حساب"
+      pending_email: "در انتظار تأیید"
+      telegram: "تلگرام"
+      telegram_link_hint: "تلگرام را متصل کنید تا با آن وارد شوید و اشتراک ربات را اینجا ببینید."
+      credentials: "ایمیل و رمز عبور برای ورود"
+      credentials_hint: "یک لینک تأیید به این آدرس می‌فرستیم. ایمیل پس از تأیید و رمز عبور بلافاصله تغییر می‌کند."
+      email_taken: "این ایمیل قبلاً ثبت شده است. با ایمیل وارد شوید و تلگرام را در تنظیمات متصل کنید."
+    # Telegram Login Widget: signing in and linking in Settings.
+    tg_login:
+      invalid: "ورود با تلگرام ناموفق بود یا منقضی شده است. لطفاً دوباره تلاش کنید."
+      inactive: "در حال حاضر امکان ورود به این حساب وجود ندارد. لطفاً به پشتیبانی پیام دهید: @Techru1"
+      linked: "تلگرام به حساب شما متصل شد."
+      merged: "تلگرام متصل شد: اشتراک و اطلاعات شما از ربات اکنون در این حساب است."
+      telegram_taken: "این تلگرام قبلاً به حساب دیگری متصل شده است. لطفاً به پشتیبانی پیام دهید: @Techru1"
   # Devise flash messages, in the language of the cabinet.
   devise:
     confirmations:

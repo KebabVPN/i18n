@@ -282,7 +282,7 @@ zh:
       apply: 使用
       applied: 优惠码已生效，将在下次付款时使用。
       current: "已使用：%{code}（%{bonus}）"
-      current_hint: 仅适用于银行卡一次性付款。自动续费和 USDT 付款按原价收费。
+      current_hint: 适用于 SBP 付款和银行卡一次性付款。自动续费和 USDT 付款按原价收费。
       bonus_percent: "−%{value}%"
       bonus_days: "+%{count} 天"
       errors:
@@ -464,6 +464,19 @@ zh:
     settings:
       title: "设置"
       account: "账户"
+      pending_email: "等待确认"
+      telegram: "Telegram"
+      telegram_link_hint: "绑定 Telegram 后，可以用它登录，并在这里查看机器人中的订阅。"
+      credentials: "登录邮箱和密码"
+      credentials_hint: "我们会向该地址发送确认链接。邮箱在确认后更改，密码立即生效。"
+      email_taken: "该邮箱已注册。请用邮箱登录，并在设置中绑定 Telegram。"
+    # Telegram Login Widget: signing in and linking in Settings.
+    tg_login:
+      invalid: "Telegram 登录失败或已过期，请重试。"
+      inactive: "该账户目前无法登录，请联系客服 @Techru1。"
+      linked: "Telegram 已绑定到您的账户。"
+      merged: "Telegram 已绑定：机器人中的订阅和数据现已转入此账户。"
+      telegram_taken: "此 Telegram 已绑定到另一个账户，请联系客服 @Techru1。"
   # Devise flash messages, in the language of the cabinet.
   devise:
     confirmations:

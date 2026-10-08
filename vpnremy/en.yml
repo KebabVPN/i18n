@@ -20,6 +20,7 @@ vpnremy_en:
     cabinet: 👤 Personal account
     cabinet_open: 🔐 Sign in to your account
     promo_generate: 🎟 Generate promo codes
+    promo_enter: 🎟 Enter promo code
     platform_apple:  Apple (iOS, MacOS)
     platform_android: 📱 Android
     platform_custom: 🔑 Other
@@ -46,19 +47,19 @@ vpnremy_en:
 
       ℹ️ /help - Get the commands list
 
-      🤖 @tolyhan - Get a support
+      🤖 @Techru1 - Get a support
   # --------------------------------------------------------
   start:
     text: |
       *🌟 Welcome! 🌟*
 
-      Thank you for choosing [VPNREMY](https://vpnremy.com). To start using VPN, you need to press the *Configurations* button below and you will get the configuration file which you need to install to your device. Detailed guide is available at https://vpnremy.com. All options are available by running /help command.
+      Thank you for choosing [RemyVPN](https://vpnremy.com). To start using VPN, you need to press the *Configurations* button below and you will get the configuration file which you need to install to your device. Detailed guide is available at https://vpnremy.com. All options are available by running /help command.
   # --------------------------------------------------------
   sub_extended:
     text: |
       🌟 *Congratulations!* 🌟
 
-      You have got *%<days>s* days of VPN usage! Feel free to write us your feedback in @tolyhan! 🫶
+      You have got *%<days>s* days of VPN usage! Feel free to write us your feedback in @Techru1! 🫶
 
       Your subscription ends at: *%<exp>s*
   # --------------------------------------------------------
@@ -70,7 +71,7 @@ vpnremy_en:
 
       You need to follow /subscription command to continue using services.
 
-      Please write us to @tolyhan if you have any questions! 🫶
+      Please write us to @Techru1 if you have any questions! 🫶
   # --------------------------------------------------------
   sub_expiring:
     text: |
@@ -80,7 +81,7 @@ vpnremy_en:
 
       Renew it with the /subscription command to keep your VPN running without interruption.
 
-      Please write us to @tolyhan if you have any questions! 🫶
+      Please write us to @Techru1 if you have any questions! 🫶
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅
@@ -124,7 +125,7 @@ vpnremy_en:
 
       USDT deposits are calculated like USD according to effective pricing. For example, if you want to pay for 12 months, just transfer `49.99` USDT. You may transfer any amount you want, the subscription end date will be calculated accordingly in a proportion.
 
-      We wait for *20 confirmations* for transaction to be processed, so you have to wait for a while. Once the transaction is processed, you will receive a notification with confirmation of your deposit. If your deposit is not credited, feel free to write us in @tolyhan.
+      We wait for *20 confirmations* for transaction to be processed, so you have to wait for a while. Once the transaction is processed, you will receive a notification with confirmation of your deposit. If your deposit is not credited, feel free to write us in @Techru1.
   # --------------------------------------------------------
   config:
     text: |
@@ -212,7 +213,7 @@ vpnremy_en:
       VPN time earn rate: *%<ref_time_percent>s*
       Money earn rate: *%<ref_money_percent>s*
 
-      Contact @tolyhan to provide your requisites for money withdrawal.
+      Contact @Techru1 to provide your requisites for money withdrawal.
   # --------------------------------------------------------
   cabinet:
     text: |
@@ -221,12 +222,19 @@ vpnremy_en:
       Tap the button below to sign in. The link works once and expires in 10 minutes.
   # --------------------------------------------------------
   referral_v2:
+    example: "From a %<price>s subscription you get %<reward>s."
+    example_fixed: "You get %<reward>s from every payment of your client."
+    friend: "Your friend gets %<bonus>s on the first payment."
     text: |
       *💰 Referral*
 
       Your invite link: `%<link>s`
       Your promo code: `%<code>s`
       Tap to copy and share with friends: they get a bonus on their first payment, and you earn from every payment they make.
+
+      You get 60%% of the reward from your clients' payments, 30%% from their clients and 10%% from the third line.
+      %<terms>s
+      Balance: *%<available>s* available, *%<on_hold>s* on hold.
 
       Statistics, balance and withdrawals are in your personal account.
   # --------------------------------------------------------
@@ -277,3 +285,27 @@ vpnremy_en:
   unknown:
     text: |
       Unknown command, please run /help to list all commands available!
+  # --------------------------------------------------------
+  promo_enter:
+    text: |
+      *🎟 Promo code*
+
+      Send the promo code in one message.
+  # --------------------------------------------------------
+  promo_applied:
+    text: |
+      ✅ Promo code `%<code>s` is applied: %<bonus>s. It works when you pay by SBP or with a one-time card payment.
+  # --------------------------------------------------------
+  promo_current:
+    text: |
+      🎟 Promo code `%<code>s` is applied: %<bonus>s
+  # --------------------------------------------------------
+  promo:
+    bonus_percent: "−%<value>s%%"
+    bonus_days: "+%<count>s days"
+    errors:
+      not_found: "❌ There is no such promo code."
+      expired: "❌ This promo code has expired."
+      used_up: "❌ This promo code has already been used up."
+      own_code: "❌ You can not use your own promo code."
+      already_used: "❌ You have already received a promo code bonus."
