@@ -472,6 +472,8 @@ ru:
       email_taken: "Эта почта уже зарегистрирована. Войдите по почте и привяжите Telegram в настройках."
     # Telegram Login Widget: signing in and linking in Settings.
     tg_login:
+      button: "Войти через Telegram"
+      link_button: "Привязать Telegram"
       invalid: "Не удалось войти через Telegram или ссылка устарела. Попробуйте ещё раз."
       inactive: "Сейчас войти в этот аккаунт нельзя. Напишите в поддержку @Techru1."
       linked: "Telegram привязан к аккаунту."

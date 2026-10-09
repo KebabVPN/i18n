@@ -472,6 +472,8 @@ tr:
       email_taken: "Bu e-posta zaten kayıtlı. E-postayla giriş yapın ve Ayarlar'dan Telegram'ı bağlayın."
     # Telegram Login Widget: signing in and linking in Settings.
     tg_login:
+      button: "Telegram ile giriş yap"
+      link_button: "Telegram'ı bağla"
       invalid: "Telegram ile giriş başarısız oldu veya süresi doldu. Lütfen tekrar deneyin."
       inactive: "Bu hesapla şu anda giriş yapılamıyor. Lütfen destekle iletişime geçin: @Techru1."
       linked: "Telegram hesabınıza bağlandı."

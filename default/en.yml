@@ -472,6 +472,8 @@ en:
       email_taken: "This email is already registered. Sign in with it and link Telegram in Settings."
     # Telegram Login Widget: signing in and linking in Settings.
     tg_login:
+      button: "Log in with Telegram"
+      link_button: "Link Telegram"
       invalid: "Telegram sign-in failed or has expired. Please try again."
       inactive: "This account can not sign in right now. Please contact support @Techru1."
       linked: "Telegram is linked to your account."

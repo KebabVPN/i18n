@@ -472,6 +472,8 @@ zh:
       email_taken: "该邮箱已注册。请用邮箱登录，并在设置中绑定 Telegram。"
     # Telegram Login Widget: signing in and linking in Settings.
     tg_login:
+      button: "通过 Telegram 登录"
+      link_button: "绑定 Telegram"
       invalid: "Telegram 登录失败或已过期，请重试。"
       inactive: "该账户目前无法登录，请联系客服 @Techru1。"
       linked: "Telegram 已绑定到您的账户。"
