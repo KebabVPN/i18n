@@ -133,6 +133,22 @@ vpnremy_zh:
 
       请选择要设置 VPN 配置的位置。系统将要求您选择所使用的操作系统。
   # --------------------------------------------------------
+  # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
+  hosts:
+    names:
+      eu_nl_1: "🇳🇱 荷兰"
+      usa_fremont_1: "🇺🇸 美国"
+      ru_saint_petersburg_1: "🇷🇺 俄罗斯 — 圣彼得堡"
+      eu_ru_nl_1: "🇳🇱 荷兰（经由俄罗斯）"
+      eu_ru_us_1: "🇺🇸 美国（经由俄罗斯）"
+    groups:
+      - title: "直接连接"
+        hint: "请先尝试"
+        hosts: [eu_nl_1, usa_fremont_1, ru_saint_petersburg_1]
+      - title: "经由俄罗斯"
+        hint: "如果直接连接无法使用"
+        hosts: [eu_ru_nl_1, eu_ru_us_1]
+  # --------------------------------------------------------
   config_manual:
     text: |
       *您的凭据*

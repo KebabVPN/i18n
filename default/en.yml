@@ -422,6 +422,7 @@ en:
       android_note: "strongSwan profile"
       manual: "Manually"
       manual_note: "Server, login, password"
+      manual_expired: "Your subscription has ended. Renew it to get the connection details."
       step_1: "Download the profile"
       step_2: "Open it"
       step_3: "Turn the VPN on"
@@ -467,8 +468,10 @@ en:
       pending_email: "Waiting for confirmation"
       telegram: "Telegram"
       telegram_link_hint: "Link Telegram to sign in with it and to see your subscription from the bot here."
-      credentials: "Email and password for signing in"
-      credentials_hint: "We will send a confirmation link to this address. The email changes once you confirm it, the password right away."
+      no_email: "Not added"
+      email_hint: "We will send a confirmation link to this address. The email changes once you follow it."
+      send_reset: "Send a link to set a password"
+      send_reset_hint: "Signing in with Telegram and don't know your password? We will send a link to %{email}."
       email_taken: "This email is already registered. Sign in with it and link Telegram in Settings."
     # Telegram Login Widget: signing in and linking in Settings.
     tg_login:

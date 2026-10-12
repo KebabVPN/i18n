@@ -133,6 +133,22 @@ vpnremy_ru:
 
       Выберите местоположение, для которого вы хотите настроить конфигурацию VPN. Вас попросят указать используемую операционную систему.
   # --------------------------------------------------------
+  # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
+  hosts:
+    names:
+      eu_nl_1: "🇳🇱 Нидерланды"
+      usa_fremont_1: "🇺🇸 США"
+      ru_saint_petersburg_1: "🇷🇺 Россия — Санкт-Петербург"
+      eu_ru_nl_1: "🇳🇱 Нидерланды (через Россию)"
+      eu_ru_us_1: "🇺🇸 США (через Россию)"
+    groups:
+      - title: "Прямое подключение"
+        hint: "попробуйте сначала его"
+        hosts: [eu_nl_1, usa_fremont_1, ru_saint_petersburg_1]
+      - title: "Через Россию"
+        hint: "если прямое подключение не работает"
+        hosts: [eu_ru_nl_1, eu_ru_us_1]
+  # --------------------------------------------------------
   config_manual:
     text: |
       *Ваши учетные данные*
