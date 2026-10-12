@@ -188,6 +188,18 @@ vpnremy_en:
       Mac: System Settings → "Privacy & Security" → "Profiles" → "Install".
       Then turn the VPN on in the settings.
   # --------------------------------------------------------
+  config_iphone:
+    text: |
+      *The "%<server>s" configuration for iPhone is ready*
+
+      Download the file and open it — the iPhone will offer to install the profile.
+  # --------------------------------------------------------
+  config_mac:
+    text: |
+      *The "%<server>s" configuration for Mac is ready*
+
+      Download the file and open it — the Mac will offer to install the profile.
+  # --------------------------------------------------------
   config_android:
     text: |
       *The "%<server>s" configuration for Android is ready*
@@ -205,18 +217,61 @@ vpnremy_en:
     text: |
       *The "%<server>s" connection for Windows*
 
-      Windows needs no file — the VPN is built into the system. Tap a value to copy it.
+      Windows needs no file — the VPN is built into the system. Enter these details in the VPN settings. Tap a value to copy it.
 
       Server: `%<host>s`
       Login: `%<username>s`
       Password: `%<password>s`
 
-      1. Settings → Network & Internet → VPN → "Add VPN"
-      2. Provider — "Windows (built-in)", name — `%<name>s`, server address — from this message
-      3. VPN type — IKEv2, sign-in — "User name and password". Enter the login and password → "Save"
-      4. Tap the connection → "Connect"
-
       Do not share the login and password — they give access to your subscription.
+  # --------------------------------------------------------
+  # The first /start, the guides after a config, "you are connected" (the first VPN login).
+  # The buttons and the welcome are shared, see default/en.yml.
+  onboarding:
+    file: "VPNRemy-%<server>s"
+    guide_iphone: |
+      *How to connect on iPhone*
+
+      1. Tap the file %<file>s above and allow the profile to download
+      2. Open Settings → "Profile Downloaded" → "Install"
+      3. Turn the VPN on: Settings → VPN → VPNRemy
+
+      As soon as you connect, the bot will confirm it.
+    guide_mac: |
+      *How to connect on Mac*
+
+      1. Open the file %<file>s from the message above
+      2. System Settings → "Privacy & Security" → "Profiles" → "Install"
+      3. Turn the VPN on: System Settings → VPN → VPNRemy
+
+      As soon as you connect, the bot will confirm it.
+    guide_android: |
+      *How to connect on Android*
+
+      1. Install the [strongSwan](https://play.google.com/store/apps/details?id=org.strongswan.android) app from Google Play
+      2. Save the file %<file>s from the message above to your phone
+      3. Open strongSwan → menu ⋮ → "Import VPN profile" → choose the file
+      4. Tap the VPNRemy profile. If asked, enter the login and password from the message above
+
+      As soon as you connect, the bot will confirm it.
+    guide_custom: |
+      *How to connect on Windows 10 and 11*
+
+      1. Open Settings → Network & Internet → VPN → "Add VPN"
+      2. Provider — "Windows (built-in)", name — VPNRemy, server address — from the message above
+      3. VPN type — IKEv2, sign-in — "User name and password". Enter the login and password → "Save"
+      4. Tap VPNRemy → "Connect"
+
+      As soon as you connect, the bot will confirm it.
+    connected_trial: |
+      *Done, you are connected to VPNRemy*
+
+      You have trial access for %<period>s. You can use VPNRemy until *%<exp>s*.
+      When the trial ends, you can renew the subscription in one of the ways below.
+    connected: |
+      *Done, you are connected to VPNRemy*
+
+      Your subscription is valid until *%<exp>s*.
   # --------------------------------------------------------
   lang:
     text: |
