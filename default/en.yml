@@ -125,6 +125,87 @@ en:
 
       Please, choose payment method:
   # --------------------------------------------------------
+  # Paying by the SBP QR code in the bot (BotController#_pay_qr) of the new bot
+  # layout; English for every language of those brands.
+  pay_qr:
+    caption: |
+      *Paying by QR code*
+
+      The "%<plan>s" plan — %<price>s.
+      Scan the QR code in your banking app. Opened the bot on your phone? Tap "Open in bank".
+
+      The code is valid for %<ttl>s. Once you pay, the bot will confirm it.
+    minutes:
+      one: "%{count} minute"
+      other: "%{count} minutes"
+    open_bank: Open in bank
+    check: Check payment
+    cancel: Cancel
+    pending: |
+      *The payment has not arrived yet*
+
+      If you have paid already, wait a couple of minutes: the bot will confirm it.
+    check_again: Check again
+    show: Show the QR code
+    failed: |
+      *The payment did not go through*
+
+      It was declined or the payment link expired. If the money was taken anyway, message support and we will sort it out.
+    error: |
+      *Could not start the payment*
+
+      Try again later or message support.
+    retry: Try again
+    other_method: Another way to pay
+  # --------------------------------------------------------
+  # "Payment received": a paid invoice (BotController.paid_screen) and a USDT deposit.
+  paid:
+    ref_balance: "%<amount>s from the referral balance"
+    text: |
+      *Subscription extended*
+
+      Plan: *%<plan>s*
+      Paid: *%<amount>s*
+      Valid until: *%<exp>s*
+
+      Nothing to set up — everything keeps working.
+
+      Made with love for the free internet
+    usdt: |
+      *Subscription extended*
+
+      Received: *%<amount>s*
+      Extended by: *%<period>s*
+      Valid until: *%<exp>s*
+
+      Nothing to set up — everything keeps working.
+
+      Made with love for the free internet
+  # --------------------------------------------------------
+  # USDT (TRC-20): the deposit address; `unavailable` while Setting.usdt_enabled is 0.
+  usdt:
+    menu: In USDT (TRC‑20)
+    text: |
+      *Top up in USDT (TRC‑20)*
+
+      Send any amount to your personal address below — the subscription is extended by the matching number of days.
+
+      `%<addr>s`
+
+      Send only USDT on the TRC‑20 network — other coins and networks will not be credited. Crediting takes a few minutes.
+    copy: Copy the address
+    check: Check the deposit
+    not_yet: Not received yet. Crediting takes a few minutes — the bot will confirm it.
+    preparing: |
+      *Preparing your USDT address*
+
+      Tap "Show the address" in a minute.
+    show: Show the address
+    unavailable: |
+      *Paying in USDT is temporarily unavailable*
+
+      Pay by QR code or message support — we will help.
+  # --------------------------------------------------------
   ref_pay_confirm:
     text: |
       *💰 Paying from the referral balance*

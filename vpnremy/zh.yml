@@ -87,7 +87,7 @@ vpnremy_zh:
     ico_yes: ✅
     ico_no: ❌
     menu:
-      crypto: 🤑 使用 USDT 支付 (TRC-20，任意金额)
+      crypto: 使用 USDT 支付 (TRC-20，任意金额)
       plan_1_mo: 💵 1 个月 - 299.00 俄罗斯卢布
       plan_6_mo: 💵 6 个月 - 1614.00 俄罗斯卢布
       plan_12_mo: 💵 12 个月 - 2988.00 俄罗斯卢布

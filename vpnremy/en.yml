@@ -81,12 +81,12 @@ vpnremy_en:
     ico_yes: ✅
     ico_no: ❌
     menu:
-      crypto: 🤑 USDT (TRC‑20, any amount)
+      crypto: USDT (TRC‑20, any amount)
       plan_1_mo: 💵 1 Month - 299.00 RUB
       plan_6_mo: 💵 6 Months - 1614.00 RUB
       plan_12_mo: 💵 12 Months - 2988.00 RUB
     text: |
-      *Your subscription is active* %<ico>s
+      *Your subscription is active*
 
       Valid until *%<exp>s*. Left: *%<period>s*.
       You can renew in advance — the paid days are added to the current ones.
@@ -103,7 +103,7 @@ vpnremy_en:
     menu:
       pm_stripe_payment: 💳 Card, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Card (subscription)
-      pm_pay2day: 📷 By QR code (SBP)
+      pm_pay2day: By QR code
       pm_ref_balance: 💰 From the referral balance
     text: |
       *The "%<plan>s" plan — %<price>s*
