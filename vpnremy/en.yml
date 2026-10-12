@@ -24,6 +24,7 @@ vpnremy_en:
     platform_apple:  Apple (iOS, MacOS)
     platform_android: 📱 Android
     platform_custom: 🔑 Other
+    ref_pay: ✅ Pay
   # --------------------------------------------------------
   platforms:
     text: |
@@ -102,6 +103,7 @@ vpnremy_en:
       pm_stripe_payment: 💳 Card, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Card (subscription)
       pm_pay2day: 🇷🇺 SBP (RUB)
+      pm_ref_balance: 💰 From the referral balance
     text: |
       *Your subscription:*
 
@@ -111,6 +113,26 @@ vpnremy_en:
       You're buying: *%<description>s*
 
       Please, choose payment method:
+  # --------------------------------------------------------
+  ref_pay_confirm:
+    text: |
+      *💰 Paying from the referral balance*
+
+      Take *%<amount>s* from your referral balance for the "%<plan>s" plan?
+
+      Available: *%<available>s*
+  # --------------------------------------------------------
+  ref_pay_short:
+    text: |
+      *💰 Your referral balance is %<missing>s short.*
+
+      Available: *%<available>s*. Choose another plan or payment method.
+  # --------------------------------------------------------
+  ref_pay_done:
+    text: |
+      ✅ *Paid from the referral balance:* %<amount>s
+
+      Your subscription is valid until *%<exp>s*.
   # --------------------------------------------------------
   plan_unknown:
     text: |
@@ -294,7 +316,7 @@ vpnremy_en:
   # --------------------------------------------------------
   promo_applied:
     text: |
-      ✅ Promo code `%<code>s` is applied: %<bonus>s. It works when you pay by SBP or with a one-time card payment.
+      ✅ Promo code `%<code>s` is applied: %<bonus>s. It works when you pay by SBP or from the referral balance.
   # --------------------------------------------------------
   promo_current:
     text: |
@@ -309,3 +331,7 @@ vpnremy_en:
       used_up: "❌ This promo code has already been used up."
       own_code: "❌ You can not use your own promo code."
       already_used: "❌ You have already received a promo code bonus."
+  # --------------------------------------------------------
+  web:
+    promo:
+      current_hint: Works with SBP and referral balance payments. USDT is charged at the full price.

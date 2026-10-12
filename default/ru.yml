@@ -20,6 +20,7 @@ ru:
     platform_apple:  Apple (iOS, MacOS)
     platform_android: 📱 Android
     platform_custom: 🔑 Другое
+    ref_pay: ✅ Оплатить
   # --------------------------------------------------------
   platforms:
     text: |
@@ -88,6 +89,7 @@ ru:
       pm_stripe_payment: 💳 Карта, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Карта (подписка)
       pm_pay2day: 🇷🇺 СБП (RUB)
+      pm_ref_balance: 💰 С реферального баланса
     text: |
       *Ваша подписка:*
 
@@ -97,6 +99,26 @@ ru:
       Вы покупаете: *%<description>s*
 
       Пожалуйста, выберите метод оплаты:
+  # --------------------------------------------------------
+  ref_pay_confirm:
+    text: |
+      *💰 Оплата с реферального баланса*
+
+      Списать *%<amount>s* с реферального баланса за тариф «%<plan>s»?
+
+      Доступно: *%<available>s*
+  # --------------------------------------------------------
+  ref_pay_short:
+    text: |
+      *💰 Не хватает %<missing>s* на реферальном балансе.
+
+      Доступно: *%<available>s*. Выберите другой тариф или способ оплаты.
+  # --------------------------------------------------------
+  ref_pay_done:
+    text: |
+      ✅ *Оплачено с реферального баланса:* %<amount>s
+
+      Подписка действует до *%<exp>s*.
   # --------------------------------------------------------
   plan_unknown:
     text: |
@@ -270,11 +292,19 @@ ru:
       period: "%{count} дн."
       best: Выгоднее всего
       unavailable: Этот тариф или способ оплаты недоступен.
+      ref_balance: С реферального баланса
+      ref_available: "Доступно %{amount}"
+      ref_short: "Не хватает %{amount}"
+      ref_paid: "Оплачено с реферального баланса. Подписка действует до %{date}."
+      ref_errors:
+        insufficient: На реферальном балансе не хватает средств на этот тариф.
+        unavailable: Оплата с реферального баланса недоступна.
     pm:
       stripe_payment: "Зарубежная карта"
       stripe_subscription: "Автопродление (зарубежная карта)"
       pay2day: "СБП"
       usdt: "USDT (TRC20)"
+      ref_balance: "Реферальный баланс"
     promo:
       have_code: "Есть промокод?"
       title: Промокод
@@ -310,6 +340,11 @@ ru:
       method: Способ
       promo: Промокод
       usdt_deposit: Пополнение USDT
+      status: Статус
+      state:
+        paid: Оплачен
+        pending: Ожидает оплаты
+        failed: Не прошёл
     partner:
       locked_title: Партнёрская программа
       locked_text: Реферальная ссылка, промокоды и вознаграждения станут доступны после вашей первой оплаты.
@@ -355,6 +390,7 @@ ru:
         sale: Оплата клиента
         opening: Перенос баланса
         adjustment: Корректировка
+        purchase: Оплата подписки
       accrual_state:
         hold: "В холде до %{date}"
         available: Доступно

@@ -20,6 +20,7 @@ en:
     platform_apple:  Apple (iOS, MacOS)
     platform_android: 📱 Android
     platform_custom: 🔑 Other
+    ref_pay: ✅ Pay
   # --------------------------------------------------------
   platforms:
     text: |
@@ -88,6 +89,7 @@ en:
       pm_stripe_payment: 💳 Card, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Card (subscription)
       pm_pay2day: 🇷🇺 SBP (RUB)
+      pm_ref_balance: 💰 From the referral balance
     text: |
       *Your subscription:*
 
@@ -97,6 +99,26 @@ en:
       You're buying: *%<description>s*
 
       Please, choose payment method:
+  # --------------------------------------------------------
+  ref_pay_confirm:
+    text: |
+      *💰 Paying from the referral balance*
+
+      Take *%<amount>s* from your referral balance for the "%<plan>s" plan?
+
+      Available: *%<available>s*
+  # --------------------------------------------------------
+  ref_pay_short:
+    text: |
+      *💰 Your referral balance is %<missing>s short.*
+
+      Available: *%<available>s*. Choose another plan or payment method.
+  # --------------------------------------------------------
+  ref_pay_done:
+    text: |
+      ✅ *Paid from the referral balance:* %<amount>s
+
+      Your subscription is valid until *%<exp>s*.
   # --------------------------------------------------------
   plan_unknown:
     text: |
@@ -270,11 +292,19 @@ en:
       period: "%{count} days"
       best: Best value
       unavailable: This plan or payment method is not available.
+      ref_balance: From the referral balance
+      ref_available: "Available: %{amount}"
+      ref_short: "%{amount} short"
+      ref_paid: "Paid from the referral balance. Your subscription is valid until %{date}."
+      ref_errors:
+        insufficient: Your referral balance is not enough for this plan.
+        unavailable: Paying from the referral balance is not available.
     pm:
       stripe_payment: "International card"
       stripe_subscription: "Auto-renewal (international card)"
       pay2day: "SBP (Russian banks)"
       usdt: "USDT (TRC20)"
+      ref_balance: "Referral balance"
     promo:
       have_code: "Have a promo code?"
       title: Promo code
@@ -310,6 +340,11 @@ en:
       method: Method
       promo: Promo code
       usdt_deposit: USDT top-up
+      status: Status
+      state:
+        paid: Paid
+        pending: Awaiting payment
+        failed: Failed
     partner:
       locked_title: Partner program
       locked_text: Your referral link, promo codes and rewards become available after your first payment.
@@ -355,6 +390,7 @@ en:
         sale: Client payment
         opening: Opening balance
         adjustment: Adjustment
+        purchase: Subscription payment
       accrual_state:
         hold: "On hold until %{date}"
         available: Available

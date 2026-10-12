@@ -294,7 +294,7 @@ vpnremy_tr:
   # --------------------------------------------------------
   promo_applied:
     text: |
-      ✅ `%<code>s` promosyon kodu uygulandı: %<bonus>s. SBP ile veya tek seferlik kart ödemesiyle ödediğinizde geçerli olur.
+      ✅ `%<code>s` promosyon kodu uygulandı: %<bonus>s. SBP ile veya referans bakiyesiyle ödediğinizde geçerli olur.
   # --------------------------------------------------------
   promo_current:
     text: |
@@ -309,3 +309,7 @@ vpnremy_tr:
       used_up: "❌ Bu promosyon kodu zaten kullanıldı."
       own_code: "❌ Kendi promosyon kodunuzu kullanamazsınız."
       already_used: "❌ Daha önce bir promosyon kodu bonusu aldınız."
+  # --------------------------------------------------------
+  web:
+    promo:
+      current_hint: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir. USDT ödemeleri tam fiyattan alınır.
