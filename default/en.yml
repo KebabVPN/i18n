@@ -31,6 +31,14 @@ en:
     platform_iphone: 📱 iPhone / iPad
     platform_windows: 💻 Windows
     platform_macos: 💻 macOS
+    other_device: 📱 Another device
+    guide_iphone: 📖 Guide for iPhone
+    guide_mac: 📖 Guide for Mac
+    guide_android: 📖 Guide for Android
+    guide_custom: 📖 Guide for Windows
+    not_connected: 😕 Can't connect
+    open_guide: 📖 Open the guide
+    retry: 🔄 Retry
   # --------------------------------------------------------
   platforms:
     text: |
@@ -295,7 +303,11 @@ en:
 
       %<invited>sTrial access for %<trial>s — until *%<exp>s*.
 
-      Press "Connect", choose a location and a device — we will send the setup made for it. It takes a couple of minutes.
+      Choose where to connect:
+
+      *Open the world* — you are in Russia and want to use foreign sites and services. The Netherlands or the USA will do.
+
+      *Russia nearby* — you are abroad and want to use Russian services: banks, Gosuslugi, marketplaces.
   sub_expiring_trial:
     text: |
       ⏰ *Trial: %<left>s*
@@ -310,6 +322,77 @@ en:
       Liked it? To keep using the VPN, choose a plan.
   referral_v2:
     share: "Try this VPN — I use it and it works. The first days are free."
+  config_iphone:
+    text: |
+      *The "%<server>s" configuration for iPhone is ready*
+
+      Download the file and open it — the iPhone will offer to install the profile.
+  config_mac:
+    text: |
+      *The "%<server>s" configuration for Mac is ready*
+
+      Download the file and open it — the Mac will offer to install the profile.
+  onboarding:
+    directions:
+      - host: eu_nl_1
+        title: 🇳🇱 Open the world via the Netherlands
+      - host: usa_fremont_1
+        title: 🇺🇸 Open the world via the USA
+      - host: ru_saint_petersburg_1
+        title: 🇷🇺 Connect to Russia
+    file: "VPN-%<server>s"
+    guide_iphone: |
+      *How to connect on iPhone*
+
+      1. Tap the file %<file>s above and allow the profile to download
+      2. Open Settings → "Profile Downloaded" → "Install"
+      3. Turn the VPN on: Settings → VPN
+
+      As soon as you connect, the bot will confirm it.
+    guide_mac: |
+      *How to connect on Mac*
+
+      1. Open the file %<file>s from the message above
+      2. System Settings → "Privacy & Security" → "Profiles" → "Install"
+      3. Turn the VPN on: System Settings → VPN
+
+      As soon as you connect, the bot will confirm it.
+    guide_android: |
+      *How to connect on Android*
+
+      1. Install the [strongSwan](https://play.google.com/store/apps/details?id=org.strongswan.android) app from Google Play
+      2. Save the file %<file>s from the message above to your phone
+      3. Open strongSwan → menu ⋮ → "Import VPN profile" → choose the file
+      4. Tap the profile. If asked, enter the login and password from the message above
+
+      As soon as you connect, the bot will confirm it.
+    guide_custom: |
+      *How to connect on Windows 10 and 11*
+
+      1. Open Settings → Network & Internet → VPN → "Add VPN"
+      2. Provider — "Windows (built-in)", any name, server address — from the message above
+      3. VPN type — IKEv2, sign-in — "User name and password". Enter the login and password → "Save"
+      4. Tap the connection → "Connect"
+
+      As soon as you connect, the bot will confirm it.
+    not_connected: |
+      *You got the configuration but have not connected yet*
+
+      It happens: most often the app is not installed or the profile is not confirmed in the settings. Check the guide or write to us — we will help.
+    trial_until: "\nYour trial is valid until *%<exp>s*.\n"
+    error: |
+      *Could not prepare the configuration*
+
+      The "%<server>s" server is not responding right now. Try again in a few minutes or choose another location.
+    connected_trial: |
+      *Done, you are connected*
+
+      You have trial access for %<period>s. You can use the VPN until *%<exp>s*.
+      When the trial ends, you can renew the subscription in one of the ways below.
+    connected: |
+      *Done, you are connected*
+
+      Your subscription is valid until *%<exp>s*.
   # --------------------------------------------------------
   # Customer cabinet on the web
   web:
