@@ -1,30 +1,30 @@
 vpnremy_en:
   menu:
     back: ⬅️ Back
-    home: 🏠 Home Menu
+    home: Main menu
     home_short: 🏠 Home
-    config: 🔌 Connect
-    subscription: 💸 Subscription
+    config: Connect
+    subscription: Subscription
     subscription_back: 💸 Back to Subscription
     subscription_back_short: 💸 Return Back
-    lang: 🌎 Language
-    lang_back: 🌎 Back to languages
-    lang_custom: 🔧 New Language
-    help: ℹ️ Help
+    lang: Language
+    lang_back: Back to languages
+    lang_custom: New language
+    help: Help
     delete_message: 🥷 Delete Message
-    settings: 🔧 Settings
-    settings_notifications_enable: 🔔 Turn reminders on
-    settings_notifications_disable: 🔕 Turn reminders off
-    subscription_management_stripe: 💸 Subscription (Stripe)
-    referral: 🎁 Invite friends
-    cabinet: 👤 Personal account
+    settings: Settings
+    settings_notifications_enable: Turn reminders on
+    settings_notifications_disable: Turn reminders off
+    subscription_management_stripe: Subscription (Stripe)
+    referral: Invite friends
+    cabinet: Personal account
     cabinet_open: 🔐 Sign in to your account
     promo_generate: Generate promo codes
     share: Share
     invite_more: Invite more
     promo_enter: 🎟 Enter promo code
     platform_apple:  Apple (iOS, MacOS)
-    platform_android: 📱 Android
+    platform_android: Android
     platform_custom: 🔑 Other
     ref_pay: ✅ Pay
   # --------------------------------------------------------
@@ -38,14 +38,9 @@ vpnremy_en:
     text: |
       *How can we help?*
 
-      Can't find an answer? Message support, a human will reply.
+      Choose a question — the answer comes right away. Can't find yours? Message support, a human will reply.
 
-      /start — main menu
-      /config — connect
-      /subscription — subscription
-      /referral — invite friends
-      /support — support
-      /help — this help
+      /start — main menu · /config — connect · /subscription — subscription · /referral — invite friends · /support — support · /help — this help
   # --------------------------------------------------------
   # the support link of /support; the text is shared, see default/en.yml
   support:
@@ -53,7 +48,7 @@ vpnremy_en:
   # --------------------------------------------------------
   start:
     text: |
-      *Welcome back!*
+      *Good to see you again*
 
       Your subscription is active until *%<exp>s* — %<days_left>s.
       What shall we do?
@@ -67,13 +62,15 @@ vpnremy_en:
   # --------------------------------------------------------
   sub_expired:
     text: |
-      ❌ *Your subscription ended on %<date>s*
+      *Your subscription ended on %<date>s*
 
       To use VPNRemy again, choose a plan. You can pay by QR code (SBP) or in USDT.
+
+      Made with love for the free internet
   # --------------------------------------------------------
   sub_expiring:
     text: |
-      ⏰ *%<left>s*
+      *%<left>s*
 
       Your VPNRemy subscription is valid until *%<exp>s*. Renew in advance — the paid days are added to the current ones.
 
@@ -83,7 +80,7 @@ vpnremy_en:
     ico_yes: ✅
     ico_no: ❌
     menu:
-      crypto: 🤑 USDT (TRC‑20, any amount)
+      crypto: USDT (TRC‑20, any amount)
       plan_1_mo: 💵 1 Month - 299.00 RUB
       plan_6_mo: 💵 6 Months - 1614.00 RUB
       plan_12_mo: 💵 12 Months - 2988.00 RUB
@@ -270,14 +267,18 @@ vpnremy_en:
 
       You have trial access for %<period>s. You can use VPNRemy until *%<exp>s*.
       When the trial ends, you can renew the subscription in one of the ways below.
+
+      Made with love for the free internet
     connected: |
       *Done, you are connected to VPNRemy*
 
       Your subscription is valid until *%<exp>s*.
+
+      Made with love for the free internet
   # --------------------------------------------------------
   lang:
     text: |
-      *🌎 Choose your language:*
+      *Choose your language:*
     en: 🇬🇧 English
     ru: 🇷🇺 Русский
     tr: 🇹🇷 Türkiye
@@ -286,7 +287,7 @@ vpnremy_en:
   # --------------------------------------------------------
   lang_custom:
     text: |
-      *🔧 New Language*
+      *New language*
 
       Please feel free to contribute us to explore more languages or fixing typos. More information is available at the page: https://github.com/KebabVPN/i18n
   # --------------------------------------------------------
@@ -381,7 +382,7 @@ vpnremy_en:
   # --------------------------------------------------------
   settings:
     text: |
-      *🔧 Settings*
+      *Settings*
 
       %<reminders>s
   # --------------------------------------------------------
