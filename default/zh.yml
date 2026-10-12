@@ -290,6 +290,7 @@ zh:
         expired: 优惠码已过期。
         used_up: 该优惠码已被用完。
         own_code: 不能使用自己的优惠码。
+        downline: 这是您自己网络中合作伙伴的优惠码，无法使用。
         already_used: 您已经领取过优惠码奖励。
         not_partner: 首次付款后即可使用优惠码功能。
         template: 请选择一个活动。

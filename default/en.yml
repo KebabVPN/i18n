@@ -400,6 +400,7 @@ en:
         expired: This promo code has expired.
         used_up: This promo code has already been used up.
         own_code: You can not use your own promo code.
+        downline: This is a promo code of a partner from your own network, it can not be applied.
         already_used: You have already received a promo code bonus.
         not_partner: Promo codes become available to you after your first payment.
         template: Choose a promotion.

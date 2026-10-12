@@ -290,6 +290,7 @@ tr:
         expired: Bu promosyon kodunun süresi dolmuş.
         used_up: Bu promosyon kodu tükenmiş.
         own_code: Kendi promosyon kodunuzu kullanamazsınız.
+        downline: Bu, kendi ağınızdaki bir ortağın promosyon kodudur, uygulanamaz.
         already_used: Promosyon kodu bonusunu zaten aldınız.
         not_partner: Promosyon kodları ilk ödemenizden sonra kullanılabilir olur.
         template: Bir kampanya seçin.
