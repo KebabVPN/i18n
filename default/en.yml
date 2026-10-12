@@ -266,12 +266,22 @@ en:
     line_1: your client
     line_2: your client's client
     line_3: 3rd line
+    hold: " (%<amount>s on hold)"
     text: |
       💸 *A friend has paid for a subscription*
 
       Credited: *+%<amount>s* — %<line>s
       Balance: *%<available>s* available, *%<on_hold>s* on hold
       The reward becomes available on %<date>s.
+  # --------------------------------------------------------
+  # A user came via the link (RefFriendStartedNotifyJob, the 2026-10 bot layout)
+  ref_started:
+    friend: A friend
+    percent: "%<rate>s of the amount"
+    text: |
+      *A friend came via your link*
+
+      %<name>s started the bot via your invite link. As soon as they pay for a subscription, you will get %<reward>s.
   # --------------------------------------------------------
   # The new bot layout (BotController::NEW_LAYOUT_WLS). Dates are Moscow time.
   bot_time: "%{date}, %{time} MSK"
@@ -296,12 +306,13 @@ en:
 
       To use the VPN again, choose a plan.
   welcome:
-    invited: "You were invited by %<name>s."
+    title: You have taken the first step to the free internet
+    invited: "You were invited by %<name>s"
     friend: a friend
     text: |
-      *You have taken the first step to the free internet*
+      *%<title>s*
 
-      %<invited>sTrial access for %<trial>s — until *%<exp>s*.
+      Trial access for %<trial>s — until *%<exp>s*.
 
       Choose where to connect:
 
@@ -322,6 +333,10 @@ en:
       Liked it? To keep using the VPN, choose a plan.
   referral_v2:
     share: "Try this VPN — I use it and it works. The first days are free."
+    people:
+      one: "%{count} person"
+      other: "%{count} people"
+    on_hold: "On hold: *%<amount>s*\n"
   config_iphone:
     text: |
       *The "%<server>s" configuration for iPhone is ready*
