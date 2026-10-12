@@ -321,9 +321,9 @@ zh:
       clicks: 链接点击
       sales: 付款次数
       earned: 累计收益
-      depth_1: 您的客户 — 60%
-      depth_2: 客户的客户 — 30%
-      depth_3: 第三级 — 10%
+      depth_1: "您的客户 — %{rate}"
+      depth_2: "客户的客户 — %{rate}"
+      depth_3: "第三级 — %{rate}"
       depth_count: "%{count} 笔付款"
       line_1: 您的客户
       line_2: 第二级
@@ -379,6 +379,7 @@ zh:
         already_requested: 您已有一个正在处理的提现申请。
         below_minimum: "最低提现金额为 %{min}。"
     date: "%{year}年%{month}%{day}日"
+    date_short: "%{month}%{day}日"
     months:
       - "1月"
       - "2月"
@@ -452,6 +453,10 @@ zh:
       share_2: "来自您客户的客户"
       share_3: "第三级"
       shares_hint: "只要客户持续付款，您就能从每笔付款的奖励中获得相应分成。"
+      rate_1: "来自您客户的付款"
+      rate_2: "来自客户的客户的付款"
+      rate_3: "第三级"
+      rates_hint: "每笔付款的 %{total} 分给合作伙伴,由三级分享。"
       discount: "受邀用户折扣"
       payouts: "提现"
       payouts_value: "USDT (TRC20)，最低 %{min}"
