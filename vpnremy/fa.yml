@@ -123,6 +123,22 @@ vpnremy_fa:
 
       لطفاً یک پیکربندی مناسب برای دستگاه خود انتخاب کنید. اکثر تلفن‌ها و سیستم‌ها پروتکل IPSec را پشتیبانی می‌کنند. دستورالعمل‌های مفصل در [مستندات](https://vpnremy.com/guide) موجود است.
   # --------------------------------------------------------
+  # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
+  hosts:
+    names:
+      eu_nl_1: "🇳🇱 هلند"
+      usa_fremont_1: "🇺🇸 آمریکا"
+      ru_saint_petersburg_1: "🇷🇺 روسیه — سن پترزبورگ"
+      eu_ru_nl_1: "🇳🇱 هلند (از طریق روسیه)"
+      eu_ru_us_1: "🇺🇸 آمریکا (از طریق روسیه)"
+    groups:
+      - title: "اتصال مستقیم"
+        hint: "ابتدا این را امتحان کنید"
+        hosts: [eu_nl_1, usa_fremont_1, ru_saint_petersburg_1]
+      - title: "از طریق روسیه"
+        hint: "اگر اتصال مستقیم کار نکرد"
+        hosts: [eu_ru_nl_1, eu_ru_us_1]
+  # --------------------------------------------------------
   config_manual:
     text: |
       *اطلاعات کاربری شما*

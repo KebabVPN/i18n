@@ -155,6 +155,22 @@ vpnremy_en:
 
       Please choose the location you want to setup VPN configuration for. You will be asked for an operating system you use.
   # --------------------------------------------------------
+  # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
+  hosts:
+    names:
+      eu_nl_1: "🇳🇱 Netherlands"
+      usa_fremont_1: "🇺🇸 USA"
+      ru_saint_petersburg_1: "🇷🇺 Russia — Saint Petersburg"
+      eu_ru_nl_1: "🇳🇱 Netherlands (via Russia)"
+      eu_ru_us_1: "🇺🇸 USA (via Russia)"
+    groups:
+      - title: "Direct connection"
+        hint: "try it first"
+        hosts: [eu_nl_1, usa_fremont_1, ru_saint_petersburg_1]
+      - title: "Via Russia"
+        hint: "if the direct connection does not work"
+        hosts: [eu_ru_nl_1, eu_ru_us_1]
+  # --------------------------------------------------------
   config_manual:
     text: |
       *Your Credentials*

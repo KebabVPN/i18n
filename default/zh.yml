@@ -423,6 +423,7 @@ zh:
       android_note: "strongSwan 配置文件"
       manual: "手动设置"
       manual_note: "服务器、用户名、密码"
+      manual_expired: "订阅已结束。续订后即可获取连接信息。"
       step_1: "下载配置文件"
       step_2: "打开它"
       step_3: "开启 VPN"
@@ -472,8 +473,10 @@ zh:
       pending_email: "等待确认"
       telegram: "Telegram"
       telegram_link_hint: "绑定 Telegram 后，可以用它登录，并在这里查看机器人中的订阅。"
-      credentials: "登录邮箱和密码"
-      credentials_hint: "我们会向该地址发送确认链接。邮箱在确认后更改，密码立即生效。"
+      no_email: "未填写邮箱"
+      email_hint: "我们会向该地址发送确认链接。点击链接后邮箱才会更改。"
+      send_reset: "发送设置密码的链接"
+      send_reset_hint: "通过 Telegram 登录、不知道密码？我们会把链接发送到 %{email}。"
       email_taken: "该邮箱已注册。请用邮箱登录，并在设置中绑定 Telegram。"
     # Telegram Login Widget: signing in and linking in Settings.
     tg_login:

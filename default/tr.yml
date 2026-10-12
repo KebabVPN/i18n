@@ -423,6 +423,7 @@ tr:
       android_note: "strongSwan profili"
       manual: "Elle"
       manual_note: "Sunucu, kullanıcı adı, şifre"
+      manual_expired: "Aboneliğiniz sona erdi. Bağlantı bilgilerini almak için yenileyin."
       step_1: "Profili indirin"
       step_2: "Açın"
       step_3: "VPN'i açın"
@@ -472,8 +473,10 @@ tr:
       pending_email: "Onay bekleniyor"
       telegram: "Telegram"
       telegram_link_hint: "Telegram ile giriş yapmak ve bottaki aboneliğinizi burada görmek için Telegram'ı bağlayın."
-      credentials: "Giriş için e-posta ve şifre"
-      credentials_hint: "Bu adrese bir onay bağlantısı göndereceğiz. E-posta adresiniz onaydan sonra, şifreniz ise hemen değişir."
+      no_email: "E-posta eklenmedi"
+      email_hint: "Bu adrese bir onay bağlantısı göndereceğiz. E-posta adresiniz bağlantıyı açtığınızda değişir."
+      send_reset: "Şifre belirleme bağlantısı gönder"
+      send_reset_hint: "Telegram ile giriş yapıyor ve şifrenizi bilmiyor musunuz? Bağlantıyı %{email} adresine göndereceğiz."
       email_taken: "Bu e-posta zaten kayıtlı. E-postayla giriş yapın ve Ayarlar'dan Telegram'ı bağlayın."
     # Telegram Login Widget: signing in and linking in Settings.
     tg_login:

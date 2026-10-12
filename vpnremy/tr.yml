@@ -133,6 +133,22 @@ vpnremy_tr:
 
       Lütfen VPN yapılandırma dosyasını kurmak istediğiniz konumu seçin. Kullandığınız işletim sisteminden size sorulacaktır.
   # --------------------------------------------------------
+  # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
+  hosts:
+    names:
+      eu_nl_1: "🇳🇱 Hollanda"
+      usa_fremont_1: "🇺🇸 ABD"
+      ru_saint_petersburg_1: "🇷🇺 Rusya — St. Petersburg"
+      eu_ru_nl_1: "🇳🇱 Hollanda (Rusya üzerinden)"
+      eu_ru_us_1: "🇺🇸 ABD (Rusya üzerinden)"
+    groups:
+      - title: "Doğrudan bağlantı"
+        hint: "önce bunu deneyin"
+        hosts: [eu_nl_1, usa_fremont_1, ru_saint_petersburg_1]
+      - title: "Rusya üzerinden"
+        hint: "doğrudan bağlantı çalışmazsa"
+        hosts: [eu_ru_nl_1, eu_ru_us_1]
+  # --------------------------------------------------------
   config_manual:
     text: |
       *Kimlik Bilgileriniz*
