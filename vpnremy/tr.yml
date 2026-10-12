@@ -326,6 +326,7 @@ vpnremy_tr:
       expired: "❌ Bu promosyon kodunun süresi doldu."
       used_up: "❌ Bu promosyon kodu zaten kullanıldı."
       own_code: "❌ Kendi promosyon kodunuzu kullanamazsınız."
+      downline: "❌ Bu, kendi ağınızdaki bir ortağın promosyon kodudur, uygulanamaz."
       already_used: "❌ Daha önce bir promosyon kodu bonusu aldınız."
   # --------------------------------------------------------
   web:
