@@ -282,3 +282,7 @@ vpnremy_fa:
   web:
     promo:
       current_hint: برای پرداخت با SBP و از موجودی معرفی. پرداخت USDT با قیمت کامل است.
+  # --------------------------------------------------------
+  # the support link of /support
+  support:
+    url: https://t.me/Techru1

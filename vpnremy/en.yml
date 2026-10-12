@@ -3,7 +3,7 @@ vpnremy_en:
     back: ⬅️ Back
     home: 🏠 Home Menu
     home_short: 🏠 Home
-    config: ⚙️ Configurations
+    config: 🔌 Connect
     subscription: 💸 Subscription
     subscription_back: 💸 Back to Subscription
     subscription_back_short: 💸 Return Back
@@ -13,10 +13,10 @@ vpnremy_en:
     help: ℹ️ Help
     delete_message: 🥷 Delete Message
     settings: 🔧 Settings
-    settings_notifications_enable: 🔕 Enable Notifications
-    settings_notifications_disable: 🔔 Disable Notifications
+    settings_notifications_enable: 🔔 Turn reminders on
+    settings_notifications_disable: 🔕 Turn reminders off
     subscription_management_stripe: 💸 Subscription (Stripe)
-    referral: 💰 Referral
+    referral: 🎁 Invite friends
     cabinet: 👤 Personal account
     cabinet_open: 🔐 Sign in to your account
     promo_generate: 🎟 Generate promo codes
@@ -28,91 +28,87 @@ vpnremy_en:
   # --------------------------------------------------------
   platforms:
     text: |
-      *Choose your platform:*
+      *Choose your device*
 
-      Choose the operating system you want to setup. You will get credentials and configuration files you need to use. Please be careful, a sensitive information might be displayed.
+      The "%<server>s" location is selected. Which device will you use VPNRemy on? Each one gets its own setup.
   # --------------------------------------------------------
   help:
     text: |
-      *Available commands:*
+      *How can we help?*
 
-      🏠 /start - Start the bot and register
+      Can't find an answer? Message support, a human will reply.
 
-      ⚙️ /config - Manage configurations
-
-      💸 /subscription - Manage your subscription
-
-      🌎 /lang - Manage the bot language
-
-      🔧 /settings - Manage the settings
-
-      ℹ️ /help - Get the commands list
-
-      🤖 @Techru1 - Get a support
+      /start — main menu
+      /config — connect
+      /subscription — subscription
+      /referral — invite friends
+      /support — support
+      /help — this help
+  # --------------------------------------------------------
+  # the support link of /support; the text is shared, see default/en.yml
+  support:
+    url: https://t.me/Techru1
   # --------------------------------------------------------
   start:
     text: |
-      *🌟 Welcome! 🌟*
+      *Welcome back!*
 
-      Thank you for choosing [VPNRemy](https://vpnremy.com). To start using VPN, you need to press the *Configurations* button below and you will get the configuration file which you need to install to your device. Detailed guide is available at https://vpnremy.com. All options are available by running /help command.
+      Your subscription is active until *%<exp>s* — %<days_left>s.
+      What shall we do?
   # --------------------------------------------------------
   sub_extended:
     text: |
-      🌟 *Congratulations!* 🌟
+      ✅ *Your subscription is extended by %<period>s*
 
-      You have got *%<days>s* days of VPN usage! Feel free to write us your feedback in @Techru1! 🫶
-
-      Your subscription ends at: *%<exp>s*
+      Valid until *%<exp>s*.
+      Nothing to set up — everything keeps working.
   # --------------------------------------------------------
   sub_expired:
     text: |
-      ❌ *Subscription Expired!* ❌
+      ❌ *Your subscription ended on %<date>s*
 
-      We're sorry to find your subscription expired at *%<exp>s*
-
-      You need to follow /subscription command to continue using services.
-
-      Please write us to @Techru1 if you have any questions! 🫶
+      To use VPNRemy again, choose a plan. You can pay by QR code (SBP) or in USDT.
   # --------------------------------------------------------
   sub_expiring:
     text: |
-      ⏰ *Your subscription ends soon* ⏰
+      ⏰ *%<left>s*
 
-      Days left: *%<days>s*. Your subscription ends at: *%<exp>s*
+      Your VPNRemy subscription is valid until *%<exp>s*. Renew in advance — the paid days are added to the current ones.
 
-      Renew it with the /subscription command to keep your VPN running without interruption.
-
-      Please write us to @Techru1 if you have any questions! 🫶
+      Reminders can be turned off in the settings.
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅
     ico_no: ❌
     menu:
-      crypto: 🤑 Pay using USDT (TRC-20, any amount)
+      crypto: 🤑 USDT (TRC‑20, any amount)
       plan_1_mo: 💵 1 Month - 299.00 RUB
       plan_6_mo: 💵 6 Months - 1614.00 RUB
       plan_12_mo: 💵 12 Months - 2988.00 RUB
     text: |
-      *Your subscription:*
+      *Your subscription is active* %<ico>s
 
-      Expiration date: *%<exp>s* %<ico>s (%<days>s active days)
-      By making a payment you agree with our [Terms and Conditions](https://vpnremy.com/terms).
+      Valid until *%<exp>s*. Left: *%<period>s*.
+      You can renew in advance — the paid days are added to the current ones.
+
+      If you change your mind, we refund within 14 days of the first payment. By paying you agree with our [Terms and Conditions](https://vpnremy.com/terms).
+    text_expired: |
+      *Your subscription ended on %<date>s*
+
+      To use VPNRemy again, choose a plan. You can pay by QR code (SBP) or in USDT.
+
+      If you change your mind, we refund within 14 days of the first payment. By paying you agree with our [Terms and Conditions](https://vpnremy.com/terms).
   # --------------------------------------------------------
   payment_options:
     menu:
       pm_stripe_payment: 💳 Card, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Card (subscription)
-      pm_pay2day: 🇷🇺 SBP (RUB)
+      pm_pay2day: 📷 By QR code (SBP)
       pm_ref_balance: 💰 From the referral balance
     text: |
-      *Your subscription:*
+      *The "%<plan>s" plan — %<price>s*
 
-      Expiration date: *%<exp>s* %<ico>s (%<days>s active days)
-      By making a payment you agree with our [Terms and Conditions](https://vpnremy.com/terms).
-
-      You're buying: *%<description>s*
-
-      Please, choose payment method:
+      How would you like to pay?
   # --------------------------------------------------------
   ref_pay_confirm:
     text: |
@@ -185,44 +181,42 @@ vpnremy_en:
   # --------------------------------------------------------
   config_apple:
     text: |
-      Please download the file and install it to your device. Once the file is installed you need to confirm the installation of a profile in system settings.
+      *The "%<server>s" configuration for iPhone, iPad or Mac is ready*
+
+      Download the file and open it — the device will offer to install the profile.
+      iPhone and iPad: Settings → "Profile Downloaded" → "Install".
+      Mac: System Settings → "Privacy & Security" → "Profiles" → "Install".
+      Then turn the VPN on in the settings.
   # --------------------------------------------------------
   config_android:
     text: |
-      Please download the file and open it using the application https://play.google.com/store/apps/details?id=org.strongswan.android
-      You will be asked for username and password which are listed below.
+      *The "%<server>s" configuration for Android is ready*
 
-      Username:
-      `%<username>s`
+      1. Install the [strongSwan](https://play.google.com/store/apps/details?id=org.strongswan.android) app from Google Play
+      2. Save the file to your phone
+      3. In strongSwan: menu ⋮ → "Import VPN profile" → choose the file
 
-      Password:
-      `%<password>s`
+      Login: `%<username>s`
+      Password: `%<password>s`
 
-      (click to copy ^^)
+      You will need them if strongSwan asks when connecting. Do not share them — they give access to your subscription.
   # --------------------------------------------------------
   config_custom:
     text: |
-      *Custom Settings*
+      *The "%<server>s" connection for Windows*
 
-      You can connect using system setting and following credentials:
+      Windows needs no file — the VPN is built into the system. Tap a value to copy it.
 
-      Connection Name: `%<name>s`
-
-      Type: `%<type>s`
-
-      Server Host: `%<host>s`
-
-      Server Identity: `%<host>s`
-
-      IPSec Identifier: `%<username>s`
-
-      Username: `%<username>s`
-
+      Server: `%<host>s`
+      Login: `%<username>s`
       Password: `%<password>s`
 
-      CA certificate: (leave empty, not used)
+      1. Settings → Network & Internet → VPN → "Add VPN"
+      2. Provider — "Windows (built-in)", name — `%<name>s`, server address — from this message
+      3. VPN type — IKEv2, sign-in — "User name and password". Enter the login and password → "Save"
+      4. Tap the connection → "Connect"
 
-      Server certificate: (leave empty, not used)
+      Do not share the login and password — they give access to your subscription.
   # --------------------------------------------------------
   lang:
     text: |
@@ -266,17 +260,17 @@ vpnremy_en:
     rates: "From every payment: %<r1>s for your clients, %<r2>s for your clients' clients, %<r3>s for the third line."
     rates_fixed: "You get %<r1>s of the reward from your clients' payments, %<r2>s from their clients and %<r3>s from the third line."
     text: |
-      *💰 Referral*
+      *🎁 Invite friends*
 
       Your invite link: `%<link>s`
       Your promo code: `%<code>s`
-      Tap to copy and share with friends: they get a bonus on their first payment, and you earn from every payment they make.
+      Tap to copy and send to friends — or press "Share". They get a bonus on their first payment, and you earn a share of every payment they make.
 
+      Invited: *%<invited>s*
       %<rates>s
       %<terms>s
       Balance: *%<available>s* available, *%<on_hold>s* on hold.
-
-      Statistics, balance and withdrawals are in your personal account.
+      Withdrawals are in USDT, in your personal account. Statistics are there too.
   # --------------------------------------------------------
   referral_v2_inactive:
     text: |
@@ -321,10 +315,14 @@ vpnremy_en:
   settings:
     text: |
       *🔧 Settings*
+
+      %<reminders>s
   # --------------------------------------------------------
   unknown:
     text: |
-      Unknown command, please run /help to list all commands available!
+      *I don't understand free text yet*
+
+      Choose what you need in the menu below. If your question is not there, message support — a human will reply.
   # --------------------------------------------------------
   promo_enter:
     text: |

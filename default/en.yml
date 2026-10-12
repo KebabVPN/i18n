@@ -22,6 +22,15 @@ en:
     platform_android: 📱 Android
     platform_custom: 🔑 Other
     ref_pay: ✅ Pay
+    # the new bot layout (BotController::NEW_LAYOUT_WLS); English for every language of those brands
+    support: 💬 Support
+    support_open: 💬 Message support
+    share: 📤 Share
+    other_plan: 💸 Another plan
+    other_direction: 🌍 Another location
+    platform_iphone: 📱 iPhone / iPad
+    platform_windows: 💻 Windows
+    platform_macos: 💻 macOS
   # --------------------------------------------------------
   platforms:
     text: |
@@ -84,6 +93,13 @@ en:
 
       Expiration date: *%<exp>s* %<ico>s (%<days>s active days)
       By making a payment you agree with our [Terms and Conditions](https://kebabvpn.com/terms).
+    # the new bot layout: plan buttons, "6 months — 1 614 ₽ (−10%)", and an ended subscription
+    plan: "%<period>s — %<price>s"
+    plan_save: "%<period>s — %<price>s (−%<save>s%%)"
+    text_expired: |
+      *Your subscription ended on %<date>s*
+
+      To use the VPN again, choose a plan.
   # --------------------------------------------------------
   payment_options:
     menu:
@@ -225,6 +241,12 @@ en:
       Contact @KebabSupport to provide your requisites for money withdrawal.
   # --------------------------------------------------------
   settings:
+    reminders_on: |-
+      Renewal reminders are *on*.
+      They come a few days before the subscription ends, so the internet does not go off unexpectedly.
+    reminders_off: |-
+      Renewal reminders are *off*.
+      Messages about payments and the end of the subscription always come.
     text: |
       *🔧 Settings*
   # --------------------------------------------------------
@@ -242,6 +264,52 @@ en:
       Credited: *+%<amount>s* — %<line>s
       Balance: *%<available>s* available, *%<on_hold>s* on hold
       The reward becomes available on %<date>s.
+  # --------------------------------------------------------
+  # The new bot layout (BotController::NEW_LAYOUT_WLS). Dates are Moscow time.
+  bot_time: "%{date}, %{time} MSK"
+  days:
+    one: "%{count} day"
+    other: "%{count} days"
+  commands:
+    start: Main menu
+    config: Connect
+    subscription: Subscription and payment
+    referral: Invite friends
+    help: Help
+    support: Message support
+  support:
+    text: |
+      *💬 Support*
+
+      Write to us — a human will reply.
+  start_expired:
+    text: |
+      *Your subscription ended on %<date>s*
+
+      To use the VPN again, choose a plan.
+  welcome:
+    invited: "You were invited by %<name>s."
+    friend: a friend
+    text: |
+      *You have taken the first step to the free internet*
+
+      %<invited>sTrial access for %<trial>s — until *%<exp>s*.
+
+      Press "Connect", choose a location and a device — we will send the setup made for it. It takes a couple of minutes.
+  sub_expiring_trial:
+    text: |
+      ⏰ *Trial: %<left>s*
+
+      You can use the VPN for free until *%<exp>s*. Choose a plan in advance so the internet does not go off.
+
+      Reminders can be turned off in the settings.
+  sub_expired_trial:
+    text: |
+      *Your trial ended on %<date>s*
+
+      Liked it? To keep using the VPN, choose a plan.
+  referral_v2:
+    share: "Try this VPN — I use it and it works. The first days are free."
   # --------------------------------------------------------
   # Customer cabinet on the web
   web:
