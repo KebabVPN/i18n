@@ -3,6 +3,7 @@ en:
     back: ⬅️ Back
     home: 🏠 Home Menu
     home_short: 🏠 Home
+    invite_more: 💰 Invite more
     config: ⚙️ Configurations
     subscription: 💸 Subscription
     subscription_back: 💸 Back to Subscription
@@ -231,6 +232,17 @@ en:
     text: |
       Unknown command, please run /help to list all commands available!
   # --------------------------------------------------------
+  ref_accrued:
+    line_1: your client
+    line_2: your client's client
+    line_3: 3rd line
+    text: |
+      💸 *A friend has paid for a subscription*
+
+      Credited: *+%<amount>s* — %<line>s
+      Balance: *%<available>s* available, *%<on_hold>s* on hold
+      The reward becomes available on %<date>s.
+  # --------------------------------------------------------
   # Customer cabinet on the web
   web:
     log_in: Log in
@@ -356,9 +368,9 @@ en:
       clicks: Link clicks
       sales: Payments
       earned: Earned in total
-      depth_1: Your clients — 60%
-      depth_2: Your clients' clients — 30%
-      depth_3: Third line — 10%
+      depth_1: "Your clients — %{rate}"
+      depth_2: "Your clients' clients — %{rate}"
+      depth_3: "Third line — %{rate}"
       depth_count: "%{count} payments"
       line_1: your client
       line_2: 2nd line
@@ -415,6 +427,7 @@ en:
         already_requested: You already have a payout request in progress.
         below_minimum: "The minimum payout is %{min}."
     date: "%{day} %{month} %{year}"
+    date_short: "%{day} %{month}"
     months:
       - "January"
       - "February"
@@ -488,6 +501,10 @@ en:
       share_2: "for your clients' clients"
       share_3: "for the third line"
       shares_hint: "Your share of the reward from every payment, for as long as the clients pay."
+      rate_1: "of your clients' payments"
+      rate_2: "of your clients' clients' payments"
+      rate_3: "the third line"
+      rates_hint: "%{total} of every payment goes to partners, split between three lines."
       discount: "Discount for those you invite"
       payouts: "Payouts"
       payouts_value: "USDT (TRC20), from %{min}"

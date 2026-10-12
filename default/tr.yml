@@ -321,9 +321,9 @@ tr:
       clicks: Bağlantı tıklamaları
       sales: Ödemeler
       earned: Toplam kazanç
-      depth_1: Müşterileriniz — %60
-      depth_2: Müşterilerinizin müşterileri — %30
-      depth_3: Üçüncü seviye — %10
+      depth_1: "Müşterileriniz — %{rate}"
+      depth_2: "Müşterilerinizin müşterileri — %{rate}"
+      depth_3: "Üçüncü seviye — %{rate}"
       depth_count: "%{count} ödeme"
       line_1: müşteriniz
       line_2: 2. seviye
@@ -379,6 +379,7 @@ tr:
         already_requested: Zaten işlenmekte olan bir ödeme talebiniz var.
         below_minimum: "Minimum ödeme tutarı %{min}."
     date: "%{day} %{month} %{year}"
+    date_short: "%{day} %{month}"
     months:
       - "Ocak"
       - "Şubat"
@@ -452,6 +453,10 @@ tr:
       share_2: "müşterilerinizin müşterileri için"
       share_3: "üçüncü seviye"
       shares_hint: "Müşteriler ödeme yaptıkça her ödemenin ödülünden aldığınız pay."
+      rate_1: "müşterilerinizin ödemelerinden"
+      rate_2: "müşterilerinizin müşterilerinin ödemelerinden"
+      rate_3: "üçüncü seviye"
+      rates_hint: "Her ödemenin %{total} kadarı ortaklara gider ve üç seviye arasında paylaştırılır."
       discount: "Davet ettiklerinize indirim"
       payouts: "Ödemeler"
       payouts_value: "USDT (TRC20), en az %{min}"

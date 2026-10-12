@@ -225,6 +225,8 @@ vpnremy_zh:
     example: "订阅 %<price>s,您可获得 %<reward>s。"
     example_fixed: "您的客户每付款一次,您可获得 %<reward>s。"
     friend: "好友首次付款可享 %<bonus>s。"
+    rates: "每笔付款:直接客户 %<r1>s,客户的客户 %<r2>s,第三级 %<r3>s。"
+    rates_fixed: "您可获得直接客户付款奖励的 %<r1>s,客户的客户的 %<r2>s,第三级的 %<r3>s。"
     text: |
       *💰 推荐*
 
@@ -232,7 +234,7 @@ vpnremy_zh:
       您的优惠码:`%<code>s`
       点击复制并分享给朋友:他们首次付款可获得优惠,您可从他们的每笔付款中获得奖励。
 
-      您可获得直接客户付款奖励的 60%%,客户的客户的 30%%,第三级的 10%%。
+      %<rates>s
       %<terms>s
       余额:可用 *%<available>s*,冻结中 *%<on_hold>s*。
 

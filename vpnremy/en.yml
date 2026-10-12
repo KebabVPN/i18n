@@ -247,6 +247,8 @@ vpnremy_en:
     example: "From a %<price>s subscription you get %<reward>s."
     example_fixed: "You get %<reward>s from every payment of your client."
     friend: "Your friend gets %<bonus>s on the first payment."
+    rates: "From every payment: %<r1>s for your clients, %<r2>s for your clients' clients, %<r3>s for the third line."
+    rates_fixed: "You get %<r1>s of the reward from your clients' payments, %<r2>s from their clients and %<r3>s from the third line."
     text: |
       *💰 Referral*
 
@@ -254,7 +256,7 @@ vpnremy_en:
       Your promo code: `%<code>s`
       Tap to copy and share with friends: they get a bonus on their first payment, and you earn from every payment they make.
 
-      You get 60%% of the reward from your clients' payments, 30%% from their clients and 10%% from the third line.
+      %<rates>s
       %<terms>s
       Balance: *%<available>s* available, *%<on_hold>s* on hold.
 
