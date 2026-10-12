@@ -32,7 +32,7 @@ vpnremy_ru:
     support: Поддержка
     support_open: Написать в поддержку
     share: Поделиться
-    other_plan: 💸 Другой тариф
+    other_plan: Другой тариф
     other_direction: Другое направление
     other_device: Другое устройство
     guide_iphone: Инструкция для iPhone
@@ -157,7 +157,7 @@ vpnremy_ru:
   # --------------------------------------------------------
   sub_extended:
     text: |
-      ✅ *Подписка продлена на %<period>s*
+      *Подписка продлена на %<period>s*
 
       Действует до *%<exp>s*.
       Ничего настраивать не нужно — всё продолжит работать.
@@ -223,7 +223,7 @@ vpnremy_ru:
       pm_stripe_payment: 💳 Карта, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Карта (подписка)
       pm_pay2day: По QR‑коду
-      pm_ref_balance: 💰 С реферального баланса
+      pm_ref_balance: С реферального баланса
     text: |
       *Тариф «%<plan>s» — %<price>s*
 
