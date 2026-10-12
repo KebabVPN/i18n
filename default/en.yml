@@ -23,22 +23,22 @@ en:
     platform_custom: 🔑 Other
     ref_pay: ✅ Pay
     # the new bot layout (BotController::NEW_LAYOUT_WLS); English for every language of those brands
-    support: 💬 Support
-    support_open: 💬 Message support
+    support: Support
+    support_open: Message support
     share: 📤 Share
     other_plan: 💸 Another plan
-    other_direction: 🌍 Another location
-    platform_iphone: 📱 iPhone / iPad
-    platform_windows: 💻 Windows
-    platform_macos: 💻 macOS
-    other_device: 📱 Another device
-    guide_iphone: 📖 Guide for iPhone
-    guide_mac: 📖 Guide for Mac
-    guide_android: 📖 Guide for Android
-    guide_custom: 📖 Guide for Windows
-    not_connected: 😕 Can't connect
-    open_guide: 📖 Open the guide
-    retry: 🔄 Retry
+    other_direction: Another location
+    platform_iphone: iPhone / iPad
+    platform_windows: Windows
+    platform_macos: macOS
+    other_device: Another device
+    guide_iphone: Guide for iPhone
+    guide_mac: Guide for Mac
+    guide_android: Guide for Android
+    guide_custom: Guide for Windows
+    not_connected: Can't connect
+    open_guide: Open the guide
+    retry: Retry
   # --------------------------------------------------------
   platforms:
     text: |
@@ -251,10 +251,10 @@ en:
   settings:
     reminders_on: |-
       Renewal reminders are *on*.
-      They come a few days before the subscription ends, so the internet does not go off unexpectedly.
+      Reminders come a few days before the subscription ends, so the internet does not go off unexpectedly.
     reminders_off: |-
       Renewal reminders are *off*.
-      Messages about payments and the end of the subscription always come.
+      Messages about payments, refunds and the end of the subscription always come.
     text: |
       *🔧 Settings*
   # --------------------------------------------------------
@@ -283,11 +283,11 @@ en:
     config: Connect
     subscription: Subscription and payment
     referral: Invite friends
-    help: Help
+    help: Help and FAQ
     support: Message support
   support:
     text: |
-      *💬 Support*
+      *Support*
 
       Write to us — a human will reply.
   start_expired:
@@ -310,7 +310,7 @@ en:
       *Russia nearby* — you are abroad and want to use Russian services: banks, Gosuslugi, marketplaces.
   sub_expiring_trial:
     text: |
-      ⏰ *Trial: %<left>s*
+      *Trial: %<left>s*
 
       You can use the VPN for free until *%<exp>s*. Choose a plan in advance so the internet does not go off.
 
@@ -320,6 +320,56 @@ en:
       *Your trial ended on %<date>s*
 
       Liked it? To keep using the VPN, choose a plan.
+
+      Made with love for the free internet
+  sub_expiring:
+    all_plans: All plans
+    all_methods: All payment methods
+  # Help's questions (BotController::FAQ): the button, the answer.
+  faq:
+    guides: Guides
+    more: Other questions
+    not_helped: "\nDidn't help? Message support — a human will reply.\n"
+    vpn:
+      title: VPN does not connect
+      text: |
+        *What to check*
+
+        1. The subscription is active — see the "Subscription" section
+        2. Turn the VPN off and on again
+        3. Try another location
+        4. Download the configuration again: "Connect" → location → device
+    change:
+      title: Change the device or location
+      text: |
+        *How to change the device or location*
+
+        1. Main menu → "Connect"
+        2. Choose the location
+        3. Choose the device — a new file or details will come
+
+        The previous settings keep working.
+    pay:
+      title: How to pay
+      text: |
+        *How to pay*
+
+        1. Main menu → "Subscription"
+        2. Choose a plan
+        3. "By QR code" — scan the code or tap "Open in bank"
+        4. After the payment the bot will confirm it
+    expire:
+      title: What if I don't renew
+      text: |
+        *What if I don't renew*
+
+        On the day the subscription ends, the VPN stops working. The bot will remind you in advance: 3 days and 1 day before the end, and 1 day before for the trial. You can renew at any time — the connection will work again.
+    devices:
+      title: How many devices can I connect
+      text: |
+        *How many devices can I connect*
+
+        One subscription can be set up on your personal devices: phone, tablet, computer. The settings for each are in the "Connect" section.
   referral_v2:
     share: "Try this VPN — I use it and it works. The first days are free."
   config_iphone:
@@ -389,10 +439,14 @@ en:
 
       You have trial access for %<period>s. You can use the VPN until *%<exp>s*.
       When the trial ends, you can renew the subscription in one of the ways below.
+
+      Made with love for the free internet
     connected: |
       *Done, you are connected*
 
       Your subscription is valid until *%<exp>s*.
+
+      Made with love for the free internet
   # --------------------------------------------------------
   # Customer cabinet on the web
   web:
