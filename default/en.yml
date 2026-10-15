@@ -364,6 +364,16 @@ en:
 
       %<name>s started the bot via your invite link. As soon as they pay for a subscription, you will get %<reward>s.
   # --------------------------------------------------------
+  # A partner asks for a payout: to the brand's payout chat (RefPayoutNotifyJob)
+  ref_payout_requested:
+    text: |
+      Payout request
+
+      Partner: %<partner>s (%<tg>s)
+      Amount: %<amount>s
+      TRC-20 address: %<address>s
+      %<link>s
+  # --------------------------------------------------------
   # The new bot layout (BotController::NEW_LAYOUT_WLS). Dates are Moscow time.
   bot_time: "%{date}, %{time} MSK"
   days:
@@ -635,7 +645,6 @@ en:
         own_code: You can not use your own promo code.
         downline: This is a promo code of a partner from your own network, it can not be applied.
         already_used: You have already received a promo code bonus.
-        not_partner: Promo codes become available to you after your first payment.
         template: Choose a promotion.
         count: Choose from 1 to 500 codes.
         form: Please check the form and try again.
@@ -661,11 +670,9 @@ en:
         failed: Failed
     partner:
       locked_title: Partner program
-      locked_text: Your referral link, promo codes and rewards become available after your first payment.
-      link_title: Your link and promo code
+      locked_text: Your referral link and rewards become available after your first payment.
+      link_title: Your link
       link: Referral link
-      code: Personal promo code
-      link_hint: Whoever signs up with your link gets your personal promo code applied to their first payment.
       stats_title: Statistics
       clicks: Link clicks
       sales: Payments
@@ -797,7 +804,7 @@ en:
       cta: "Subscribe and become a partner"
       how_title: "How it works"
       step_1: "Subscribe: the partner section opens after your first payment."
-      step_2: "Share your link or personal promo code. Whoever comes by them gets a discount."
+      step_2: "Share your link. Whoever subscribes through it becomes your client."
       step_3: "Get rewards for every payment of your clients and withdraw them in USDT."
       shares_title: "How much you get"
       share_1: "for your clients"
@@ -808,7 +815,6 @@ en:
       rate_2: "of your clients' clients' payments"
       rate_3: "the third line"
       rates_hint: "%{total} of every payment goes to partners, split between three lines."
-      discount: "Discount for those you invite"
       payouts: "Payouts"
       payouts_value: "USDT (TRC20), from %{min}"
       hold: "Rewards become available"

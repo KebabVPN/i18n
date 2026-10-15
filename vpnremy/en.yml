@@ -314,7 +314,6 @@ vpnremy_en:
   referral_v2:
     example: "From a %<price>s subscription you get %<reward>s."
     example_fixed: "You get %<reward>s from every payment of your client."
-    friend: "Your friend gets %<bonus>s on the first payment."
     rates: "From every payment: %<r1>s for your clients, %<r2>s for your clients' clients, %<r3>s for the third line."
     rates_fixed: "You get %<r1>s of the reward from your clients' payments, %<r2>s from their clients and %<r3>s from the third line."
     text: |
@@ -328,7 +327,6 @@ vpnremy_en:
       %<hold>s%<rates>s
       Withdrawals are in USDT. To withdraw, message support.
 
-      Your promo code: `%<code>s`
       %<terms>s
   # --------------------------------------------------------
   ref_accrued:
@@ -344,7 +342,7 @@ vpnremy_en:
     text: |
       *Referral*
 
-      The partner program opens after your first payment. Then your invite link and promo code will appear here and in your personal account.
+      The partner program opens after your first payment. Then your invite link will appear here and in your personal account.
   # --------------------------------------------------------
   promo_templates:
     text: |
@@ -416,6 +414,7 @@ vpnremy_en:
       own_code: "❌ You can not use your own promo code."
       downline: "❌ This is a promo code of a partner from your own network, it can not be applied."
       already_used: "❌ You have already received a promo code bonus."
+      not_allowed: "❌ Generating promo codes is not available to you."
   # --------------------------------------------------------
   web:
     promo:

@@ -292,7 +292,6 @@ zh:
         own_code: 不能使用自己的优惠码。
         downline: 这是您自己网络中合作伙伴的优惠码，无法使用。
         already_used: 您已经领取过优惠码奖励。
-        not_partner: 首次付款后即可使用优惠码功能。
         template: 请选择一个活动。
         count: 可生成 1 到 500 个优惠码。
         form: 请检查表单后重试。
@@ -313,11 +312,9 @@ zh:
       usdt_deposit: USDT 充值
     partner:
       locked_title: 合作伙伴计划
-      locked_text: 首次付款后，您即可获得推荐链接、优惠码和奖励。
-      link_title: 您的链接和优惠码
+      locked_text: 首次付款后，您即可获得推荐链接和奖励。
+      link_title: 您的链接
       link: 推荐链接
-      code: 专属优惠码
-      link_hint: 通过您的链接注册的用户，首次付款时将自动使用您的专属优惠码。
       stats_title: 统计
       clicks: 链接点击
       sales: 付款次数
@@ -448,7 +445,7 @@ zh:
       cta: "订阅并成为合作伙伴"
       how_title: "如何运作"
       step_1: "订阅：首次付款后开放合作伙伴页面。"
-      step_2: "分享您的链接或专属优惠码，通过它们而来的用户可享受折扣。"
+      step_2: "分享您的链接，通过它订阅的用户将成为您的客户。"
       step_3: "从客户的每笔付款中获得奖励，并以 USDT 提现。"
       shares_title: "您能获得多少"
       share_1: "来自您的客户"
@@ -459,7 +456,6 @@ zh:
       rate_2: "来自客户的客户的付款"
       rate_3: "第三级"
       rates_hint: "每笔付款的 %{total} 分给合作伙伴,由三级分享。"
-      discount: "受邀用户折扣"
       payouts: "提现"
       payouts_value: "USDT (TRC20)，最低 %{min}"
       hold: "奖励可用时间"

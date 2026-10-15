@@ -292,7 +292,6 @@ tr:
         own_code: Kendi promosyon kodunuzu kullanamazsınız.
         downline: Bu, kendi ağınızdaki bir ortağın promosyon kodudur, uygulanamaz.
         already_used: Promosyon kodu bonusunu zaten aldınız.
-        not_partner: Promosyon kodları ilk ödemenizden sonra kullanılabilir olur.
         template: Bir kampanya seçin.
         count: 1 ile 500 arasında kod seçin.
         form: Lütfen formu kontrol edip tekrar deneyin.
@@ -313,11 +312,9 @@ tr:
       usdt_deposit: USDT yüklemesi
     partner:
       locked_title: Ortaklık programı
-      locked_text: Referans bağlantınız, promosyon kodlarınız ve ödülleriniz ilk ödemenizden sonra kullanılabilir olur.
-      link_title: Bağlantınız ve promosyon kodunuz
+      locked_text: Referans bağlantınız ve ödülleriniz ilk ödemenizden sonra kullanılabilir olur.
+      link_title: Bağlantınız
       link: Referans bağlantısı
-      code: Kişisel promosyon kodu
-      link_hint: Bağlantınızla kaydolan herkesin ilk ödemesine kişisel promosyon kodunuz uygulanır.
       stats_title: İstatistikler
       clicks: Bağlantı tıklamaları
       sales: Ödemeler
@@ -448,7 +445,7 @@ tr:
       cta: "Abone olun ve ortak olun"
       how_title: "Nasıl çalışır"
       step_1: "Abone olun: ortaklık bölümü ilk ödemenizden sonra açılır."
-      step_2: "Bağlantınızı veya kişisel promosyon kodunuzu paylaşın. Bunlarla gelenler indirim alır."
+      step_2: "Bağlantınızı paylaşın. Onunla abone olan herkes müşteriniz olur."
       step_3: "Müşterilerinizin her ödemesinden ödül alın ve USDT olarak çekin."
       shares_title: "Ne kadar kazanırsınız"
       share_1: "müşterileriniz için"
@@ -459,7 +456,6 @@ tr:
       rate_2: "müşterilerinizin müşterilerinin ödemelerinden"
       rate_3: "üçüncü seviye"
       rates_hint: "Her ödemenin %{total} kadarı ortaklara gider ve üç seviye arasında paylaştırılır."
-      discount: "Davet ettiklerinize indirim"
       payouts: "Ödemeler"
       payouts_value: "USDT (TRC20), en az %{min}"
       hold: "Ödüller kullanılabilir"
