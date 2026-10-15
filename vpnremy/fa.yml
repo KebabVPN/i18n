@@ -283,6 +283,7 @@ vpnremy_fa:
   web:
     promo:
       current_hint: برای پرداخت با SBP و از موجودی معرفی. پرداخت USDT با قیمت کامل است.
+      current_hint_no_usdt: برای پرداخت با SBP و از موجودی معرفی.
   # --------------------------------------------------------
   # the support link of /support
   support:

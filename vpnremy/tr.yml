@@ -332,6 +332,7 @@ vpnremy_tr:
   web:
     promo:
       current_hint: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir. USDT ödemeleri tam fiyattan alınır.
+      current_hint_no_usdt: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir.
   # --------------------------------------------------------
   # the support link of /support
   support:

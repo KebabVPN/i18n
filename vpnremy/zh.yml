@@ -332,6 +332,7 @@ vpnremy_zh:
   web:
     promo:
       current_hint: 适用于 SBP 付款和推荐余额付款。USDT 付款按原价收费。
+      current_hint_no_usdt: 适用于 SBP 付款和推荐余额付款。
   # --------------------------------------------------------
   # the support link of /support
   support:

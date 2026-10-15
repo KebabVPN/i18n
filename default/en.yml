@@ -36,6 +36,8 @@ en:
     guide_mac: Guide for Mac
     guide_android: Guide for Android
     guide_custom: Guide for Windows
+    guide_linux: Guide for Linux
+    platform_linux: Linux
     not_connected: Can't connect
     open_guide: Open the guide
     retry: Retry
@@ -276,6 +278,19 @@ en:
 
       (click to copy ^^)
   # --------------------------------------------------------
+  # the new bot layout: Linux takes the Windows settings (Host::PLATFORM_LINUX)
+  config_linux:
+    text: |
+      *The "%<server>s" connection for Linux*
+
+      Linux needs no file — the VPN is set up in NetworkManager. Enter these details in the VPN settings. Tap a value to copy it.
+
+      Server: `%<host>s`
+      Login: `%<username>s`
+      Password: `%<password>s`
+
+      Do not share the login and password — they give access to your subscription.
+  # --------------------------------------------------------
   config_custom:
     text: |
       *Custom Settings*
@@ -335,7 +350,7 @@ en:
       Reminders come a few days before the subscription ends, so the internet does not go off unexpectedly.
     reminders_off: |-
       Renewal reminders are *off*.
-      Messages about payments, refunds and the end of the subscription always come.
+      Messages about payments and the end of the subscription always come.
     text: |
       *🔧 Settings*
   # --------------------------------------------------------
@@ -461,7 +476,7 @@ en:
       text: |
         *How many devices can I connect*
 
-        One subscription can be set up on your personal devices: phone, tablet, computer. The settings for each are in the "Connect" section.
+        One subscription can be set up on your personal devices: iPhone and iPad, Android, Windows, macOS and Linux. The settings for each are in the "Connect" section.
   referral_v2:
     share: "Try this VPN — I use it and it works. The first days are free."
     people:
@@ -519,6 +534,16 @@ en:
       2. Provider — "Windows (built-in)", any name, server address — from the message above
       3. VPN type — IKEv2, sign-in — "User name and password". Enter the login and password → "Save"
       4. Tap the connection → "Connect"
+
+      As soon as you connect, the bot will confirm it.
+    guide_linux: |
+      *How to connect on Linux*
+
+      1. Install the strongSwan plugin for NetworkManager. Ubuntu and Debian: `sudo apt install network-manager-strongswan`
+      2. Open Settings → Network → VPN → "+" → "IPsec/IKEv2 (strongswan)", any name
+      3. Server — the address from the message above. Leave the certificate empty
+      4. Authentication — EAP. Enter the login and password from the message above, tick "Request an inner IP address" → "Add"
+      5. Turn the VPN on
 
       As soon as you connect, the bot will confirm it.
     not_connected: |

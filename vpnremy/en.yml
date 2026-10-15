@@ -67,6 +67,13 @@ vpnremy_en:
       To use VPNRemy again, choose a plan. You can pay by QR code (SBP) or in USDT.
 
       Made with love for the free internet
+    # while Setting.usdt_enabled is 0 (T#usdt_get)
+    text_no_usdt: |
+      *Your subscription ended on %<date>s*
+
+      To use VPNRemy again, choose a plan. You can pay by QR code (SBP).
+
+      Made with love for the free internet
   # --------------------------------------------------------
   sub_expiring:
     text: |
@@ -90,13 +97,20 @@ vpnremy_en:
       Valid until *%<exp>s*. Left: *%<period>s*.
       You can renew in advance — the paid days are added to the current ones.
 
-      If you change your mind, we refund within 14 days of the first payment. By paying you agree with our [Terms and Conditions](https://vpnremy.com/terms).
+      By paying you agree with our [Terms and Conditions](https://vpnremy.com/terms).
     text_expired: |
       *Your subscription ended on %<date>s*
 
       To use VPNRemy again, choose a plan. You can pay by QR code (SBP) or in USDT.
 
-      If you change your mind, we refund within 14 days of the first payment. By paying you agree with our [Terms and Conditions](https://vpnremy.com/terms).
+      By paying you agree with our [Terms and Conditions](https://vpnremy.com/terms).
+    # while Setting.usdt_enabled is 0 (T#usdt_get)
+    text_expired_no_usdt: |
+      *Your subscription ended on %<date>s*
+
+      To use VPNRemy again, choose a plan. You can pay by QR code (SBP).
+
+      By paying you agree with our [Terms and Conditions](https://vpnremy.com/terms).
   # --------------------------------------------------------
   payment_options:
     menu:
@@ -146,9 +160,11 @@ vpnremy_en:
   # --------------------------------------------------------
   config:
     text: |
-      *Choose Location:*
+      *Choose where to connect*
 
-      Please choose the location you want to setup VPN configuration for. You will be asked for an operating system you use.
+      *Open the world* — you are in Russia and want to use foreign sites and services. The Netherlands or the USA will do.
+
+      *Russia nearby* — you are abroad and want to use Russian services: banks, Gosuslugi, marketplaces.
   # --------------------------------------------------------
   # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
   hosts:
@@ -260,6 +276,16 @@ vpnremy_en:
       2. Provider — "Windows (built-in)", name — VPNRemy, server address — from the message above
       3. VPN type — IKEv2, sign-in — "User name and password". Enter the login and password → "Save"
       4. Tap VPNRemy → "Connect"
+
+      As soon as you connect, the bot will confirm it.
+    guide_linux: |
+      *How to connect on Linux*
+
+      1. Install the strongSwan plugin for NetworkManager. Ubuntu and Debian: `sudo apt install network-manager-strongswan`
+      2. Open Settings → Network → VPN → "+" → "IPsec/IKEv2 (strongswan)", name — VPNRemy
+      3. Server — the address from the message above. Leave the certificate empty
+      4. Authentication — EAP. Enter the login and password from the message above, tick "Request an inner IP address" → "Add"
+      5. Turn VPNRemy on
 
       As soon as you connect, the bot will confirm it.
     connected_trial: |
@@ -420,3 +446,4 @@ vpnremy_en:
   web:
     promo:
       current_hint: Works with SBP and referral balance payments. USDT is charged at the full price.
+      current_hint_no_usdt: Works with SBP and referral balance payments.
