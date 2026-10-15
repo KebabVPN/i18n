@@ -225,6 +225,7 @@ tr:
     reset_password_title: Parolanızı sıfırlayın
     reset_password_hint: Yeni bir parola belirlemeniz için e-posta ile bağlantı göndereceğiz.
     send_link: Bağlantıyı gönder
+    reset_link_sent: "Şifre belirleme bağlantısı %{email} adresine gönderildi. Gelen kutunuzu ve Spam klasörünü kontrol edin."
     new_password_title: Yeni parola belirleyin
     new_password: Yeni parola
     confirm_new_password: Yeni parolayı doğrulayın

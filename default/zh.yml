@@ -225,6 +225,7 @@ zh:
     reset_password_title: 重置密码
     reset_password_hint: 我们会通过邮件发送设置新密码的链接。
     send_link: 发送链接
+    reset_link_sent: "设置密码的链接已发送至 %{email}。请查看收件箱和垃圾邮件文件夹。"
     new_password_title: 设置新密码
     new_password: 新密码
     confirm_new_password: 确认新密码

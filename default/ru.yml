@@ -247,6 +247,7 @@ ru:
     reset_password_title: Восстановление пароля
     reset_password_hint: Пришлём на почту ссылку для смены пароля.
     send_link: Отправить ссылку
+    reset_link_sent: "Ссылка для смены пароля отправлена на %{email} — проверьте почту и папку «Спам»."
     new_password_title: Новый пароль
     new_password: Новый пароль
     confirm_new_password: Повторите новый пароль
@@ -524,6 +525,27 @@ ru:
       linked: "Telegram привязан к аккаунту."
       merged: "Telegram привязан, подписка и данные из бота теперь в этом аккаунте."
       telegram_taken: "Этот Telegram уже привязан к другому аккаунту. Напишите в поддержку @Techru1."
+  # "Почта не найдена" on the password recovery form. The attribute name is
+  # every Russian User error's: "Почта" in place of the English "Email".
+  activerecord:
+    attributes:
+      user:
+        email: "Почта"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              not_found: "не найдена"
+  # Dashboard rows of the admin, which reads Russian whatever its locale.
+  admin:
+    dashboard:
+      revenue_total: "Итого выручка"
+      not_revenue:
+        ref_balance: "Оплачено реферальным балансом (не выручка)"
+        promo: "Промокоды (без оплаты)"
+      accrued: "Начислено партнёрам за период"
+      net: "Выручка минус начисления"
   # Devise flash messages, in the language of the cabinet.
   devise:
     confirmations:
@@ -533,10 +555,10 @@ ru:
     failure:
       already_authenticated: "Вы уже вошли."
       inactive: "Ваш аккаунт ещё не активирован."
-      invalid: "Неверный %{authentication_keys} или пароль."
+      invalid: "Неверная почта или пароль."
       locked: "Ваш аккаунт заблокирован."
       last_attempt: "Осталась одна попытка, после неё аккаунт будет заблокирован."
-      not_found_in_database: "Неверный %{authentication_keys} или пароль."
+      not_found_in_database: "Неверная почта или пароль."
       timeout: "Сессия истекла. Войдите снова, чтобы продолжить."
       unauthenticated: "Войдите или зарегистрируйтесь, чтобы продолжить."
       unconfirmed: "Подтвердите адрес почты, чтобы продолжить."
