@@ -176,6 +176,7 @@ fa:
     reset_password_title: بازیابی رمز عبور
     reset_password_hint: پیوند انتخاب رمز جدید را به ایمیل شما می‌فرستیم.
     send_link: ارسال پیوند
+    reset_link_sent: "پیوند تعیین رمز عبور به %{email} فرستاده شد. صندوق ورودی و پوشهٔ هرزنامه را بررسی کنید."
     new_password_title: انتخاب رمز عبور جدید
     new_password: رمز عبور جدید
     confirm_new_password: تکرار رمز عبور جدید
