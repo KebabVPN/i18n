@@ -284,6 +284,7 @@ tr:
       applied: Promosyon kodu uygulandı. Bir sonraki ödemenizde kullanılacak.
       current: "Uygulandı: %{code} (%{bonus})"
       current_hint: SBP ve tek seferlik kart ödemelerinde geçerlidir. Otomatik yenileme ve USDT ödemeleri tam fiyattan alınır.
+      current_hint_no_usdt: SBP ve tek seferlik kart ödemelerinde geçerlidir. Otomatik yenileme tam fiyattan alınır.
       bonus_percent: "−%%%{value}"
       bonus_days: "+%{count} gün"
       errors:
@@ -293,6 +294,7 @@ tr:
         own_code: Kendi promosyon kodunuzu kullanamazsınız.
         downline: Bu, kendi ağınızdaki bir ortağın promosyon kodudur, uygulanamaz.
         already_used: Promosyon kodu bonusunu zaten aldınız.
+        not_allowed: Promosyon kodu oluşturma sizin için kullanılamıyor.
         template: Bir kampanya seçin.
         count: 1 ile 500 arasında kod seçin.
         form: Lütfen formu kontrol edip tekrar deneyin.

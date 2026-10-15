@@ -284,6 +284,7 @@ zh:
       applied: 优惠码已生效，将在下次付款时使用。
       current: "已使用：%{code}（%{bonus}）"
       current_hint: 适用于 SBP 付款和银行卡一次性付款。自动续费和 USDT 付款按原价收费。
+      current_hint_no_usdt: 适用于 SBP 付款和银行卡一次性付款。自动续费按原价收费。
       bonus_percent: "−%{value}%"
       bonus_days: "+%{count} 天"
       errors:
@@ -293,6 +294,7 @@ zh:
         own_code: 不能使用自己的优惠码。
         downline: 这是您自己网络中合作伙伴的优惠码，无法使用。
         already_used: 您已经领取过优惠码奖励。
+        not_allowed: 您无法生成优惠码。
         template: 请选择一个活动。
         count: 可生成 1 到 500 个优惠码。
         form: 请检查表单后重试。

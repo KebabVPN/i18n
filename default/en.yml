@@ -662,6 +662,7 @@ en:
       applied: The promo code is applied. It will be used on your next payment.
       current: "Applied: %{code} (%{bonus})"
       current_hint: Works with SBP and one-time card payments. Auto-renewal and USDT are charged at the full price.
+      current_hint_no_usdt: Works with SBP and one-time card payments. Auto-renewal is charged at the full price.
       bonus_percent: "−%{value}%"
       bonus_days: "+%{count} days"
       errors:
@@ -671,6 +672,7 @@ en:
         own_code: You can not use your own promo code.
         downline: This is a promo code of a partner from your own network, it can not be applied.
         already_used: You have already received a promo code bonus.
+        not_allowed: Generating promo codes is not available to you.
         template: Choose a promotion.
         count: Choose from 1 to 500 codes.
         form: Please check the form and try again.
