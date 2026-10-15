@@ -240,15 +240,13 @@ vpnremy_tr:
   referral_v2:
     example: "%<price>s tutarındaki bir abonelikten %<reward>s kazanırsınız."
     example_fixed: "Müşterinizin her ödemesinden %<reward>s kazanırsınız."
-    friend: "Arkadaşınız ilk ödemesinde %<bonus>s kazanır."
     rates: "Her ödemeden: müşterileriniz için %<r1>s, müşterilerinizin müşterileri için %<r2>s, üçüncü seviye için %<r3>s."
     rates_fixed: "Müşterilerinizin ödemelerinden ödülün %<r1>s kadarını, onların müşterilerinden %<r2>s, üçüncü seviyeden %<r3>s alırsınız."
     text: |
       *💰 Referans*
 
       Davet bağlantınız: `%<link>s`
-      Promosyon kodunuz: `%<code>s`
-      Kopyalamak için dokunun ve arkadaşlarınızla paylaşın: ilk ödemelerinde bonus kazanırlar, siz de yaptıkları her ödemeden kazanırsınız.
+      Kopyalamak için dokunun ve arkadaşlarınızla paylaşın: yaptıkları her ödemeden kazanırsınız.
 
       %<rates>s
       %<terms>s
@@ -260,7 +258,7 @@ vpnremy_tr:
     text: |
       *💰 Referans*
 
-      Ortaklık programı ilk ödemenizden sonra açılır. Davet bağlantınız ve promosyon kodunuz o zaman burada ve kişisel hesabınızda görünecek.
+      Ortaklık programı ilk ödemenizden sonra açılır. Davet bağlantınız o zaman burada ve kişisel hesabınızda görünecek.
   # --------------------------------------------------------
   promo_templates:
     text: |
@@ -328,10 +326,12 @@ vpnremy_tr:
       own_code: "❌ Kendi promosyon kodunuzu kullanamazsınız."
       downline: "❌ Bu, kendi ağınızdaki bir ortağın promosyon kodudur, uygulanamaz."
       already_used: "❌ Daha önce bir promosyon kodu bonusu aldınız."
+      not_allowed: "❌ Promosyon kodu oluşturma sizin için kullanılamıyor."
   # --------------------------------------------------------
   web:
     promo:
       current_hint: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir. USDT ödemeleri tam fiyattan alınır.
+      current_hint_no_usdt: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir.
   # --------------------------------------------------------
   # the support link of /support
   support:

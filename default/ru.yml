@@ -231,6 +231,16 @@ ru:
     text: |
       Неизвестная команда, выполните /help, чтобы получить список всех доступных команд!
   # --------------------------------------------------------
+  # A partner asks for a payout: to the brand's payout chat (RefPayoutNotifyJob)
+  ref_payout_requested:
+    text: |
+      Заявка на выплату
+
+      Партнёр: %<partner>s (%<tg>s)
+      Сумма: %<amount>s
+      Адрес TRC-20: %<address>s
+      %<link>s
+  # --------------------------------------------------------
   # Customer cabinet on the web
   web:
     log_in: Войти
@@ -247,6 +257,7 @@ ru:
     reset_password_title: Восстановление пароля
     reset_password_hint: Пришлём на почту ссылку для смены пароля.
     send_link: Отправить ссылку
+    reset_link_sent: "Ссылка для смены пароля отправлена на %{email} — проверьте почту и папку «Спам»."
     new_password_title: Новый пароль
     new_password: Новый пароль
     confirm_new_password: Повторите новый пароль
@@ -313,6 +324,7 @@ ru:
       applied: Промокод применён. Он сработает при следующей оплате.
       current: "Применён: %{code} (%{bonus})"
       current_hint: Действует при оплате по СБП и разовой оплате картой. Автопродление и USDT — по полной цене.
+      current_hint_no_usdt: Действует при оплате по СБП и разовой оплате картой. Автопродление — по полной цене.
       bonus_percent: "−%{value}%"
       bonus_days: "+%{count} дн."
       errors:
@@ -322,7 +334,7 @@ ru:
         own_code: Нельзя применить собственный промокод.
         downline: Это промокод партнёра из вашей сети — применить его нельзя.
         already_used: Вы уже получали бонус по промокоду.
-        not_partner: Промокоды станут доступны после вашей первой оплаты.
+        not_allowed: Генерация промокодов вам недоступна.
         template: Выберите акцию.
         count: Можно сгенерировать от 1 до 500 кодов.
         form: Проверьте форму и попробуйте ещё раз.
@@ -348,11 +360,9 @@ ru:
         failed: Не прошёл
     partner:
       locked_title: Партнёрская программа
-      locked_text: Реферальная ссылка, промокоды и вознаграждения станут доступны после вашей первой оплаты.
-      link_title: Ваша ссылка и промокод
+      locked_text: Реферальная ссылка и вознаграждения станут доступны после вашей первой оплаты.
+      link_title: Ваша ссылка
       link: Реферальная ссылка
-      code: Личный промокод
-      link_hint: Кто зарегистрируется по вашей ссылке, получит ваш личный промокод на первую оплату.
       stats_title: Статистика
       clicks: Переходы
       sales: Оплаты
@@ -484,7 +494,7 @@ ru:
       cta: "Оформить подписку и стать партнёром"
       how_title: "Как это работает"
       step_1: "Оформите подписку: партнёрский раздел откроется после первой оплаты."
-      step_2: "Делитесь ссылкой или личным промокодом. Кто придёт по ним, получит скидку."
+      step_2: "Делитесь своей ссылкой. Кто оформит подписку по ней, станет вашим клиентом."
       step_3: "Получайте вознаграждение с каждой оплаты ваших клиентов и выводите его в USDT."
       shares_title: "Сколько вы получаете"
       share_1: "за ваших клиентов"
@@ -495,7 +505,6 @@ ru:
       rate_2: "с оплат клиентов ваших клиентов"
       rate_3: "третья линия"
       rates_hint: "С каждой оплаты %{total} идёт партнёрам: делится между тремя линиями."
-      discount: "Скидка для приглашённых"
       payouts: "Выплаты"
       payouts_value: "USDT (TRC20), от %{min}"
       hold: "Вознаграждение доступно"
@@ -524,6 +533,27 @@ ru:
       linked: "Telegram привязан к аккаунту."
       merged: "Telegram привязан, подписка и данные из бота теперь в этом аккаунте."
       telegram_taken: "Этот Telegram уже привязан к другому аккаунту. Напишите в поддержку @Techru1."
+  # "Почта не найдена" on the password recovery form. The attribute name is
+  # every Russian User error's: "Почта" in place of the English "Email".
+  activerecord:
+    attributes:
+      user:
+        email: "Почта"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              not_found: "не найдена"
+  # Dashboard rows of the admin, which reads Russian whatever its locale.
+  admin:
+    dashboard:
+      revenue_total: "Итого выручка"
+      not_revenue:
+        ref_balance: "Оплачено реферальным балансом (не выручка)"
+        promo: "Промокоды (без оплаты)"
+      accrued: "Начислено партнёрам за период"
+      net: "Выручка минус начисления"
   # Devise flash messages, in the language of the cabinet.
   devise:
     confirmations:
@@ -533,10 +563,10 @@ ru:
     failure:
       already_authenticated: "Вы уже вошли."
       inactive: "Ваш аккаунт ещё не активирован."
-      invalid: "Неверный %{authentication_keys} или пароль."
+      invalid: "Неверная почта или пароль."
       locked: "Ваш аккаунт заблокирован."
       last_attempt: "Осталась одна попытка, после неё аккаунт будет заблокирован."
-      not_found_in_database: "Неверный %{authentication_keys} или пароль."
+      not_found_in_database: "Неверная почта или пароль."
       timeout: "Сессия истекла. Войдите снова, чтобы продолжить."
       unauthenticated: "Войдите или зарегистрируйтесь, чтобы продолжить."
       unconfirmed: "Подтвердите адрес почты, чтобы продолжить."

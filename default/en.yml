@@ -36,6 +36,8 @@ en:
     guide_mac: Guide for Mac
     guide_android: Guide for Android
     guide_custom: Guide for Windows
+    guide_linux: Guide for Linux
+    platform_linux: Linux
     not_connected: Can't connect
     open_guide: Open the guide
     retry: Retry
@@ -276,6 +278,19 @@ en:
 
       (click to copy ^^)
   # --------------------------------------------------------
+  # the new bot layout: Linux takes the Windows settings (Host::PLATFORM_LINUX)
+  config_linux:
+    text: |
+      *The "%<server>s" connection for Linux*
+
+      Linux needs no file — the VPN is set up in NetworkManager. Enter these details in the VPN settings. Tap a value to copy it.
+
+      Server: `%<host>s`
+      Login: `%<username>s`
+      Password: `%<password>s`
+
+      Do not share the login and password — they give access to your subscription.
+  # --------------------------------------------------------
   config_custom:
     text: |
       *Custom Settings*
@@ -335,7 +350,7 @@ en:
       Reminders come a few days before the subscription ends, so the internet does not go off unexpectedly.
     reminders_off: |-
       Renewal reminders are *off*.
-      Messages about payments, refunds and the end of the subscription always come.
+      Messages about payments and the end of the subscription always come.
     text: |
       *🔧 Settings*
   # --------------------------------------------------------
@@ -363,6 +378,16 @@ en:
       *A friend came via your link*
 
       %<name>s started the bot via your invite link. As soon as they pay for a subscription, you will get %<reward>s.
+  # --------------------------------------------------------
+  # A partner asks for a payout: to the brand's payout chat (RefPayoutNotifyJob)
+  ref_payout_requested:
+    text: |
+      Payout request
+
+      Partner: %<partner>s (%<tg>s)
+      Amount: %<amount>s
+      TRC-20 address: %<address>s
+      %<link>s
   # --------------------------------------------------------
   # The new bot layout (BotController::NEW_LAYOUT_WLS). Dates are Moscow time.
   bot_time: "%{date}, %{time} MSK"
@@ -461,7 +486,7 @@ en:
       text: |
         *How many devices can I connect*
 
-        One subscription can be set up on your personal devices: phone, tablet, computer. The settings for each are in the "Connect" section.
+        One subscription can be set up on your personal devices: iPhone and iPad, Android, Windows, macOS and Linux. The settings for each are in the "Connect" section.
   referral_v2:
     share: "Try this VPN — I use it and it works. The first days are free."
     people:
@@ -521,6 +546,16 @@ en:
       4. Tap the connection → "Connect"
 
       As soon as you connect, the bot will confirm it.
+    guide_linux: |
+      *How to connect on Linux*
+
+      1. Install the strongSwan plugin for NetworkManager. Ubuntu and Debian: `sudo apt install network-manager-strongswan`
+      2. Open Settings → Network → VPN → "+" → "IPsec/IKEv2 (strongswan)", any name
+      3. Server — the address from the message above. Leave the certificate empty
+      4. Authentication — EAP. Enter the login and password from the message above, tick "Request an inner IP address" → "Add"
+      5. Turn the VPN on
+
+      As soon as you connect, the bot will confirm it.
     not_connected: |
       *You got the configuration but have not connected yet*
 
@@ -560,6 +595,7 @@ en:
     reset_password_title: Reset your password
     reset_password_hint: We will email you a link to choose a new one.
     send_link: Send the link
+    reset_link_sent: "We have sent a link to set a password to %{email}. Check your inbox and the Spam folder."
     new_password_title: Choose a new password
     new_password: New password
     confirm_new_password: Confirm new password
@@ -626,6 +662,7 @@ en:
       applied: The promo code is applied. It will be used on your next payment.
       current: "Applied: %{code} (%{bonus})"
       current_hint: Works with SBP and one-time card payments. Auto-renewal and USDT are charged at the full price.
+      current_hint_no_usdt: Works with SBP and one-time card payments. Auto-renewal is charged at the full price.
       bonus_percent: "−%{value}%"
       bonus_days: "+%{count} days"
       errors:
@@ -635,7 +672,7 @@ en:
         own_code: You can not use your own promo code.
         downline: This is a promo code of a partner from your own network, it can not be applied.
         already_used: You have already received a promo code bonus.
-        not_partner: Promo codes become available to you after your first payment.
+        not_allowed: Generating promo codes is not available to you.
         template: Choose a promotion.
         count: Choose from 1 to 500 codes.
         form: Please check the form and try again.
@@ -661,11 +698,9 @@ en:
         failed: Failed
     partner:
       locked_title: Partner program
-      locked_text: Your referral link, promo codes and rewards become available after your first payment.
-      link_title: Your link and promo code
+      locked_text: Your referral link and rewards become available after your first payment.
+      link_title: Your link
       link: Referral link
-      code: Personal promo code
-      link_hint: Whoever signs up with your link gets your personal promo code applied to their first payment.
       stats_title: Statistics
       clicks: Link clicks
       sales: Payments
@@ -797,7 +832,7 @@ en:
       cta: "Subscribe and become a partner"
       how_title: "How it works"
       step_1: "Subscribe: the partner section opens after your first payment."
-      step_2: "Share your link or personal promo code. Whoever comes by them gets a discount."
+      step_2: "Share your link. Whoever subscribes through it becomes your client."
       step_3: "Get rewards for every payment of your clients and withdraw them in USDT."
       shares_title: "How much you get"
       share_1: "for your clients"
@@ -808,7 +843,6 @@ en:
       rate_2: "of your clients' clients' payments"
       rate_3: "the third line"
       rates_hint: "%{total} of every payment goes to partners, split between three lines."
-      discount: "Discount for those you invite"
       payouts: "Payouts"
       payouts_value: "USDT (TRC20), from %{min}"
       hold: "Rewards become available"
