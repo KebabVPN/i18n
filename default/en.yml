@@ -406,6 +406,17 @@ en:
       *Support*
 
       Write to us — a human will reply.
+    # the case is closed, to the user in the support bot (SupportCase#close!)
+    closed: |
+      Your request is closed. If you still have a question, just write here and we will open a new one.
+    # A user writes to support: to the brand's support chat (SupportNotifyAdminJob)
+    admin_notify: |
+      Support message (%<source>s)
+
+      From: %<login>s
+      %<text>s
+
+      %<link>s
   start_expired:
     text: |
       *Your subscription ended on %<date>s*
