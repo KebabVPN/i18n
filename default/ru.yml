@@ -241,6 +241,19 @@ ru:
       Адрес TRC-20: %<address>s
       %<link>s
   # --------------------------------------------------------
+  # A user writes to support: to the brand's support chat (SupportNotifyAdminJob)
+  support:
+    # the case is closed, to the user in the support bot (SupportCase#close!)
+    closed: |
+      Обращение закрыто. Если вопрос остался, просто напишите сюда — откроем новое.
+    admin_notify: |
+      Сообщение в поддержку (%<source>s)
+
+      От: %<login>s
+      %<text>s
+
+      %<link>s
+  # --------------------------------------------------------
   # Customer cabinet on the web
   web:
     log_in: Войти
@@ -560,6 +573,30 @@ ru:
         promo: "Промокоды (без оплаты)"
       accrued: "Начислено партнёрам за период"
       net: "Выручка минус начисления"
+    # The support cases (app/admin/support_cases.rb)
+    support:
+      menu: "Поддержка"
+      all: "Все"
+      statuses:
+        new: "Новые"
+        in_progress: "В работе"
+        resolved: "Решено"
+        unresolved: "Не решено"
+      sources:
+        tg: "Telegram"
+        site: "Сайт"
+        cabinet: "ЛК"
+      last_message: "Последнее сообщение"
+      messages: "Переписка"
+      reply: "Ответ"
+      send: "Отправить"
+      not_delivered: "не доставлено"
+      document: "Документ"
+      previous: "Прошлые обращения"
+      replied: "Ответ отправлен."
+      reply_blank: "Пустой ответ не отправлен."
+      already_closed: "Обращение уже закрыто."
+      closed: "Обращение закрыто."
   # Devise flash messages, in the language of the cabinet.
   devise:
     confirmations:
