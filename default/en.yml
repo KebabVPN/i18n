@@ -511,7 +511,6 @@ en:
         title: 🇺🇸 Open the world via the USA
       - host: ru_saint_petersburg_1
         title: 🇷🇺 Connect to Russia
-    file: "VPN-%<server>s"
     guide_iphone: |
       *How to connect on iPhone*
 
