@@ -287,6 +287,10 @@ vpnremy_fa:
     promo:
       current_hint: برای پرداخت با SBP و از موجودی معرفی. پرداخت USDT با قیمت کامل است.
       current_hint_no_usdt: برای پرداخت با SBP و از موجودی معرفی.
+    # The default texts name @Techru1; this brand has its own support bot.
+    tg_login:
+      inactive: "در حال حاضر امکان ورود به این حساب وجود ندارد. لطفاً به پشتیبانی پیام دهید: @vpnremy_support_bot"
+      telegram_taken: "این تلگرام قبلاً به حساب دیگری متصل شده است. لطفاً به پشتیبانی پیام دهید: @vpnremy_support_bot"
   # --------------------------------------------------------
   # the support link of /support
   support:

@@ -336,6 +336,10 @@ vpnremy_zh:
     promo:
       current_hint: 适用于 SBP 付款和推荐余额付款。USDT 付款按原价收费。
       current_hint_no_usdt: 适用于 SBP 付款和推荐余额付款。
+    # The default texts name @Techru1; this brand has its own support bot.
+    tg_login:
+      inactive: "该账户目前无法登录，请联系客服 @vpnremy_support_bot。"
+      telegram_taken: "此 Telegram 已绑定到另一个账户，请联系客服 @vpnremy_support_bot。"
   # --------------------------------------------------------
   # the support link of /support
   support:

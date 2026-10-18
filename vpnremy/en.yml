@@ -446,3 +446,7 @@ vpnremy_en:
     promo:
       current_hint: Works with SBP and referral balance payments. USDT is charged at the full price.
       current_hint_no_usdt: Works with SBP and referral balance payments.
+    # The default texts name @Techru1; this brand has its own support bot.
+    tg_login:
+      inactive: "This account can not sign in right now. Please contact support @vpnremy_support_bot."
+      telegram_taken: "This Telegram is already linked to another account. Please contact support @vpnremy_support_bot."

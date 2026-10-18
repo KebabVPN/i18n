@@ -336,6 +336,10 @@ vpnremy_tr:
     promo:
       current_hint: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir. USDT ödemeleri tam fiyattan alınır.
       current_hint_no_usdt: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir.
+    # The default texts name @Techru1; this brand has its own support bot.
+    tg_login:
+      inactive: "Bu hesapla şu anda giriş yapılamıyor. Lütfen destekle iletişime geçin: @vpnremy_support_bot."
+      telegram_taken: "Bu Telegram zaten başka bir hesaba bağlı. Lütfen destekle iletişime geçin: @vpnremy_support_bot."
   # --------------------------------------------------------
   # the support link of /support
   support:
