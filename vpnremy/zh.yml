@@ -133,6 +133,10 @@ vpnremy_zh:
 
       请选择要设置 VPN 配置的位置。系统将要求您选择所使用的操作系统。
   # --------------------------------------------------------
+  # The config file name, the same in the bot and in the cabinet (Host#config_file_name).
+  onboarding:
+    file: "VPNRemy-%<server>s"
+  # --------------------------------------------------------
   # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
   hosts:
     names:

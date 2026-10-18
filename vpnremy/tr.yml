@@ -133,6 +133,10 @@ vpnremy_tr:
 
       Lütfen VPN yapılandırma dosyasını kurmak istediğiniz konumu seçin. Kullandığınız işletim sisteminden size sorulacaktır.
   # --------------------------------------------------------
+  # The config file name, the same in the bot and in the cabinet (Host#config_file_name).
+  onboarding:
+    file: "VPNRemy-%<server>s"
+  # --------------------------------------------------------
   # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
   hosts:
     names:
