@@ -253,6 +253,16 @@ ru:
       %<text>s
 
       %<link>s
+    # The brand's support bot (SupportBotController)
+    bot:
+      start: |
+        Это поддержка. Напишите свой вопрос, можно приложить скриншот или файл. Ответит человек, ответ придёт сюда.
+      received: |
+        Сообщение получили. Ответим здесь, как только сможем.
+      unsupported: |
+        Такие сообщения мы не принимаем. Напишите текстом или пришлите фото или файл.
+      commands:
+        start: Написать в поддержку
   # --------------------------------------------------------
   # Customer cabinet on the web
   web:
@@ -292,8 +302,19 @@ ru:
       plans: "Тарифы"
       payments: Платежи
       partner: Партнёрам
+      support: Поддержка
       settings: Настройки
       copy: Скопировать
+    # The support chat page (Web::SupportController)
+    support:
+      title: Поддержка
+      placeholder: Ваше сообщение
+      send: Отправить
+      empty: Напишите нам, ответит человек. Ответ появится здесь.
+      closed: Обращение закрыто. Если вопрос остался, просто напишите, откроем новое.
+      invalid: Сообщение пустое или длиннее 4000 символов.
+      you: Вы
+      team: Поддержка
     # Cabinet sections: subscription, payments, partner program, bot sign-in.
     login_link_invalid: Ссылка для входа недействительна или уже использована. Получите новую в боте или войдите по email.
     plans:
@@ -592,6 +613,7 @@ ru:
       send: "Отправить"
       not_delivered: "не доставлено"
       document: "Документ"
+      photo: "Фото"
       previous: "Прошлые обращения"
       replied: "Ответ отправлен."
       reply_blank: "Пустой ответ не отправлен."

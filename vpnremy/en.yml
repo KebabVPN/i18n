@@ -44,7 +44,7 @@ vpnremy_en:
   # --------------------------------------------------------
   # the support link of /support; the text is shared, see default/en.yml
   support:
-    url: https://t.me/Techru1
+    url: https://t.me/vpnremy_support_bot
   # --------------------------------------------------------
   start:
     text: |

@@ -417,6 +417,16 @@ en:
       %<text>s
 
       %<link>s
+    # The brand's support bot (SupportBotController)
+    bot:
+      start: |
+        This is support. Write your question, you can attach a screenshot or a file. A human will reply here.
+      received: |
+        We got your message and will reply here as soon as we can.
+      unsupported: |
+        We can not take this kind of message. Please write text or send a photo or a file.
+      commands:
+        start: Message support
   start_expired:
     text: |
       *Your subscription ended on %<date>s*
@@ -636,8 +646,19 @@ en:
       plans: "Plans"
       payments: Payments
       partner: Partners
+      support: Support
       settings: Settings
       copy: Copy
+    # The support chat page (Web::SupportController)
+    support:
+      title: Support
+      placeholder: Your message
+      send: Send
+      empty: Write to us and a human will reply. The answer will appear here.
+      closed: This request is closed. If you still have a question, just write and we will open a new one.
+      invalid: The message is empty or longer than 4000 characters.
+      you: You
+      team: Support
     # Cabinet sections: subscription, payments, partner program, bot sign-in.
     login_link_invalid: This sign-in link is invalid or has already been used. Get a new one in the bot or sign in with your email.
     plans:
