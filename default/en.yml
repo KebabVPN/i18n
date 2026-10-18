@@ -503,6 +503,15 @@ en:
       *The "%<server>s" configuration for Mac is ready*
 
       Download the file and open it — the Mac will offer to install the profile.
+  hosts:
+    # What customers of brands without their own hosts.names read; these were
+    # the hosts.description values on production before the column was dropped.
+    names:
+      eu_nl_1: "🇳🇱 Netherlands, EU"
+      eu_ru_nl_1: "🇳🇱 Netherlands, EU (via Russia)"
+      eu_ru_us_1: "🇺🇸 Fremont CA, USA (via Russia)"
+      ru_saint_petersburg_1: "🇷🇺 Saint-Petersburg, RU"
+      usa_fremont_1: "🇺🇸 Fremont CA, USA"
   onboarding:
     directions:
       - host: eu_nl_1
