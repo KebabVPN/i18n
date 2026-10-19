@@ -657,6 +657,7 @@ en:
       empty: Write to us and a human will reply. The answer will appear here.
       closed: This request is closed. If you still have a question, just write and we will open a new one.
       invalid: The message is empty or longer than 4000 characters.
+      too_many: Too many messages in a row. Please wait a minute.
       you: You
       team: Support
     # Cabinet sections: subscription, payments, partner program, bot sign-in.
