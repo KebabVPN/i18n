@@ -37,7 +37,7 @@ vpnremy_fa:
 
       ℹ️ /help - راهنما
 
-      🤖 @Techru1 - پشتیبانی
+      🤖 @vpnremy\_support\_bot - پشتیبانی
   # --------------------------------------------------------
   start:
     text: |
@@ -49,7 +49,7 @@ vpnremy_fa:
     text: |
       🌟 *تبریک!* 🌟
 
-      شما *%<days>s* روز از استفاده از VPN به دست آوردید! تجربه‌تان را با @Techru1 به اشتراک بگذارید! 🫶
+      شما *%<days>s* روز از استفاده از VPN به دست آوردید! تجربه‌تان را با @vpnremy\_support\_bot به اشتراک بگذارید! 🫶
 
       اشتراک شما تا تاریخ *%<exp>s* فعال است.
   # --------------------------------------------------------
@@ -61,7 +61,7 @@ vpnremy_fa:
 
       You need to follow /subscription command to continue using services.
 
-      Please write us to @Techru1 if you have any questions! 🫶
+      Please write us to @vpnremy\_support\_bot if you have any questions! 🫶
   # --------------------------------------------------------
   sub_expiring:
     text: |
@@ -71,7 +71,7 @@ vpnremy_fa:
 
       برای استفاده بدون وقفه از VPN، اشتراک خود را با دستور /subscription تمدید کنید.
 
-      اگر سوالی دارید، به ما در @Techru1 پیام دهید! 🫶
+      اگر سوالی دارید، به ما در @vpnremy\_support\_bot پیام دهید! 🫶
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅

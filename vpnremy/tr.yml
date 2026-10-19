@@ -47,7 +47,7 @@ vpnremy_tr:
 
       ℹ️ /help - Komut listesini alın
 
-      🤖 @Techru1 - Destek alın
+      🤖 @vpnremy\_support\_bot - Destek alın
   # --------------------------------------------------------
   start:
     text: |
@@ -59,7 +59,7 @@ vpnremy_tr:
     text: |
       🌟 *Tebrikler!* 🌟
 
-      *%<days>s* gün VPN kullanımı kazandınız! Geri bildiriminizi @Techru1 üzerinden bize yazmaktan çekinmeyin! 🫶
+      *%<days>s* gün VPN kullanımı kazandınız! Geri bildiriminizi @vpnremy\_support\_bot üzerinden bize yazmaktan çekinmeyin! 🫶
 
       Aboneliğiniz *%<exp>s* tarihinde sona eriyor.
   # --------------------------------------------------------
@@ -71,7 +71,7 @@ vpnremy_tr:
 
       Hizmetleri kullanmaya devam etmek için /subscription komutunu izlemeniz gerekiyor.
 
-      Herhangi bir sorunuz varsa lütfen bize @Techru1 üzerinden yazın! 🫶
+      Herhangi bir sorunuz varsa lütfen bize @vpnremy\_support\_bot üzerinden yazın! 🫶
   # --------------------------------------------------------
   sub_expiring:
     text: |
@@ -81,7 +81,7 @@ vpnremy_tr:
 
       VPN'i kesintisiz kullanmak için aboneliğinizi /subscription komutuyla yenileyin.
 
-      Herhangi bir sorunuz varsa lütfen bize @Techru1 üzerinden yazın! 🫶
+      Herhangi bir sorunuz varsa lütfen bize @vpnremy\_support\_bot üzerinden yazın! 🫶
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅
