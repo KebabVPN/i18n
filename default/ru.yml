@@ -241,11 +241,11 @@ ru:
       Адрес TRC-20: %<address>s
       %<link>s
   # --------------------------------------------------------
-  # A user writes to support: to the brand's support chat (SupportNotifyAdminJob)
   support:
     # the case is closed, to the user in the support bot (SupportCase#close!)
     closed: |
       Обращение закрыто. Если вопрос остался, просто напишите сюда — откроем новое.
+    # A user writes to support: to the brand's support chat (SupportNotifyAdminJob)
     admin_notify: |
       Сообщение в поддержку (%<source>s)
 
@@ -312,7 +312,7 @@ ru:
       send: Отправить
       empty: Напишите нам, ответит человек. Ответ появится здесь.
       closed: Обращение закрыто. Если вопрос остался, просто напишите, откроем новое.
-      invalid: Сообщение пустое или длиннее 4000 символов.
+      invalid: Сообщение пустое или длиннее %<max>s символов.
       too_many: Слишком много сообщений подряд. Подождите минуту.
       you: Вы
       team: Поддержка
@@ -608,6 +608,8 @@ ru:
         tg: "Telegram"
         site: "Сайт"
         cabinet: "ЛК"
+      # a site guest in the notice to the support chat, known by the case only
+      guest: "гость сайта, обращение #%<id>s"
       last_message: "Последнее сообщение"
       messages: "Переписка"
       reply: "Ответ"
@@ -617,7 +619,7 @@ ru:
       photo: "Фото"
       previous: "Прошлые обращения"
       replied: "Ответ отправлен."
-      reply_blank: "Пустой ответ не отправлен."
+      reply_invalid: "Ответ пустой или длиннее %<max>s символов, не отправлен."
       already_closed: "Обращение уже закрыто."
       closed: "Обращение закрыто."
   # Devise flash messages, in the language of the cabinet.
