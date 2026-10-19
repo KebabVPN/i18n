@@ -47,7 +47,7 @@ vpnremy_zh:
 
       ℹ️ /help - 获取命令列表
 
-      🤖 @Techru1 - 获取支持
+      🤖 @vpnremy\_support\_bot - 获取支持
   # --------------------------------------------------------
   start:
     text: |
@@ -59,7 +59,7 @@ vpnremy_zh:
     text: |
       🌟 *恭喜！* 🌟
 
-      您获得了 *%<days>s* 天的 VPN 使用权！请随时在 @Techru1 中给我们写反馈！🫶
+      您获得了 *%<days>s* 天的 VPN 使用权！请随时在 @vpnremy\_support\_bot 中给我们写反馈！🫶
 
       您的订阅到期时间为：*%<exp>s*
   # --------------------------------------------------------
@@ -71,7 +71,7 @@ vpnremy_zh:
 
       您需要执行 /subscription 命令以继续使用服务。
 
-      如果您有任何问题，请在 @Techru1 联系我们！🫶
+      如果您有任何问题，请在 @vpnremy\_support\_bot 联系我们！🫶
   # --------------------------------------------------------
   sub_expiring:
     text: |
@@ -81,7 +81,7 @@ vpnremy_zh:
 
       请执行 /subscription 命令续订，以保持 VPN 不间断使用。
 
-      如果您有任何问题，请在 @Techru1 联系我们！🫶
+      如果您有任何问题，请在 @vpnremy\_support\_bot 联系我们！🫶
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅
@@ -132,6 +132,10 @@ vpnremy_zh:
       *选择位置:*
 
       请选择要设置 VPN 配置的位置。系统将要求您选择所使用的操作系统。
+  # --------------------------------------------------------
+  # The config file name, the same in the bot and in the cabinet (Host#config_file_name).
+  onboarding:
+    file: "VPNRemy-%<server>s"
   # --------------------------------------------------------
   # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
   hosts:
@@ -332,7 +336,11 @@ vpnremy_zh:
     promo:
       current_hint: 适用于 SBP 付款和推荐余额付款。USDT 付款按原价收费。
       current_hint_no_usdt: 适用于 SBP 付款和推荐余额付款。
+    # The default texts name @Techru1; this brand has its own support bot.
+    tg_login:
+      inactive: "该账户目前无法登录，请联系客服 @vpnremy_support_bot。"
+      telegram_taken: "此 Telegram 已绑定到另一个账户，请联系客服 @vpnremy_support_bot。"
   # --------------------------------------------------------
   # the support link of /support
   support:
-    url: https://t.me/Techru1
+    url: https://t.me/vpnremy_support_bot

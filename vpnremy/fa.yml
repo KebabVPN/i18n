@@ -37,7 +37,7 @@ vpnremy_fa:
 
       ℹ️ /help - راهنما
 
-      🤖 @Techru1 - پشتیبانی
+      🤖 @vpnremy\_support\_bot - پشتیبانی
   # --------------------------------------------------------
   start:
     text: |
@@ -49,7 +49,7 @@ vpnremy_fa:
     text: |
       🌟 *تبریک!* 🌟
 
-      شما *%<days>s* روز از استفاده از VPN به دست آوردید! تجربه‌تان را با @Techru1 به اشتراک بگذارید! 🫶
+      شما *%<days>s* روز از استفاده از VPN به دست آوردید! تجربه‌تان را با @vpnremy\_support\_bot به اشتراک بگذارید! 🫶
 
       اشتراک شما تا تاریخ *%<exp>s* فعال است.
   # --------------------------------------------------------
@@ -61,7 +61,7 @@ vpnremy_fa:
 
       You need to follow /subscription command to continue using services.
 
-      Please write us to @Techru1 if you have any questions! 🫶
+      Please write us to @vpnremy\_support\_bot if you have any questions! 🫶
   # --------------------------------------------------------
   sub_expiring:
     text: |
@@ -71,7 +71,7 @@ vpnremy_fa:
 
       برای استفاده بدون وقفه از VPN، اشتراک خود را با دستور /subscription تمدید کنید.
 
-      اگر سوالی دارید، به ما در @Techru1 پیام دهید! 🫶
+      اگر سوالی دارید، به ما در @vpnremy\_support\_bot پیام دهید! 🫶
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅
@@ -122,6 +122,10 @@ vpnremy_fa:
       *پیکربندی VPN شما*
 
       لطفاً یک پیکربندی مناسب برای دستگاه خود انتخاب کنید. اکثر تلفن‌ها و سیستم‌ها پروتکل IPSec را پشتیبانی می‌کنند. دستورالعمل‌های مفصل در [مستندات](https://vpnremy.com/guide) موجود است.
+  # --------------------------------------------------------
+  # The config file name, the same in the bot and in the cabinet (Host#config_file_name).
+  onboarding:
+    file: "VPNRemy-%<server>s"
   # --------------------------------------------------------
   # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
   hosts:
@@ -283,7 +287,11 @@ vpnremy_fa:
     promo:
       current_hint: برای پرداخت با SBP و از موجودی معرفی. پرداخت USDT با قیمت کامل است.
       current_hint_no_usdt: برای پرداخت با SBP و از موجودی معرفی.
+    # The default texts name @Techru1; this brand has its own support bot.
+    tg_login:
+      inactive: "در حال حاضر امکان ورود به این حساب وجود ندارد. لطفاً به پشتیبانی پیام دهید: @vpnremy_support_bot"
+      telegram_taken: "این تلگرام قبلاً به حساب دیگری متصل شده است. لطفاً به پشتیبانی پیام دهید: @vpnremy_support_bot"
   # --------------------------------------------------------
   # the support link of /support
   support:
-    url: https://t.me/Techru1
+    url: https://t.me/vpnremy_support_bot

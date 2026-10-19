@@ -47,7 +47,7 @@ vpnremy_tr:
 
       ℹ️ /help - Komut listesini alın
 
-      🤖 @Techru1 - Destek alın
+      🤖 @vpnremy\_support\_bot - Destek alın
   # --------------------------------------------------------
   start:
     text: |
@@ -59,7 +59,7 @@ vpnremy_tr:
     text: |
       🌟 *Tebrikler!* 🌟
 
-      *%<days>s* gün VPN kullanımı kazandınız! Geri bildiriminizi @Techru1 üzerinden bize yazmaktan çekinmeyin! 🫶
+      *%<days>s* gün VPN kullanımı kazandınız! Geri bildiriminizi @vpnremy\_support\_bot üzerinden bize yazmaktan çekinmeyin! 🫶
 
       Aboneliğiniz *%<exp>s* tarihinde sona eriyor.
   # --------------------------------------------------------
@@ -71,7 +71,7 @@ vpnremy_tr:
 
       Hizmetleri kullanmaya devam etmek için /subscription komutunu izlemeniz gerekiyor.
 
-      Herhangi bir sorunuz varsa lütfen bize @Techru1 üzerinden yazın! 🫶
+      Herhangi bir sorunuz varsa lütfen bize @vpnremy\_support\_bot üzerinden yazın! 🫶
   # --------------------------------------------------------
   sub_expiring:
     text: |
@@ -81,7 +81,7 @@ vpnremy_tr:
 
       VPN'i kesintisiz kullanmak için aboneliğinizi /subscription komutuyla yenileyin.
 
-      Herhangi bir sorunuz varsa lütfen bize @Techru1 üzerinden yazın! 🫶
+      Herhangi bir sorunuz varsa lütfen bize @vpnremy\_support\_bot üzerinden yazın! 🫶
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅
@@ -132,6 +132,10 @@ vpnremy_tr:
       *Konumunuzu Seçin:*
 
       Lütfen VPN yapılandırma dosyasını kurmak istediğiniz konumu seçin. Kullandığınız işletim sisteminden size sorulacaktır.
+  # --------------------------------------------------------
+  # The config file name, the same in the bot and in the cabinet (Host#config_file_name).
+  onboarding:
+    file: "VPNRemy-%<server>s"
   # --------------------------------------------------------
   # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
   hosts:
@@ -332,7 +336,11 @@ vpnremy_tr:
     promo:
       current_hint: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir. USDT ödemeleri tam fiyattan alınır.
       current_hint_no_usdt: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir.
+    # The default texts name @Techru1; this brand has its own support bot.
+    tg_login:
+      inactive: "Bu hesapla şu anda giriş yapılamıyor. Lütfen destekle iletişime geçin: @vpnremy_support_bot."
+      telegram_taken: "Bu Telegram zaten başka bir hesaba bağlı. Lütfen destekle iletişime geçin: @vpnremy_support_bot."
   # --------------------------------------------------------
   # the support link of /support
   support:
-    url: https://t.me/Techru1
+    url: https://t.me/vpnremy_support_bot

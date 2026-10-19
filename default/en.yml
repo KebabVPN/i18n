@@ -406,6 +406,27 @@ en:
       *Support*
 
       Write to us — a human will reply.
+    # the case is closed, to the user in the support bot (SupportCase#close!)
+    closed: |
+      Your request is closed. If you still have a question, just write here and we will open a new one.
+    # A user writes to support: to the brand's support chat (SupportNotifyAdminJob)
+    admin_notify: |
+      Support message (%<source>s)
+
+      From: %<login>s
+      %<text>s
+
+      %<link>s
+    # The brand's support bot (SupportBotController)
+    bot:
+      start: |
+        This is support. Write your question, you can attach a screenshot or a file. A human will reply here.
+      received: |
+        We got your message and will reply here as soon as we can.
+      unsupported: |
+        We can not take this kind of message. Please write text or send a photo or a file.
+      commands:
+        start: Message support
   start_expired:
     text: |
       *Your subscription ended on %<date>s*
@@ -503,6 +524,15 @@ en:
       *The "%<server>s" configuration for Mac is ready*
 
       Download the file and open it — the Mac will offer to install the profile.
+  hosts:
+    # What customers of brands without their own hosts.names read; these were
+    # the hosts.description values on production before the column was dropped.
+    names:
+      eu_nl_1: "🇳🇱 Netherlands, EU"
+      eu_ru_nl_1: "🇳🇱 Netherlands, EU (via Russia)"
+      eu_ru_us_1: "🇺🇸 Fremont CA, USA (via Russia)"
+      ru_saint_petersburg_1: "🇷🇺 Saint-Petersburg, RU"
+      usa_fremont_1: "🇺🇸 Fremont CA, USA"
   onboarding:
     directions:
       - host: eu_nl_1
@@ -511,7 +541,6 @@ en:
         title: 🇺🇸 Open the world via the USA
       - host: ru_saint_petersburg_1
         title: 🇷🇺 Connect to Russia
-    file: "VPN-%<server>s"
     guide_iphone: |
       *How to connect on iPhone*
 
@@ -617,8 +646,20 @@ en:
       plans: "Plans"
       payments: Payments
       partner: Partners
+      support: Support
       settings: Settings
       copy: Copy
+    # The support chat page (Web::SupportController)
+    support:
+      title: Support
+      placeholder: Your message
+      send: Send
+      empty: Write to us and a human will reply. The answer will appear here.
+      closed: This request is closed. If you still have a question, just write and we will open a new one.
+      invalid: The message is empty or longer than %<max>s characters.
+      too_many: Too many messages in a row. Please wait a minute.
+      you: You
+      team: Support
     # Cabinet sections: subscription, payments, partner program, bot sign-in.
     login_link_invalid: This sign-in link is invalid or has already been used. Get a new one in the bot or sign in with your email.
     plans:

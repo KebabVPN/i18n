@@ -241,6 +241,29 @@ ru:
       Адрес TRC-20: %<address>s
       %<link>s
   # --------------------------------------------------------
+  support:
+    # the case is closed, to the user in the support bot (SupportCase#close!)
+    closed: |
+      Обращение закрыто. Если вопрос остался, просто напишите сюда — откроем новое.
+    # A user writes to support: to the brand's support chat (SupportNotifyAdminJob)
+    admin_notify: |
+      Сообщение в поддержку (%<source>s)
+
+      От: %<login>s
+      %<text>s
+
+      %<link>s
+    # The brand's support bot (SupportBotController)
+    bot:
+      start: |
+        Это поддержка. Напишите свой вопрос, можно приложить скриншот или файл. Ответит человек, ответ придёт сюда.
+      received: |
+        Сообщение получили. Ответим здесь, как только сможем.
+      unsupported: |
+        Такие сообщения мы не принимаем. Напишите текстом или пришлите фото или файл.
+      commands:
+        start: Написать в поддержку
+  # --------------------------------------------------------
   # Customer cabinet on the web
   web:
     log_in: Войти
@@ -279,8 +302,20 @@ ru:
       plans: "Тарифы"
       payments: Платежи
       partner: Партнёрам
+      support: Поддержка
       settings: Настройки
       copy: Скопировать
+    # The support chat page (Web::SupportController)
+    support:
+      title: Поддержка
+      placeholder: Ваше сообщение
+      send: Отправить
+      empty: Напишите нам, ответит человек. Ответ появится здесь.
+      closed: Обращение закрыто. Если вопрос остался, просто напишите, откроем новое.
+      invalid: Сообщение пустое или длиннее %<max>s символов.
+      too_many: Слишком много сообщений подряд. Подождите минуту.
+      you: Вы
+      team: Поддержка
     # Cabinet sections: subscription, payments, partner program, bot sign-in.
     login_link_invalid: Ссылка для входа недействительна или уже использована. Получите новую в боте или войдите по email.
     plans:
@@ -560,6 +595,33 @@ ru:
         promo: "Промокоды (без оплаты)"
       accrued: "Начислено партнёрам за период"
       net: "Выручка минус начисления"
+    # The support cases (app/admin/support_cases.rb)
+    support:
+      menu: "Поддержка"
+      all: "Все"
+      statuses:
+        new: "Новые"
+        in_progress: "В работе"
+        resolved: "Решено"
+        unresolved: "Не решено"
+      sources:
+        tg: "Telegram"
+        site: "Сайт"
+        cabinet: "ЛК"
+      # a site guest in the notice to the support chat, known by the case only
+      guest: "гость сайта, обращение #%<id>s"
+      last_message: "Последнее сообщение"
+      messages: "Переписка"
+      reply: "Ответ"
+      send: "Отправить"
+      not_delivered: "не доставлено"
+      document: "Документ"
+      photo: "Фото"
+      previous: "Прошлые обращения"
+      replied: "Ответ отправлен."
+      reply_invalid: "Ответ пустой или длиннее %<max>s символов, не отправлен."
+      already_closed: "Обращение уже закрыто."
+      closed: "Обращение закрыто."
   # Devise flash messages, in the language of the cabinet.
   devise:
     confirmations:

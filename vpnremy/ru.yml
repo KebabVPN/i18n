@@ -123,7 +123,7 @@ vpnremy_ru:
         Одну подписку можно поставить на ваши личные устройства: iPhone и iPad, Android, Windows, macOS и Linux. Настройки для каждого — в разделе «Подключиться».
   # --------------------------------------------------------
   support:
-    url: https://t.me/Techru1
+    url: https://t.me/vpnremy_support_bot
     text: |
       *Поддержка*
 
@@ -704,3 +704,7 @@ vpnremy_ru:
     promo:
       current_hint: Действует при оплате по СБП и с реферального баланса. USDT — по полной цене.
       current_hint_no_usdt: Действует при оплате по СБП и с реферального баланса.
+    # The default texts name @Techru1; this brand has its own support bot.
+    tg_login:
+      inactive: "Сейчас войти в этот аккаунт нельзя. Напишите в поддержку @vpnremy_support_bot."
+      telegram_taken: "Этот Telegram уже привязан к другому аккаунту. Напишите в поддержку @vpnremy_support_bot."
