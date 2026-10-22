@@ -214,6 +214,7 @@ tr:
     log_in: Giriş yap
     sign_up: Kayıt ol
     sign_out: Çıkış yap
+    loading: Yükleniyor…
     email: E-posta
     password: Parola
     remember_me: Beni hatırla

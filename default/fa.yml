@@ -165,6 +165,7 @@ fa:
     log_in: ورود
     sign_up: ثبت‌نام
     sign_out: خروج
+    loading: در حال بارگذاری…
     email: ایمیل
     password: رمز عبور
     remember_me: مرا به خاطر بسپار

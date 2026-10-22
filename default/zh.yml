@@ -214,6 +214,7 @@ zh:
     log_in: 登录
     sign_up: 注册
     sign_out: 退出登录
+    loading: 加载中…
     email: 邮箱
     password: 密码
     remember_me: 记住我

@@ -613,6 +613,7 @@ en:
     log_in: Log in
     sign_up: Sign up
     sign_out: Sign out
+    loading: Loading…
     email: Email
     password: Password
     remember_me: Remember me
