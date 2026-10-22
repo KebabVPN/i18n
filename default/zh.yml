@@ -400,6 +400,19 @@ zh:
       minutes: "%{n} 分钟前"
       hours: "%{n} 小时前"
       days: "%{n} 天前"
+    # The status of one payment after "Pay" (Web::PaymentsController#show)
+    pay:
+      title: "付款"
+      time_left: "二维码剩余有效时间"
+      scan: "请用银行应用扫描二维码。"
+      open_bank: "在银行应用中付款"
+      waiting: "等待付款…"
+      paid_title: "付款成功"
+      paid_text: "您的订阅有效期至 %{date}。"
+      failed_title: "付款未成功"
+      failed_text: "付款被拒绝或付款时间已过。如果款项已被扣除，请联系客服，我们会处理。"
+      error_text: "无法创建付款。请稍后重试或联系客服。"
+      retry: "重试"
     cancel: "取消"
     home:
       state:

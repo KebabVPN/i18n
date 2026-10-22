@@ -351,6 +351,19 @@ fa:
       minutes: "%{n} دقیقه پیش"
       hours: "%{n} ساعت پیش"
       days: "%{n} روز پیش"
+    # The status of one payment after "Pay" (Web::PaymentsController#show)
+    pay:
+      title: "پرداخت"
+      time_left: "اعتبار کد"
+      scan: "کد QR را در برنامهٔ بانک خود اسکن کنید."
+      open_bank: "پرداخت در برنامهٔ بانک"
+      waiting: "در انتظار پرداخت…"
+      paid_title: "پرداخت انجام شد"
+      paid_text: "اشتراک شما تا %{date} فعال است."
+      failed_title: "پرداخت انجام نشد"
+      failed_text: "پرداخت رد شد یا زمان پرداخت به پایان رسید. اگر مبلغ از حساب شما کسر شده است، با پشتیبانی تماس بگیرید تا بررسی کنیم."
+      error_text: "ایجاد پرداخت ممکن نشد. بعداً دوباره تلاش کنید یا با پشتیبانی تماس بگیرید."
+      retry: "تلاش دوباره"
     cancel: "انصراف"
     home:
       state:

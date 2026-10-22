@@ -400,6 +400,19 @@ tr:
       minutes: "%{n} dk önce"
       hours: "%{n} sa önce"
       days: "%{n} gün önce"
+    # The status of one payment after "Pay" (Web::PaymentsController#show)
+    pay:
+      title: "Ödeme"
+      time_left: "Kodun geçerlilik süresi"
+      scan: "QR kodunu banka uygulamanızla tarayın."
+      open_bank: "Banka uygulamasında öde"
+      waiting: "Ödeme bekleniyor…"
+      paid_title: "Ödeme alındı"
+      paid_text: "Aboneliğiniz %{date} tarihine kadar geçerli."
+      failed_title: "Ödeme başarısız"
+      failed_text: "Ödeme reddedildi veya ödeme süresi doldu. Para yine de çekildiyse destekle iletişime geçin, çözelim."
+      error_text: "Ödeme oluşturulamadı. Daha sonra tekrar deneyin veya destekle iletişime geçin."
+      retry: "Tekrar dene"
     cancel: "İptal"
     home:
       state:

@@ -737,7 +737,7 @@ en:
       state:
         paid: Paid
         pending: Awaiting payment
-        failed: Failed
+        failed: Not paid
     partner:
       locked_title: Partner program
       locked_text: Your referral link and rewards become available after your first payment.
@@ -825,6 +825,19 @@ en:
       minutes: "%{n} min ago"
       hours: "%{n} h ago"
       days: "%{n} d ago"
+    # The status of one payment after "Pay" (Web::PaymentsController#show)
+    pay:
+      title: "Payment"
+      time_left: "Code valid for"
+      scan: "Scan the QR code in your banking app."
+      open_bank: "Pay in your bank app"
+      waiting: "Waiting for payment…"
+      paid_title: "Payment received"
+      paid_text: "Your subscription is active until %{date}."
+      failed_title: "Payment failed"
+      failed_text: "The payment was declined or the time to pay ran out. If the money was charged anyway, contact support and we will sort it out."
+      error_text: "We could not create the payment. Try again later or contact support."
+      retry: "Try again"
     cancel: "Cancel"
     home:
       state:
