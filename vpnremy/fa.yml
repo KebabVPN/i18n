@@ -1,4 +1,11 @@
 vpnremy_fa:
+  welcome:
+    text: |
+      *%<title>s*
+
+      دسترسی آزمایشی به مدت %<trial>s تا *%<exp>s* فعال است.
+
+      کشور اتصال را انتخاب کنید:
   menu:
     home: 🏠 خانه
     home_short: 🏠 خانه
@@ -88,6 +95,7 @@ vpnremy_fa:
       با پرداخت موافقت می‌کنید با [شرایط سرویس](https://vpnremy.com/terms).
   # --------------------------------------------------------
   payment_options:
+    checkout_pending: "یک پرداخت با تخفیف اولین خرید باز است. برای تغییر طرح یا روش پرداخت، تا پایان اعتبار آن صبر کنید."
     menu:
       pm_stripe_payment: 💳 Card, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Card (subscription)
@@ -126,22 +134,62 @@ vpnremy_fa:
   # The config file name, the same in the bot and in the cabinet (Host#config_file_name).
   onboarding:
     file: "VPNRemy-%<server>s"
+    setup:
+      ready: "پیکربندی آماده است"
+      download: "دانلود پیکربندی"
+      back: "انتخاب دستگاه دیگر"
+      manual_title: "اطلاعات اتصال"
+      checks_title: "اگر اتصال برقرار نشد"
+      checks:
+        - "اعتبار اشتراک، نام کاربری و گذرواژه را بررسی کنید."
+        - "سرور یا شبکهٔ دیگری را امتحان کنید."
+        - "تاریخ و ساعت دستگاه را بررسی کنید؛ در صورت نیاز پروفایل را دوباره نصب کنید."
+      confirmation: "پس از اولین اتصال، ربات تأیید می‌فرستد. برای کمک به @vpnremy_support_bot پیام دهید."
+      iphone:
+        title: "اتصال در iPhone و iPad"
+        steps:
+          - "پروفایل را دانلود کنید. اگر باز نشد، آن را در Files ذخیره و از آنجا باز کنید."
+          - "Settings → Profile Downloaded را باز کنید. اگر نبود، به General → VPN & Device Management بروید."
+          - "Install را بزنید و رمز عبور دستگاه را وارد کنید."
+          - "در Settings → VPN، VPNRemy را روشن کنید."
+      mac:
+        title: "اتصال در macOS"
+        steps:
+          - "پروفایل را دانلود کنید و فایل را دوبار کلیک کنید."
+          - "در System Settings بخش Profiles را پیدا کنید. جای آن به نسخهٔ macOS بستگی دارد."
+          - "پروفایل VPNRemy را باز کنید، Install را بزنید و گذرواژهٔ Mac را وارد کنید."
+          - "در System Settings → VPN، VPNRemy را روشن کنید."
+      android:
+        title: "اتصال در Android"
+        steps:
+          - "strongSwan VPN Client را از Google Play نصب کنید: https://play.google.com/store/apps/details?id=org.strongswan.android"
+          - "فایل را دانلود کنید. آن را با strongSwan باز کنید یا از منوی برنامه Import VPN profile را بزنید."
+          - "اگر درخواست شد، نام کاربری و گذرواژهٔ پیام پیکربندی را وارد کنید و Import یا Save را بزنید."
+          - "پروفایل VPNRemy را بزنید و اجازهٔ اتصال VPN را بدهید."
+      custom:
+        title: "اتصال در Windows 10 و 11"
+        steps:
+          - "Settings → Network & Internet → VPN → Add VPN را باز کنید."
+          - "ارائه‌دهنده را Windows (built-in) بگذارید، نام VPNRemy و نشانی سرور در اطلاعات اتصال را وارد کنید."
+          - "نوع VPN را IKEv2 و نوع ورود را نام کاربری و گذرواژه بگذارید. اطلاعات را وارد و ذخیره کنید."
+          - "VPNRemy را انتخاب کنید و Connect را بزنید."
+      linux:
+        title: "اتصال در Linux"
+        steps:
+          - "افزونهٔ strongSwan برای NetworkManager را نصب کنید. Ubuntu و Debian: sudo apt install network-manager-strongswan"
+          - "Settings → Network → VPN → + → IPsec/IKEv2 (strongswan) را باز کنید."
+          - "نشانی سرور در اطلاعات اتصال را وارد کنید و بخش گواهی را خالی بگذارید."
+          - "احراز هویت EAP را انتخاب کنید، نام کاربری و گذرواژه را وارد کنید، Request an inner IP address را فعال و ذخیره کنید."
+          - "پروفایل VPNRemy را روشن کنید."
   # --------------------------------------------------------
-  # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
+  # Server labels. Host records are shared by all brands.
   hosts:
     names:
       eu_nl_1: "🇳🇱 هلند"
       usa_fremont_1: "🇺🇸 آمریکا"
-      ru_saint_petersburg_1: "🇷🇺 روسیه — سن پترزبورگ"
-      eu_ru_nl_1: "🇳🇱 هلند (از طریق روسیه)"
-      eu_ru_us_1: "🇺🇸 آمریکا (از طریق روسیه)"
-    groups:
-      - title: "اتصال مستقیم"
-        hint: "ابتدا این را امتحان کنید"
-        hosts: [eu_nl_1, usa_fremont_1, ru_saint_petersburg_1]
-      - title: "از طریق روسیه"
-        hint: "اگر اتصال مستقیم کار نکرد"
-        hosts: [eu_ru_nl_1, eu_ru_us_1]
+      ru_saint_petersburg_1: "روسیه"
+      eu_ru_nl_1: "هلند"
+      eu_ru_us_1: "آمریکا"
   # --------------------------------------------------------
   config_manual:
     text: |
@@ -193,6 +241,7 @@ vpnremy_fa:
       برای ورود، دکمه زیر را بزنید. این لینک فقط یک بار کار می‌کند و ۱۰ دقیقه اعتبار دارد.
   # --------------------------------------------------------
   referral_v2:
+    friend_discount: "دوست شما با لینک شما برای اولین پرداخت ۱۰٪ تخفیف می‌گیرد. این تخفیف با کد تبلیغاتی جمع نمی‌شود."
     example: "از اشتراک %<price>s، %<reward>s دریافت می‌کنید."
     example_fixed: "از هر پرداخت مشتری خود %<reward>s دریافت می‌کنید."
     rates: "از هر پرداخت: %<r1>s برای مشتریان شما، %<r2>s برای مشتریانِ مشتریان شما، %<r3>s برای سطح سوم."
@@ -275,6 +324,8 @@ vpnremy_fa:
     bonus_percent: "−%<value>s٪"
     bonus_days: "+%<count>s روز"
     errors:
+      checkout_pending: "صبر کنید تا صورتحساب تخفیف‌دار فعلی منقضی شود، سپس کد تبلیغاتی را وارد کنید."
+      subscription_promo: "کد تبلیغاتی فقط برای پرداخت یک‌باره است. برای اشتراک، ابتدا بدون کد پرداخت کنید."
       not_found: "❌ چنین کد تخفیفی وجود ندارد."
       expired: "❌ مهلت این کد تخفیف تمام شده است."
       used_up: "❌ ظرفیت استفاده از این کد تخفیف تمام شده است."
@@ -284,7 +335,14 @@ vpnremy_fa:
       not_allowed: "❌ ساخت کد تخفیف برای شما در دسترس نیست."
   # --------------------------------------------------------
   web:
+    plans:
+      checkout_pending: "یک پرداخت با تخفیف اولین خرید باز است. پس از پایان اعتبار آن می‌توانید طرح یا روش پرداخت را تغییر دهید."
+    partner:
+      friend_discount: "دوست شما با لینک شما برای اولین پرداخت ۱۰٪ تخفیف می‌گیرد. این تخفیف با کد تبلیغاتی جمع نمی‌شود."
     promo:
+      errors:
+        checkout_pending: 'صبر کنید تا صورتحساب تخفیف‌دار فعلی منقضی شود، سپس کد تبلیغاتی را وارد کنید.'
+        subscription_promo: "کد تبلیغاتی فقط برای پرداخت یک‌باره است. برای اشتراک، ابتدا بدون کد پرداخت کنید."
       current_hint: برای پرداخت با SBP و از موجودی معرفی. پرداخت USDT با قیمت کامل است.
       current_hint_no_usdt: برای پرداخت با SBP و از موجودی معرفی.
     # The default texts name @Techru1; this brand has its own support bot.
@@ -295,3 +353,6 @@ vpnremy_fa:
   # the support link of /support
   support:
     url: https://t.me/vpnremy_support_bot
+  admin:
+    referral:
+      individual_percent: "درصد اختصاصی"

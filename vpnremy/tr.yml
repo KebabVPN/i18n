@@ -1,4 +1,11 @@
 vpnremy_tr:
+  welcome:
+    text: |
+      *%<title>s*
+
+      %<trial>s deneme erişimi *%<exp>s* tarihine kadar geçerlidir.
+
+      Bağlanmak istediğiniz ülkeyi seçin:
   menu:
     back: ⬅️ Geri
     home: 🏠 Ana Menü
@@ -98,6 +105,7 @@ vpnremy_tr:
       Ödeme yaparak [Kullanım Koşulları](https://vpnremy.com/terms) ile anlaştığınızı kabul edersiniz.
   # --------------------------------------------------------
   payment_options:
+    checkout_pending: "İlk ödeme indirimiyle açık bir ödemeniz var. Tarife veya ödeme yöntemini değiştirmek için süresinin dolmasını bekleyin."
     menu:
       pm_stripe_payment: 💳 Kart, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Kart (abonelik)
@@ -136,22 +144,62 @@ vpnremy_tr:
   # The config file name, the same in the bot and in the cabinet (Host#config_file_name).
   onboarding:
     file: "VPNRemy-%<server>s"
+    setup:
+      ready: "Yapılandırma hazır"
+      download: "Yapılandırmayı indir"
+      back: "Başka bir cihaz seç"
+      manual_title: "Bağlantı bilgileri"
+      checks_title: "Bağlantı kurulmazsa"
+      checks:
+        - "Aboneliğinizin süresini, kullanıcı adını ve parolayı kontrol edin."
+        - "Başka bir sunucu veya ağ deneyin."
+        - "Cihazın tarih ve saatini kontrol edin; gerekirse profili yeniden yükleyin."
+      confirmation: "İlk bağlantınızdan sonra bot onay gönderecek. Yardım için @vpnremy_support_bot hesabına yazın."
+      iphone:
+        title: "iPhone veya iPad ile bağlanma"
+        steps:
+          - "Yukarıdaki profili indirin. Açılmazsa Dosyalar'a kaydedip oradan açın."
+          - "Ayarlar → İndirilen Profil'i açın. Görünmüyorsa Genel → VPN ve Aygıt Yönetimi'ne gidin."
+          - "Yükle'ye dokunun ve cihaz parolanızı girin."
+          - "Ayarlar → VPN bölümünde VPNRemy'yi açın."
+      mac:
+        title: "macOS ile bağlanma"
+        steps:
+          - "Yukarıdaki profili indirin ve dosyayı çift tıklayarak açın."
+          - "Sistem Ayarları'nda Profiller'i bulun. Bölümün yeri macOS sürümüne göre değişir."
+          - "VPNRemy profilini açın, Yükle'yi seçin ve Mac parolanızı girin."
+          - "Sistem Ayarları → VPN bölümünde VPNRemy'yi açın."
+      android:
+        title: "Android ile bağlanma"
+        steps:
+          - "Google Play'den strongSwan VPN Client yükleyin: https://play.google.com/store/apps/details?id=org.strongswan.android"
+          - "Yukarıdaki dosyayı indirin. strongSwan ile açın veya uygulama menüsünden VPN profilini içe aktar'ı seçin."
+          - "İstenirse yapılandırma mesajındaki kullanıcı adını ve parolayı girin. İçe Aktar veya Kaydet'e dokunun."
+          - "VPNRemy profiline dokunun ve VPN bağlantısına izin verin."
+      custom:
+        title: "Windows 10 veya 11 ile bağlanma"
+        steps:
+          - "Ayarlar → Ağ ve İnternet → VPN → VPN ekle yolunu açın."
+          - "Sağlayıcı olarak Windows (yerleşik) seçin; ad olarak VPNRemy ve bağlantı bilgilerindeki sunucu adresini girin."
+          - "VPN türü IKEv2, oturum açma türü kullanıcı adı ve parola olsun. Bilgileri girip kaydedin."
+          - "VPNRemy'yi seçip Bağlan'a tıklayın."
+      linux:
+        title: "Linux ile bağlanma"
+        steps:
+          - "NetworkManager için strongSwan eklentisini yükleyin. Ubuntu ve Debian: sudo apt install network-manager-strongswan"
+          - "Ayarlar → Ağ → VPN → + → IPsec/IKEv2 (strongswan) yolunu açın."
+          - "Yukarıdaki sunucu adresini girin. Sertifika alanını boş bırakın."
+          - "EAP kimlik doğrulamasını seçin, kullanıcı adı ve parolayı girin, İç IP adresi iste'yi işaretleyip kaydedin."
+          - "VPNRemy profilini açın."
   # --------------------------------------------------------
-  # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
+  # Server labels. Host records are shared by all brands.
   hosts:
     names:
       eu_nl_1: "🇳🇱 Hollanda"
       usa_fremont_1: "🇺🇸 ABD"
-      ru_saint_petersburg_1: "🇷🇺 Rusya — St. Petersburg"
-      eu_ru_nl_1: "🇳🇱 Hollanda (Rusya üzerinden)"
-      eu_ru_us_1: "🇺🇸 ABD (Rusya üzerinden)"
-    groups:
-      - title: "Doğrudan bağlantı"
-        hint: "önce bunu deneyin"
-        hosts: [eu_nl_1, usa_fremont_1, ru_saint_petersburg_1]
-      - title: "Rusya üzerinden"
-        hint: "doğrudan bağlantı çalışmazsa"
-        hosts: [eu_ru_nl_1, eu_ru_us_1]
+      ru_saint_petersburg_1: "Rusya"
+      eu_ru_nl_1: "Hollanda"
+      eu_ru_us_1: "ABD"
   # --------------------------------------------------------
   config_manual:
     text: |
@@ -242,6 +290,7 @@ vpnremy_tr:
       Giriş yapmak için aşağıdaki düğmeye dokunun. Bağlantı yalnızca bir kez çalışır ve 10 dakika geçerlidir.
   # --------------------------------------------------------
   referral_v2:
+    friend_discount: "Arkadaşınız bağlantınızla ilk ödemede %10 indirim alır. Bu indirim promosyon koduyla birleşmez."
     example: "%<price>s tutarındaki bir abonelikten %<reward>s kazanırsınız."
     example_fixed: "Müşterinizin her ödemesinden %<reward>s kazanırsınız."
     rates: "Her ödemeden: müşterileriniz için %<r1>s, müşterilerinizin müşterileri için %<r2>s, üçüncü seviye için %<r3>s."
@@ -324,6 +373,8 @@ vpnremy_tr:
     bonus_percent: "−%%%<value>s"
     bonus_days: "+%<count>s gün"
     errors:
+      checkout_pending: "Promosyon kodu girmeden önce mevcut indirimli ödeme süresinin dolmasını bekleyin."
+      subscription_promo: "Promosyon kodu tek seferlik ödemede geçerlidir. Abonelik için önce kod olmadan ödeme yapın."
       not_found: "❌ Böyle bir promosyon kodu yok."
       expired: "❌ Bu promosyon kodunun süresi doldu."
       used_up: "❌ Bu promosyon kodu zaten kullanıldı."
@@ -333,7 +384,14 @@ vpnremy_tr:
       not_allowed: "❌ Promosyon kodu oluşturma sizin için kullanılamıyor."
   # --------------------------------------------------------
   web:
+    plans:
+      checkout_pending: "İlk ödeme indirimiyle açık bir ödemeniz var. Tarife veya ödeme yöntemini süresi dolduktan sonra değiştirebilirsiniz."
+    partner:
+      friend_discount: "Arkadaşınız bağlantınızla ilk ödemede %10 indirim alır. Bu indirim promosyon koduyla birleşmez."
     promo:
+      errors:
+        checkout_pending: 'Promosyon kodu girmeden önce mevcut indirimli ödeme süresinin dolmasını bekleyin.'
+        subscription_promo: "Promosyon kodu tek seferlik ödemede geçerlidir. Abonelik için önce kod olmadan ödeme yapın."
       current_hint: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir. USDT ödemeleri tam fiyattan alınır.
       current_hint_no_usdt: SBP ve referans bakiyesiyle yapılan ödemelerde geçerlidir.
     # The default texts name @Techru1; this brand has its own support bot.
@@ -344,3 +402,6 @@ vpnremy_tr:
   # the support link of /support
   support:
     url: https://t.me/vpnremy_support_bot
+  admin:
+    referral:
+      individual_percent: "Bireysel yüzde"

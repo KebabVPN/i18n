@@ -1,4 +1,11 @@
 vpnremy_zh:
+  welcome:
+    text: |
+      *%<title>s*
+
+      试用期为 %<trial>s，截止到 *%<exp>s*。
+
+      请选择连接的国家：
   menu:
     back: ⬅️ 返回
     home: 🏠 主菜单
@@ -98,6 +105,7 @@ vpnremy_zh:
       通过付款，您同意我们的[服务条款](https://vpnremy.com/terms)。
   # --------------------------------------------------------
   payment_options:
+    checkout_pending: "首付款折扣订单尚未过期。请在过期后更改套餐或付款方式。"
     menu:
       pm_stripe_payment: 💳 信用卡，WeChat，Alipay，ApplePay，GPay
       pm_stripe_subscription: 💳 信用卡 (订阅)
@@ -136,22 +144,62 @@ vpnremy_zh:
   # The config file name, the same in the bot and in the cabinet (Host#config_file_name).
   onboarding:
     file: "VPNRemy-%<server>s"
+    setup:
+      ready: "配置已准备好"
+      download: "下载配置"
+      back: "选择其他设备"
+      manual_title: "连接信息"
+      checks_title: "无法连接时"
+      checks:
+        - "检查订阅有效期、用户名和密码。"
+        - "尝试其他服务器或网络。"
+        - "检查设备日期和时间；必要时重新安装配置文件。"
+      confirmation: "首次连接后，机器人会发送确认消息。需要帮助请联系 @vpnremy_support_bot。"
+      iphone:
+        title: "在 iPhone 或 iPad 上连接"
+        steps:
+          - "下载配置文件。如果无法打开，先保存到“文件”，再从中打开。"
+          - "打开“设置”→“已下载描述文件”。如果没有该选项，打开“通用”→“VPN 与设备管理”。"
+          - "点按“安装”并输入设备密码。"
+          - "在“设置”→“VPN”中打开 VPNRemy。"
+      mac:
+        title: "在 macOS 上连接"
+        steps:
+          - "下载配置文件并双击打开。"
+          - "在“系统设置”中找到“描述文件”。位置因 macOS 版本而异。"
+          - "打开 VPNRemy 描述文件，点按“安装”并输入 Mac 密码。"
+          - "在“系统设置”→“VPN”中打开 VPNRemy。"
+      android:
+        title: "在 Android 上连接"
+        steps:
+          - "从 Google Play 安装 strongSwan VPN Client：https://play.google.com/store/apps/details?id=org.strongswan.android"
+          - "下载配置文件。用 strongSwan 打开，或在应用菜单中选择“导入 VPN 配置文件”。"
+          - "如果提示，请输入配置消息中的用户名和密码，然后点按“导入”或“保存”。"
+          - "点按 VPNRemy 配置文件并允许 VPN 连接。"
+      custom:
+        title: "在 Windows 10 或 11 上连接"
+        steps:
+          - "打开“设置”→“网络和 Internet”→“VPN”→“添加 VPN”。"
+          - "提供商选 Windows（内置），名称填写 VPNRemy，服务器地址填写连接信息。"
+          - "VPN 类型选 IKEv2，登录方式选用户名和密码。输入信息并保存。"
+          - "选择 VPNRemy，点击“连接”。"
+      linux:
+        title: "在 Linux 上连接"
+        steps:
+          - "安装 NetworkManager 的 strongSwan 插件。Ubuntu 和 Debian：sudo apt install network-manager-strongswan"
+          - "打开“设置”→“网络”→“VPN”→“+”→“IPsec/IKEv2 (strongswan)”。"
+          - "输入连接信息中的服务器地址，证书字段留空。"
+          - "选择 EAP 认证，输入用户名和密码，勾选“请求内部 IP 地址”并保存。"
+          - "打开 VPNRemy 配置文件。"
   # --------------------------------------------------------
-  # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
+  # Server labels. Host records are shared by all brands.
   hosts:
     names:
       eu_nl_1: "🇳🇱 荷兰"
       usa_fremont_1: "🇺🇸 美国"
-      ru_saint_petersburg_1: "🇷🇺 俄罗斯 — 圣彼得堡"
-      eu_ru_nl_1: "🇳🇱 荷兰（经由俄罗斯）"
-      eu_ru_us_1: "🇺🇸 美国（经由俄罗斯）"
-    groups:
-      - title: "直接连接"
-        hint: "请先尝试"
-        hosts: [eu_nl_1, usa_fremont_1, ru_saint_petersburg_1]
-      - title: "经由俄罗斯"
-        hint: "如果直接连接无法使用"
-        hosts: [eu_ru_nl_1, eu_ru_us_1]
+      ru_saint_petersburg_1: "俄罗斯"
+      eu_ru_nl_1: "荷兰"
+      eu_ru_us_1: "美国"
   # --------------------------------------------------------
   config_manual:
     text: |
@@ -242,6 +290,7 @@ vpnremy_zh:
       点击下方按钮登录。该链接仅可使用一次,10 分钟内有效。
   # --------------------------------------------------------
   referral_v2:
+    friend_discount: "好友通过您的链接首次付款可享九折优惠。此优惠不能与促销码叠加。"
     example: "订阅 %<price>s,您可获得 %<reward>s。"
     example_fixed: "您的客户每付款一次,您可获得 %<reward>s。"
     rates: "每笔付款:直接客户 %<r1>s,客户的客户 %<r2>s,第三级 %<r3>s。"
@@ -324,6 +373,8 @@ vpnremy_zh:
     bonus_percent: "−%<value>s%%"
     bonus_days: "+%<count>s 天"
     errors:
+      checkout_pending: "请等待当前折扣订单过期，然后再输入促销码。"
+      subscription_promo: "促销码仅适用于一次性付款。若要订阅，请先不使用促销码付款。"
       not_found: "❌ 优惠码不存在。"
       expired: "❌ 该优惠码已过期。"
       used_up: "❌ 该优惠码已被用完。"
@@ -333,7 +384,14 @@ vpnremy_zh:
       not_allowed: "❌ 您无法生成优惠码。"
   # --------------------------------------------------------
   web:
+    plans:
+      checkout_pending: "首付款折扣订单尚未过期。过期后即可更改套餐或付款方式。"
+    partner:
+      friend_discount: "好友通过您的链接首次付款可享九折优惠。此优惠不能与促销码叠加。"
     promo:
+      errors:
+        checkout_pending: '请等待当前折扣订单过期，然后再输入促销码。'
+        subscription_promo: "促销码仅适用于一次性付款。若要订阅，请先不使用促销码付款。"
       current_hint: 适用于 SBP 付款和推荐余额付款。USDT 付款按原价收费。
       current_hint_no_usdt: 适用于 SBP 付款和推荐余额付款。
     # The default texts name @Techru1; this brand has its own support bot.
@@ -344,3 +402,6 @@ vpnremy_zh:
   # the support link of /support
   support:
     url: https://t.me/vpnremy_support_bot
+  admin:
+    referral:
+      individual_percent: "个人比例"

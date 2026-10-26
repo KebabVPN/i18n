@@ -1,4 +1,11 @@
 vpnremy_en:
+  welcome:
+    text: |
+      *%<title>s*
+
+      Trial access for %<trial>s — until *%<exp>s*.
+
+      Choose where to connect:
   menu:
     back: ⬅️ Back
     home: Main menu
@@ -113,6 +120,7 @@ vpnremy_en:
       By paying you agree with our [Terms and Conditions](https://vpnremy.com/terms).
   # --------------------------------------------------------
   payment_options:
+    checkout_pending: "A first-payment discount checkout is open. Wait for it to expire before changing the plan or payment method."
     menu:
       pm_stripe_payment: 💳 Card, WeChat, Alipay, ApplePay, GPay
       pm_stripe_subscription: 💳 Card (subscription)
@@ -161,26 +169,16 @@ vpnremy_en:
   config:
     text: |
       *Choose where to connect*
-
-      *Open the world* — you are in Russia and want to use foreign sites and services. The Netherlands or the USA will do.
-
-      *Russia nearby* — you are abroad and want to use Russian services: banks, Gosuslugi, marketplaces.
   # --------------------------------------------------------
-  # Server names and groups (Host#display_name, Host.grouped); the records are shared by all brands.
+  # Server labels. Host records are shared by all brands.
   hosts:
+    visible: [eu_ru_nl_1, eu_ru_us_1, ru_saint_petersburg_1]
     names:
       eu_nl_1: "🇳🇱 Netherlands"
       usa_fremont_1: "🇺🇸 USA"
-      ru_saint_petersburg_1: "🇷🇺 Russia — Saint Petersburg"
-      eu_ru_nl_1: "🇳🇱 Netherlands (via Russia)"
-      eu_ru_us_1: "🇺🇸 USA (via Russia)"
-    groups:
-      - title: "Direct connection"
-        hint: "try it first"
-        hosts: [eu_nl_1, usa_fremont_1, ru_saint_petersburg_1]
-      - title: "Via Russia"
-        hint: "if the direct connection does not work"
-        hosts: [eu_ru_nl_1, eu_ru_us_1]
+      ru_saint_petersburg_1: "Russia"
+      eu_ru_nl_1: "Netherlands"
+      eu_ru_us_1: "USA"
   # --------------------------------------------------------
   config_manual:
     text: |
@@ -244,6 +242,53 @@ vpnremy_en:
   # The buttons and the welcome are shared, see default/en.yml.
   onboarding:
     file: "VPNRemy-%<server>s"
+    setup:
+      ready: "Configuration ready"
+      download: "Download configuration"
+      back: "Choose another device"
+      manual_title: "Connection details"
+      checks_title: "If it does not connect"
+      checks:
+        - "Check your subscription and your username and password."
+        - "Try another server or another network."
+        - "Check your device's date and time. Reinstall the profile if needed."
+      confirmation: "The bot will confirm your first connection. Need help? Message @vpnremy_support_bot."
+      iphone:
+        title: "Connect on iPhone or iPad"
+        steps:
+          - "Download the profile. If it does not open, save it to Files and open it there."
+          - "Open Settings → Profile Downloaded. If you do not see it, open General → VPN & Device Management."
+          - "Tap Install and enter your device passcode."
+          - "Open Settings → VPN and turn on VPNRemy."
+      mac:
+        title: "Connect on macOS"
+        steps:
+          - "Download the profile and double-click the file."
+          - "Find Profiles in System Settings. Its location depends on your macOS version."
+          - "Open the VPNRemy profile, click Install, and enter your Mac password."
+          - "Open System Settings → VPN and turn on VPNRemy."
+      android:
+        title: "Connect on Android"
+        steps:
+          - "Install strongSwan VPN Client from Google Play: https://play.google.com/store/apps/details?id=org.strongswan.android"
+          - "Download the file. Open it with strongSwan, or choose Import VPN profile from the app menu."
+          - "If asked, enter the username and password from the configuration message. Tap Import or Save."
+          - "Tap the VPNRemy profile and allow the VPN connection."
+      custom:
+        title: "Connect on Windows 10 or 11"
+        steps:
+          - "Open Settings → Network & Internet → VPN → Add VPN."
+          - "Choose Windows (built-in), enter VPNRemy as the name, and enter the server address in the connection details."
+          - "Choose IKEv2 and Username and password. Enter the connection details and save."
+          - "Choose VPNRemy and click Connect."
+      linux:
+        title: "Connect on Linux"
+        steps:
+          - "Install the strongSwan plugin for NetworkManager. Ubuntu and Debian: sudo apt install network-manager-strongswan"
+          - "Open Settings → Network → VPN → + → IPsec/IKEv2 (strongswan)."
+          - "Enter the server address in the connection details. Leave the certificate field empty."
+          - "Choose EAP authentication, enter the username and password, select Request an inner IP address, and save."
+          - "Turn on the VPNRemy profile."
     guide_iphone: |
       *How to connect on iPhone*
 
@@ -338,6 +383,7 @@ vpnremy_en:
       Tap the button below to sign in. The link works once and expires in 10 minutes.
   # --------------------------------------------------------
   referral_v2:
+    friend_discount: "Your friend gets 10% off the first payment through your link. This discount cannot be combined with a promo code."
     example: "From a %<price>s subscription you get %<reward>s."
     example_fixed: "You get %<reward>s from every payment of your client."
     rates: "From every payment: %<r1>s for your clients, %<r2>s for your clients' clients, %<r3>s for the third line."
@@ -434,6 +480,8 @@ vpnremy_en:
     bonus_percent: "−%<value>s%%"
     bonus_days: "+%<count>s days"
     errors:
+      checkout_pending: "Wait for the current discounted checkout to expire before entering a promo code."
+      subscription_promo: "A promo code works with a one-time payment. To subscribe, first pay without the promo code."
       not_found: "❌ There is no such promo code."
       expired: "❌ This promo code has expired."
       used_up: "❌ This promo code has already been used up."
@@ -443,10 +491,20 @@ vpnremy_en:
       not_allowed: "❌ Generating promo codes is not available to you."
   # --------------------------------------------------------
   web:
+    plans:
+      checkout_pending: "A first-payment discount checkout is open. You can change the plan or payment method after it expires."
+    partner:
+      friend_discount: "Your friend gets 10% off the first payment through your link. This discount cannot be combined with a promo code."
     promo:
+      errors:
+        checkout_pending: 'Wait for the current discounted checkout to expire before entering a promo code.'
+        subscription_promo: "A promo code works with a one-time payment. To subscribe, first pay without the promo code."
       current_hint: Works with SBP and referral balance payments. USDT is charged at the full price.
       current_hint_no_usdt: Works with SBP and referral balance payments.
     # The default texts name @Techru1; this brand has its own support bot.
     tg_login:
       inactive: "This account can not sign in right now. Please contact support @vpnremy_support_bot."
       telegram_taken: "This Telegram is already linked to another account. Please contact support @vpnremy_support_bot."
+  admin:
+    referral:
+      individual_percent: "Individual percentage"
