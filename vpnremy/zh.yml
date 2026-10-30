@@ -145,6 +145,7 @@ vpnremy_zh:
   onboarding:
     file: "VPNRemy-%<server>s"
     setup:
+      android_credentials_hint: "如果 strongSwan 要求输入用户名和密码，请输入这些凭据"
       ready: "配置已准备好"
       download: "下载配置"
       back: "选择其他设备"
@@ -290,7 +291,6 @@ vpnremy_zh:
       点击下方按钮登录。该链接仅可使用一次,10 分钟内有效。
   # --------------------------------------------------------
   referral_v2:
-    friend_discount: "好友通过您的链接首次付款可享九折优惠。此优惠不能与促销码叠加。"
     example: "订阅 %<price>s,您可获得 %<reward>s。"
     example_fixed: "您的客户每付款一次,您可获得 %<reward>s。"
     rates: "每笔付款:直接客户 %<r1>s,客户的客户 %<r2>s,第三级 %<r3>s。"
@@ -386,8 +386,6 @@ vpnremy_zh:
   web:
     plans:
       checkout_pending: "首付款折扣订单尚未过期。过期后即可更改套餐或付款方式。"
-    partner:
-      friend_discount: "好友通过您的链接首次付款可享九折优惠。此优惠不能与促销码叠加。"
     promo:
       errors:
         checkout_pending: '请等待当前折扣订单过期，然后再输入促销码。'
@@ -405,3 +403,38 @@ vpnremy_zh:
   admin:
     referral:
       individual_percent: "个人比例"
+
+  vpn_devices:
+    admin:
+      limit: "自定义设备上限"
+      limit_hint: "留空使用品牌上限。降低上限不会撤销现有设备。"
+      sessions: "当前连接数：%{count}。每个 VPN 登录名最多 %{limit} 个同时连接。"
+
+  device_registry:
+    title: "您的设备"
+    usage: "%{used} / %{limit} 台设备"
+    empty: "尚未添加设备。"
+    add: "添加设备"
+    choose_host: "选择服务器"
+    choose_platform: "选择平台"
+    issue: "生成设备配置"
+    issue_hint: "此操作将生成独立的用户名和密码，并占用一个设备名额。"
+    download_again: "再次下载"
+    add_direction: "添加连接方向"
+    direction_hint: "在另一台服务器上使用此设备现有的用户名和密码，不占用额外名额。"
+    delete: "删除设备"
+    confirm_delete: "确认删除"
+    delete_warning: "用户名和密码将被撤销，现有连接的断开操作将加入队列。"
+    legacy_warning: "所有旧配置共用此用户名和密码。删除旧连接将撤销所有这些配置的访问权限，现有连接的断开操作将加入队列。"
+    revoked_pending: "凭据已撤销，现有连接等待断开。"
+    limit_reached: "设备数量已达上限。请删除设备以释放名额，现有设备仍可使用。"
+    back: "返回"
+    legacy: "旧连接"
+    name: "%{platform} · #%{id}"
+    not_ready: "设备设置正在准备中，请稍后重试。"
+    platforms:
+      iphone: "iPhone / iPad"
+      android: "Android"
+      custom: "Windows"
+      mac: "macOS"
+      linux: "Linux"

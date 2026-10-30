@@ -243,6 +243,7 @@ vpnremy_en:
   onboarding:
     file: "VPNRemy-%<server>s"
     setup:
+      android_credentials_hint: "If strongSwan asks for a username and password, enter these credentials"
       ready: "Configuration ready"
       download: "Download configuration"
       back: "Choose another device"
@@ -383,7 +384,6 @@ vpnremy_en:
       Tap the button below to sign in. The link works once and expires in 10 minutes.
   # --------------------------------------------------------
   referral_v2:
-    friend_discount: "Your friend gets 10% off the first payment through your link. This discount cannot be combined with a promo code."
     example: "From a %<price>s subscription you get %<reward>s."
     example_fixed: "You get %<reward>s from every payment of your client."
     rates: "From every payment: %<r1>s for your clients, %<r2>s for your clients' clients, %<r3>s for the third line."
@@ -493,8 +493,6 @@ vpnremy_en:
   web:
     plans:
       checkout_pending: "A first-payment discount checkout is open. You can change the plan or payment method after it expires."
-    partner:
-      friend_discount: "Your friend gets 10% off the first payment through your link. This discount cannot be combined with a promo code."
     promo:
       errors:
         checkout_pending: 'Wait for the current discounted checkout to expire before entering a promo code.'
@@ -508,3 +506,38 @@ vpnremy_en:
   admin:
     referral:
       individual_percent: "Individual percentage"
+
+  vpn_devices:
+    admin:
+      limit: "Device limit override"
+      limit_hint: "Empty uses the brand limit. Lowering the limit keeps existing devices."
+      sessions: "%{count} active sessions. Up to %{limit} simultaneous sessions per VPN login."
+
+  device_registry:
+    title: "Your devices"
+    usage: "%{used} of %{limit} devices"
+    empty: "No devices issued yet."
+    add: "Add device"
+    choose_host: "Choose a server"
+    choose_platform: "Choose a platform"
+    issue: "Issue device settings"
+    issue_hint: "This action issues a separate login and password and uses one device slot."
+    download_again: "Download again"
+    add_direction: "Add direction"
+    direction_hint: "Use this device’s existing login and password on another server. No extra slot is used."
+    delete: "Delete device"
+    confirm_delete: "Confirm deletion"
+    delete_warning: "The login and password will be revoked. Active disconnection will be queued."
+    legacy_warning: "All old profiles share this login and password. Deleting the old connection revokes all of them. Active disconnection will be queued."
+    revoked_pending: "Credentials revoked. Active disconnection pending."
+    limit_reached: "Device limit reached. Delete a device to free a slot. Existing devices keep working."
+    back: "Back"
+    legacy: "Old connection"
+    name: "%{platform} · #%{id}"
+    not_ready: "Device setup is being prepared. Please try again later."
+    platforms:
+      iphone: "iPhone / iPad"
+      android: "Android"
+      custom: "Windows"
+      mac: "macOS"
+      linux: "Linux"

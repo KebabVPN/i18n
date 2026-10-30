@@ -967,3 +967,20 @@ en:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
+  admin:
+    referral:
+      profile: "Referral profile"
+      rates: "Referral rates"
+      shared_profiles: "Shared referral profiles"
+      first_percent: "First level (%)"
+      second_percent: "Second level (%)"
+      third_percent: "Third level (%)"
+      assignment_busy: "The referral chain is being updated. Retry the change."
+      reset_hint: "Select Standard or VIP to clear individual rates and use the shared profile. Individual requires all three rates."
+      save_profiles: "Save referral profiles"
+      profiles_saved: "Referral profiles saved. Individual rates are unchanged."
+      invalid_rates: "Enter all six rates between 0 and 100, with at most two decimal places."
+      profiles:
+        standard: "Standard"
+        vip: "VIP"
+        individual: "Individual"
