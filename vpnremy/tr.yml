@@ -145,6 +145,7 @@ vpnremy_tr:
   onboarding:
     file: "VPNRemy-%<server>s"
     setup:
+      android_credentials_hint: "strongSwan kullanıcı adı ve parola isterse bu bilgileri girin"
       ready: "Yapılandırma hazır"
       download: "Yapılandırmayı indir"
       back: "Başka bir cihaz seç"
@@ -290,7 +291,6 @@ vpnremy_tr:
       Giriş yapmak için aşağıdaki düğmeye dokunun. Bağlantı yalnızca bir kez çalışır ve 10 dakika geçerlidir.
   # --------------------------------------------------------
   referral_v2:
-    friend_discount: "Arkadaşınız bağlantınızla ilk ödemede %10 indirim alır. Bu indirim promosyon koduyla birleşmez."
     example: "%<price>s tutarındaki bir abonelikten %<reward>s kazanırsınız."
     example_fixed: "Müşterinizin her ödemesinden %<reward>s kazanırsınız."
     rates: "Her ödemeden: müşterileriniz için %<r1>s, müşterilerinizin müşterileri için %<r2>s, üçüncü seviye için %<r3>s."
@@ -386,8 +386,6 @@ vpnremy_tr:
   web:
     plans:
       checkout_pending: "İlk ödeme indirimiyle açık bir ödemeniz var. Tarife veya ödeme yöntemini süresi dolduktan sonra değiştirebilirsiniz."
-    partner:
-      friend_discount: "Arkadaşınız bağlantınızla ilk ödemede %10 indirim alır. Bu indirim promosyon koduyla birleşmez."
     promo:
       errors:
         checkout_pending: 'Promosyon kodu girmeden önce mevcut indirimli ödeme süresinin dolmasını bekleyin.'
@@ -405,3 +403,38 @@ vpnremy_tr:
   admin:
     referral:
       individual_percent: "Bireysel yüzde"
+
+  vpn_devices:
+    admin:
+      limit: "Kişisel cihaz sınırı"
+      limit_hint: "Boş bırakılırsa marka sınırı kullanılır. Sınırı azaltmak mevcut cihazları iptal etmez."
+      sessions: "%{count} etkin bağlantı. Her VPN kullanıcı adı için en fazla %{limit} eşzamanlı bağlantı."
+
+  device_registry:
+    title: "Cihazlarınız"
+    usage: "%{used} / %{limit} cihaz"
+    empty: "Henüz cihaz eklenmedi."
+    add: "Cihaz ekle"
+    choose_host: "Sunucu seçin"
+    choose_platform: "Platform seçin"
+    issue: "Cihaz ayarlarını oluştur"
+    issue_hint: "Bu işlem ayrı bir kullanıcı adı ve parola oluşturur ve bir cihaz hakkı kullanır."
+    download_again: "Yeniden indir"
+    add_direction: "Yön ekle"
+    direction_hint: "Başka bir sunucuda bu cihazın mevcut kullanıcı adını ve parolasını kullanın. Ek cihaz hakkı kullanılmaz."
+    delete: "Cihazı sil"
+    confirm_delete: "Silmeyi onayla"
+    delete_warning: "Kullanıcı adı ve parola iptal edilecek. Etkin bağlantıların kesilmesi sıraya alınacak."
+    legacy_warning: "Tüm eski profiller bu kullanıcı adını ve parolayı paylaşır. Eski bağlantıyı silmek tüm bu profillerin erişimini iptal eder. Etkin bağlantıların kesilmesi sıraya alınacak."
+    revoked_pending: "Kimlik bilgileri iptal edildi. Etkin bağlantıların kesilmesi bekleniyor."
+    limit_reached: "Cihaz sınırına ulaşıldı. Yer açmak için bir cihazı silin. Mevcut cihazlar çalışmaya devam eder."
+    back: "Geri"
+    legacy: "Eski bağlantı"
+    name: "%{platform} · #%{id}"
+    not_ready: "Cihaz kurulumu hazırlanıyor. Lütfen daha sonra tekrar deneyin."
+    platforms:
+      iphone: "iPhone / iPad"
+      android: "Android"
+      custom: "Windows"
+      mac: "macOS"
+      linux: "Linux"

@@ -602,6 +602,22 @@ ru:
               not_found: "не найдена"
   # Dashboard rows of the admin, which reads Russian whatever its locale.
   admin:
+    referral:
+      profile: "Реферальный профиль"
+      rates: "Реферальные ставки"
+      shared_profiles: "Общие реферальные профили"
+      first_percent: "Первый уровень (%)"
+      second_percent: "Второй уровень (%)"
+      third_percent: "Третий уровень (%)"
+      assignment_busy: "Реферальная цепочка обновляется. Повторите изменение."
+      reset_hint: "Выберите стандартный или VIP-профиль, чтобы сбросить индивидуальные ставки. Для индивидуального профиля нужны все три ставки."
+      save_profiles: "Сохранить реферальные профили"
+      profiles_saved: "Реферальные профили сохранены. Индивидуальные ставки не изменены."
+      invalid_rates: "Укажите все шесть ставок от 0 до 100, не более двух знаков после запятой."
+      profiles:
+        standard: "Стандартный"
+        vip: "VIP"
+        individual: "Индивидуальный"
     dashboard:
       revenue_total: "Итого выручка"
       not_revenue:
