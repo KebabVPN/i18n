@@ -35,6 +35,7 @@ vpnremy_en:
     platform_custom: 🔑 Other
     ref_pay: ✅ Pay
   # --------------------------------------------------------
+    other_device: "Another configuration"
   platforms:
     text: |
       *Choose your device*
@@ -53,6 +54,10 @@ vpnremy_en:
   support:
     url: https://t.me/vpnremy_support_bot
   # --------------------------------------------------------
+    text: |
+      *Support*
+
+      We are here 24/7 and usually reply within a few minutes. Message us — a human will reply.
   start:
     text: |
       *Good to see you again*
@@ -87,8 +92,6 @@ vpnremy_en:
       *%<left>s*
 
       Your VPNRemy subscription is valid until *%<exp>s*. Renew in advance — the paid days are added to the current ones.
-
-      Reminders can be turned off in the settings.
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅
@@ -195,36 +198,24 @@ vpnremy_en:
   config_apple:
     text: |
       *The "%<server>s" configuration for iPhone, iPad or Mac is ready*
-
-      Download the file and open it — the device will offer to install the profile.
-      iPhone and iPad: Settings → "Profile Downloaded" → "Install".
-      Mac: System Settings → "Privacy & Security" → "Profiles" → "Install".
-      Then turn the VPN on in the settings.
   # --------------------------------------------------------
   config_iphone:
     text: |
       *The "%<server>s" configuration for iPhone is ready*
-
-      Download the file and open it — the iPhone will offer to install the profile.
   # --------------------------------------------------------
   config_mac:
     text: |
       *The "%<server>s" configuration for Mac is ready*
-
-      Download the file and open it — the Mac will offer to install the profile.
   # --------------------------------------------------------
   config_android:
     text: |
       *The "%<server>s" configuration for Android is ready*
 
-      1. Install the [strongSwan](https://play.google.com/store/apps/details?id=org.strongswan.android) app from Google Play
-      2. Save the file to your phone
-      3. In strongSwan: menu ⋮ → "Import VPN profile" → choose the file
-
       Login: `%<username>s`
+
       Password: `%<password>s`
 
-      You will need them if strongSwan asks when connecting. Do not share them — they give access to your subscription.
+      Do not share your login and password — they give access to your subscription.
   # --------------------------------------------------------
   config_custom:
     text: |
@@ -234,6 +225,7 @@ vpnremy_en:
 
       Server: `%<host>s`
       Login: `%<username>s`
+
       Password: `%<password>s`
 
       Do not share the login and password — they give access to your subscription.
@@ -290,6 +282,7 @@ vpnremy_en:
           - "Enter the server address in the connection details. Leave the certificate field empty."
           - "Choose EAP authentication, enter the username and password, select Request an inner IP address, and save."
           - "Turn on the VPNRemy profile."
+      important: "Turn VPN on and off in your device settings or in strongSwan on Android. On-demand activation is disabled in the iPhone and Mac configuration. After a connection drops, the system or app may try to reconnect. Do not share the file, username or password: they give access to your subscription."
     guide_iphone: |
       *How to connect on iPhone*
 
@@ -503,41 +496,134 @@ vpnremy_en:
     tg_login:
       inactive: "This account can not sign in right now. Please contact support @vpnremy_support_bot."
       telegram_taken: "This Telegram is already linked to another account. Please contact support @vpnremy_support_bot."
+    connect:
+      title: Connect
+      apple_note: Install configuration
+      android_note: strongSwan configuration
+      step_1: Download configuration
+    partner:
+      clicks: Visits through your link
+      sales: Payments across three levels
+      link_clicks: "Visits through your link"
+      three_line_sales: "Payments across three levels"
+      stats_explanation: "Visits are counted only when your link is opened. Payments include repeat purchases and purchases across three referral levels, including people invited with a promo code. Payments can therefore outnumber visits."
+    support:
+      empty: We are here 24/7 and usually reply within a few minutes. The reply will appear
+        in this chat. Only a verified email address receives a notification linking to your
+        account, without conversation text or attachments.
+      availability: "Support is available 24/7. We usually reply within a few minutes."
+      quick_help: "Quick help"
+      instructions: "Connection guides"
+      subscription_help: "Subscription and payment"
+      reply_email: "The reply will appear in chat. Only your verified email address receives a notification with a link to your account, without conversation text or attachments."
+      reply_chat: "The reply will appear here, in your account chat."
+      category: "Request category"
+      screenshots: "Screenshots (optional)"
+      upload_help: "Up to 3 JPEG, PNG or WebP images, 5 MB each, per message. Up to 20 images and 50 MB per case. You can still send text after reaching the quota. Screenshots are deleted with the case or after 90 days without activity, whichever comes first. Existing text retention rules are unchanged."
+      secrets_warning: "Do not send passwords, connection keys or payment details."
+      optional_context: "Connection context (optional)"
+      configuration: "Your configuration (optional)"
+      server: "Configuration server (optional)"
+      os: "Operating system (optional)"
+      browser: "Browser (optional)"
+      other: "Other"
+      context_help: "We include your subscription status and language. Passwords, IP addresses and VPN session history are not automatically added to the request."
+      upload_invalid: "Your request was not sent. Check the image format, size and count, the case quota and the selected configuration. You can send a message without images."
+      image: "Open screenshot"
+      expired: "Screenshot retention period has expired."
+      email_subject: "Support has replied to your request"
+      email_body: "A support reply is available in your account. Sign in to read it."
+      categories:
+        connection: Connection
+        payment: Payment
+        other: Other
+    nav:
+      subscription: Subscription
+    subscription:
+      title: Subscription
+      pending: Pending payment
+      history: Payment history
+      resume: Continue payment
+      stripe_unavailable: Could not open checkout. Try again later or contact support.
   admin:
     referral:
       individual_percent: "Individual percentage"
 
+      reset_hint: "Standard and VIP profiles use the current shared rates in settings. Your last individual rates are saved and restored when you return to the individual profile. Fill in all three rates when selecting it for the first time. Shared rates are read-only in the user card; edit them in Settings."
+      shared_settings: "Edit shared rates in settings"
   vpn_devices:
     admin:
-      limit: "Device limit override"
-      limit_hint: "Empty uses the brand limit. Lowering the limit keeps existing devices."
-      sessions: "%{count} active sessions. Up to %{limit} simultaneous sessions per VPN login."
+      limit: "Configuration issuance limit (not applied)"
+      limit_hint: "VPNRemy does not limit configuration issuance. Simultaneous connection rules are unchanged."
+      sessions: "%{count} active sessions. Up to %{limit} simultaneous sessions per account."
 
   device_registry:
-    title: "Your devices"
-    usage: "%{used} of %{limit} devices"
-    empty: "No devices issued yet."
-    add: "Add device"
+    title: "Your configurations"
+    usage: ""
+    empty: "No configurations issued yet."
+    add: "Add configuration"
     choose_host: "Choose a server"
     choose_platform: "Choose a platform"
-    issue: "Issue device settings"
-    issue_hint: "This action issues a separate login and password and uses one device slot."
+    issue: "Issue configuration"
+    issue_hint: "This creates a separate login and password. Configuration issuance is unlimited. Simultaneous connections across all configurations count towards the account’s connection limit."
     download_again: "Download again"
     add_direction: "Add direction"
-    direction_hint: "Use this device’s existing login and password on another server. No extra slot is used."
-    delete: "Delete device"
+    direction_hint: "Use this configuration’s existing login and password on another server. No new credentials are created."
+    delete: "Delete configuration"
     confirm_delete: "Confirm deletion"
     delete_warning: "The login and password will be revoked. Active disconnection will be queued."
-    legacy_warning: "All old profiles share this login and password. Deleting the old connection revokes all of them. Active disconnection will be queued."
+    legacy_warning: "All old configurations share this login and password. Deleting the old connection revokes all of them. Active disconnection will be queued."
     revoked_pending: "Credentials revoked. Active disconnection pending."
-    limit_reached: "Device limit reached. Delete a device to free a slot. Existing devices keep working."
+    limit_reached: "Could not issue the configuration. Try again later or contact support."
     back: "Back"
     legacy: "Old connection"
     name: "%{platform} · #%{id}"
-    not_ready: "Device setup is being prepared. Please try again later."
+    not_ready: "Configuration setup is being prepared. Please try again later."
     platforms:
       iphone: "iPhone / iPad"
       android: "Android"
       custom: "Windows"
       mac: "macOS"
       linux: "Linux"
+    previous: "Previous"
+    next: "Next"
+    pagination: "Configuration pages"
+    complete_legacy: "Complete the configuration details"
+    open: "Open configuration"
+  faq:
+    vpn:
+      title: VPN does not connect
+      text: |
+        *What to check*
+
+        1. Check your subscription in Subscription
+        2. Turn VPN off and on again
+        3. Try another location
+        4. Open Connect and download your saved configuration again
+    change:
+      title: Change configuration or location
+      text: |
+        *Change configuration or location*
+
+        Open Connect and choose a saved configuration to get its file or credentials. Use Add direction for another server with the same credentials. Create a new configuration only if you need a separate username and password. Existing configurations keep working.
+    devices:
+      title: How many devices can I connect
+      text: "You can create configurations for iPhone and iPad, Android, Windows, macOS and Linux in Connect. Configuration issuance is unlimited. Simultaneous connections across all configurations count towards the account’s connection limit."
+  bot_date_year: "%{day} %{month} %{year}"
+  config_linux:
+    text: |
+      *The "%<server>s" connection for Linux*
+
+      Linux needs no file — set up the VPN in NetworkManager using these details. Tap a value to copy it.
+
+      Server: `%<host>s`
+      Login: `%<username>s`
+
+      Password: `%<password>s`
+
+      Do not share your login and password: they give access to your subscription.
+  sub_expiring_trial:
+    text: |
+      *%<left>s*
+
+      You can use VPNRemy for free until *%<exp>s*. Choose a plan in advance.

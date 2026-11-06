@@ -32,6 +32,7 @@ vpnremy_zh:
     platform_android: 📱 Android
     platform_custom: 🔑 其他
   # --------------------------------------------------------
+    other_device: "其他配置"
   platforms:
     text: |
       *选择您的平台:*
@@ -50,45 +51,34 @@ vpnremy_zh:
 
       🌎 /lang - 管理机器人语言
 
-      🔧 /settings - 管理设置
-
       ℹ️ /help - 获取命令列表
 
       🤖 @vpnremy\_support\_bot - 获取支持
   # --------------------------------------------------------
   start:
     text: |
-      *🌟 欢迎！ 🌟*
+      *欢迎回来*
 
-      感谢您选择 [VPNRemy](https://vpnremy.com)。要开始使用 VPN，请按下面的 *配置* 按钮，您将获得需要安装到设备上的配置文件。详细指南请参阅 https://vpnremy.com。通过运行 /help 命令可访问所有选项。
+      订阅有效期至 *%<exp>s* — %<days_left>s。
+      接下来做什么？
   # --------------------------------------------------------
   sub_extended:
     text: |
-      🌟 *恭喜！* 🌟
+      *订阅已延长 %<period>s*
 
-      您获得了 *%<days>s* 天的 VPN 使用权！请随时在 @vpnremy\_support\_bot 中给我们写反馈！🫶
-
-      您的订阅到期时间为：*%<exp>s*
+      有效期至 *%<exp>s*，无需重新设置。
   # --------------------------------------------------------
   sub_expired:
     text: |
-      ❌ *订阅已过期！* ❌
+      *订阅已于 %<date>s 到期*
 
-      很抱歉发现您的订阅在 *%<exp>s* 过期
-
-      您需要执行 /subscription 命令以继续使用服务。
-
-      如果您有任何问题，请在 @vpnremy\_support\_bot 联系我们！🫶
+      请选择套餐以继续使用 VPNRemy。
   # --------------------------------------------------------
   sub_expiring:
     text: |
-      ⏰ *您的订阅即将到期* ⏰
+      *%<left>s*
 
-      剩余天数：*%<days>s*。您的订阅到期时间为：*%<exp>s*
-
-      请执行 /subscription 命令续订，以保持 VPN 不间断使用。
-
-      如果您有任何问题，请在 @vpnremy\_support\_bot 联系我们！🫶
+      订阅有效期至 *%<exp>s*。提前续费，购买的时长将加到当前有效期之后。
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅
@@ -99,10 +89,11 @@ vpnremy_zh:
       plan_6_mo: 💵 6 个月 - 1614.00 俄罗斯卢布
       plan_12_mo: 💵 12 个月 - 2988.00 俄罗斯卢布
     text: |
-      *您的订阅:*
+      *订阅有效*
 
-      到期日期：*%<exp>s* %<ico>s (活跃天数 %<days>s)
-      通过付款，您同意我们的[服务条款](https://vpnremy.com/terms)。
+      有效期至 *%<exp>s*。剩余：*%<period>s*。
+
+      付款即表示您同意[使用条款](https://vpnremy.com/terms)。
   # --------------------------------------------------------
   payment_options:
     checkout_pending: "首付款折扣订单尚未过期。请在过期后更改套餐或付款方式。"
@@ -111,14 +102,9 @@ vpnremy_zh:
       pm_stripe_subscription: 💳 信用卡 (订阅)
       pm_pay2day: 🇷🇺 SBP (RUB)
     text: |
-      *您的订阅:*
+      *%<plan>s — %<price>s*
 
-      到期日期：*%<exp>s* %<ico>s (活跃天数 %<days>s)
-      通过付款，您同意我们的[服务条款](https://vpnremy.com/terms)。
-
-      您正在购买：*%<description>s*
-
-      请选择付款方式：
+      请选择付款方式。
   # --------------------------------------------------------
   plan_unknown:
     text: |
@@ -194,6 +180,7 @@ vpnremy_zh:
           - "打开 VPNRemy 配置文件。"
   # --------------------------------------------------------
   # Server labels. Host records are shared by all brands.
+      important: "请在设备设置中开启或关闭 VPN；Android 请使用 strongSwan。iPhone 和 Mac 配置已关闭按需自动启用。连接中断后，系统或应用可能尝试重新连接。请勿分享文件、用户名或密码，持有这些信息的人可以使用您的订阅。"
   hosts:
     names:
       eu_nl_1: "🇳🇱 荷兰"
@@ -216,44 +203,30 @@ vpnremy_zh:
   # --------------------------------------------------------
   config_apple:
     text: |
-      请下载文件并将其安装到您的设备上。安装文件后，您需要在系统设置中确认配置文件的安装。
+      *iPhone / iPad / Mac 的“%<server>s”配置已准备好*
   # --------------------------------------------------------
   config_android:
     text: |
-      请下载文件并使用应用程序 https://play.google.com/store/apps/details?id=org.strongswan.android 打开它。
-      您将被要求输入以下用户名和密码。
+      *Android 的“%<server>s”配置已准备好*
 
-      用户名：
-      `%<username>s`
+      用户名: `%<username>s`
 
-      密码：
-      `%<password>s`
+      密码: `%<password>s`
 
-      (点击 以复制 ^^)
+      请勿分享用户名和密码，他人可用其访问您的订阅。
   # --------------------------------------------------------
   config_custom:
     text: |
-      *自定义设置*
+      *Windows 的“%<server>s”连接*
 
-      您可以使用系统设置和以下凭据进行连接：
+      Windows 内置 VPN，无需文件。请在 VPN 设置中输入以下信息，点击值即可复制。
 
-      连接名称：%<name>s
+      服务器: `%<host>s`
+      用户名: `%<username>s`
 
-      类型：%<type>s
+      密码: `%<password>s`
 
-      服务器主机：%<host>s
-
-      服务器标识：%<host>s
-
-      IPSec 标识符：%<username>s
-
-      用户名：%<username>s
-
-      密码：%<password>s
-
-      CA 证书：（留空，不使用）
-
-      服务器证书：（留空，不使用）
+      请勿分享用户名和密码：他人可用其访问您的订阅。
   # --------------------------------------------------------
   lang:
     text: |
@@ -296,16 +269,17 @@ vpnremy_zh:
     rates: "每笔付款:直接客户 %<r1>s,客户的客户 %<r2>s,第三级 %<r3>s。"
     rates_fixed: "您可获得直接客户付款奖励的 %<r1>s,客户的客户的 %<r2>s,第三级的 %<r3>s。"
     text: |
-      *💰 推荐*
+      *邀请朋友*
 
-      您的邀请链接:`%<link>s`
-      点击复制并分享给朋友:您可从他们的每笔付款中获得奖励。
+      您的邀请链接: `%<link>s`
+      点击链接复制并分享给朋友。
 
-      %<rates>s
+      已邀请: *%<people>s*
+      余额: *%<available>s*
+      %<hold>s%<rates>s
+      提现使用 USDT。请联系客服申请提现。
+
       %<terms>s
-      余额:可用 *%<available>s*,冻结中 *%<on_hold>s*。
-
-      统计、余额和提现请前往个人中心。
   # --------------------------------------------------------
   referral_v2_inactive:
     text: |
@@ -398,43 +372,135 @@ vpnremy_zh:
       telegram_taken: "此 Telegram 已绑定到另一个账户，请联系客服 @vpnremy_support_bot。"
   # --------------------------------------------------------
   # the support link of /support
+    connect:
+      title: 连接
+      apple_note: 安装配置
+      android_note: strongSwan 配置
+      step_1: 下载配置
+    partner:
+      clicks: 通过您的链接访问
+      sales: 三级推荐网络的付款
+      link_clicks: "通过您的链接访问"
+      three_line_sales: "三级推荐网络的付款"
+      stats_explanation: "只有打开您的链接才会计入访问数。付款包括重复购买及三级推荐网络的购买，也包括通过优惠码邀请的用户。因此付款数可能多于访问数。"
+    support:
+      empty: 全天候 24/7 服务，通常几分钟内回复。回复将在此聊天中显示。仅向已验证的邮箱发送包含个人中心链接的通知，不含聊天内容和附件。
+      availability: "客服全天候 24/7 服务，通常几分钟内回复。"
+      quick_help: "快速帮助"
+      instructions: "连接指南"
+      subscription_help: "订阅与付款"
+      reply_email: "回复将在聊天中显示。仅向已验证的邮箱发送包含个人中心链接的通知，不含聊天内容和附件。"
+      reply_chat: "回复将在个人中心的此聊天中显示。"
+      category: "问题类别"
+      screenshots: "截图（可选）"
+      upload_help: "每条消息最多 3 张 JPEG、PNG 或 WebP 图片，每张不超过 5 MB。每个工单最多 20 张图片、总计 50 MB。达到限额后仍可发送文字。截图随工单删除，或在工单 90 天无活动后删除，以先发生者为准。原有文字保存规则不变。"
+      secrets_warning: "请勿发送密码、连接密钥或付款详情。"
+      optional_context: "连接信息（可选）"
+      configuration: "您的配置（可选）"
+      server: "配置服务器（可选）"
+      os: "操作系统（可选）"
+      browser: "浏览器（可选）"
+      other: "其他"
+      context_help: "工单会包含订阅状态和语言，不会自动附加密码、IP 地址或 VPN 会话历史。"
+      upload_invalid: "工单未发送。请检查图片格式、大小、数量、工单限额及所选配置。您也可以不附图片发送消息。"
+      image: "打开截图"
+      expired: "截图保存期限已过。"
+      email_subject: "客服已回复您的工单"
+      email_body: "个人中心有新的客服回复，请登录查看。"
+      categories:
+        connection: 连接
+        payment: 付款
+        other: 其他
+    nav:
+      subscription: 订阅
+    subscription:
+      title: 订阅
+      pending: 未完成的付款
+      history: 付款记录
+      resume: 继续付款
+      stripe_unavailable: 无法打开付款页面。请稍后重试或联系客服。
   support:
     url: https://t.me/vpnremy_support_bot
+    text: |
+      *客服*
+
+      全天候 24/7 服务，通常几分钟内回复。请留言，人工客服会为您解答。
   admin:
     referral:
       individual_percent: "个人比例"
 
+      reset_hint: "标准和 VIP 方案使用设置中当前的通用费率。最近的个人费率会保留，并在切回个人方案时恢复。首次选择个人方案时须填写全部三级费率。用户卡片中的通用费率为只读；请在设置中修改。"
+      shared_settings: "在设置中修改通用费率"
   vpn_devices:
     admin:
-      limit: "自定义设备上限"
-      limit_hint: "留空使用品牌上限。降低上限不会撤销现有设备。"
-      sessions: "当前连接数：%{count}。每个 VPN 登录名最多 %{limit} 个同时连接。"
+      limit: "配置数量上限（不适用）"
+      limit_hint: "VPNRemy 不限制配置数量，同时连接规则保持不变。"
+      sessions: "当前连接数：%{count}。每个账户最多 %{limit} 个同时连接。"
 
   device_registry:
-    title: "您的设备"
-    usage: "%{used} / %{limit} 台设备"
-    empty: "尚未添加设备。"
-    add: "添加设备"
+    title: "您的配置"
+    usage: ""
+    empty: "尚未创建配置。"
+    add: "添加配置"
     choose_host: "选择服务器"
     choose_platform: "选择平台"
-    issue: "生成设备配置"
-    issue_hint: "此操作将生成独立的用户名和密码，并占用一个设备名额。"
+    issue: "创建配置"
+    issue_hint: "将生成独立的用户名和密码。 配置发放数量不限。所有配置的同时连接数合并计入账号的连接上限。"
     download_again: "再次下载"
     add_direction: "添加连接方向"
-    direction_hint: "在另一台服务器上使用此设备现有的用户名和密码，不占用额外名额。"
-    delete: "删除设备"
+    direction_hint: "在另一服务器上使用此配置已有的用户名和密码，不会生成新的凭据。"
+    delete: "删除配置"
     confirm_delete: "确认删除"
     delete_warning: "用户名和密码将被撤销，现有连接的断开操作将加入队列。"
-    legacy_warning: "所有旧配置共用此用户名和密码。删除旧连接将撤销所有这些配置的访问权限，现有连接的断开操作将加入队列。"
+    legacy_warning: "所有旧配置共用此用户名和密码。删除旧连接将撤销这些配置的访问权限，当前连接的断开操作将排队执行。"
     revoked_pending: "凭据已撤销，现有连接等待断开。"
-    limit_reached: "设备数量已达上限。请删除设备以释放名额，现有设备仍可使用。"
+    limit_reached: "无法创建配置。请稍后重试或联系客服。"
     back: "返回"
     legacy: "旧连接"
     name: "%{platform} · #%{id}"
-    not_ready: "设备设置正在准备中，请稍后重试。"
+    not_ready: "配置页面正在准备中，请稍后重试。"
     platforms:
       iphone: "iPhone / iPad"
       android: "Android"
       custom: "Windows"
       mac: "macOS"
       linux: "Linux"
+    previous: "上一页"
+    next: "下一页"
+    pagination: "配置分页"
+    complete_legacy: "补全配置信息"
+    open: "打开配置"
+  bot_date_year: "%{day} %{month} %{year}"
+  config_linux:
+    text: |
+      *Linux 的“%<server>s”连接*
+
+      Linux 无需文件。请使用以下信息在 NetworkManager 中配置 VPN。点击值即可复制。
+
+      服务器: `%<host>s`
+      用户名: `%<username>s`
+
+      密码: `%<password>s`
+
+      请勿分享用户名和密码：他人可用其访问您的订阅。
+  sub_expiring_trial:
+    text: |
+      *%<left>s*
+
+      您可免费使用 VPNRemy 至 *%<exp>s*。请提前选择套餐。
+  faq:
+    vpn:
+      title: VPN 无法连接
+      text: 请确认订阅有效，关闭后重新开启 VPN，并尝试其他服务器。需要重新下载时，请在连接菜单中打开已保存的配置。
+    change:
+      title: 更换配置或服务器
+      text: 在连接菜单中选择已保存的配置，即可获取相同文件和登录信息。其他服务器可通过添加线路获得，用户名和密码不变。如需独立凭据，请创建新配置。
+    devices:
+      title: 可以连接多少设备
+      text: "连接菜单提供 iPhone、iPad、Android、Windows、macOS 和 Linux 配置。 配置发放数量不限。所有配置的同时连接数合并计入账号的连接上限。"
+  config_iphone:
+    text: |
+      *iPhone 的“%<server>s”配置已准备好*
+  config_mac:
+    text: |
+      *Mac 的“%<server>s”配置已准备好*

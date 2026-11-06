@@ -32,6 +32,7 @@ vpnremy_tr:
     platform_android: 📱 Android
     platform_custom: 🔑 Diğer
   # --------------------------------------------------------
+    other_device: "Başka yapılandırma"
   platforms:
     text: |
       *Platformunuzu Seçin:*
@@ -50,45 +51,34 @@ vpnremy_tr:
 
       🌎 /lang - Bot dilini yönetin
 
-      🔧 /settings - Ayarları yönetin
-
       ℹ️ /help - Komut listesini alın
 
       🤖 @vpnremy\_support\_bot - Destek alın
   # --------------------------------------------------------
   start:
     text: |
-      *🌟 Hoş geldiniz! 🌟*
+      *Tekrar hoş geldiniz*
 
-      [VPNRemy](https://vpnremy.com) seçtiğiniz için teşekkür ederiz. VPN kullanmaya başlamak için aşağıdaki *Konfigürasyonlar* düğmesine basmanız ve cihazınıza kurmanız gereken yapılandırma dosyasını almanız gerekiyor. Ayrıntılı kılavuz https://vpnremy.com adresinde bulunmaktadır. Tüm seçenekler, /help komutunu çalıştırarak kullanılabilir.
+      Aboneliğiniz *%<exp>s* tarihine kadar etkin — %<days_left>s.
+      Ne yapalım?
   # --------------------------------------------------------
   sub_extended:
     text: |
-      🌟 *Tebrikler!* 🌟
+      *Aboneliğiniz %<period>s uzatıldı*
 
-      *%<days>s* gün VPN kullanımı kazandınız! Geri bildiriminizi @vpnremy\_support\_bot üzerinden bize yazmaktan çekinmeyin! 🫶
-
-      Aboneliğiniz *%<exp>s* tarihinde sona eriyor.
+      *%<exp>s* tarihine kadar geçerli. Yeniden kurulum gerekmez.
   # --------------------------------------------------------
   sub_expired:
     text: |
-      ❌ *Abonelik Süresi Doldu!* ❌
+      *Aboneliğiniz %<date>s tarihinde sona erdi*
 
-      Aboneliğinizin süresinin *%<exp>s* tarihinde dolduğunu üzülerek öğrendik.
-
-      Hizmetleri kullanmaya devam etmek için /subscription komutunu izlemeniz gerekiyor.
-
-      Herhangi bir sorunuz varsa lütfen bize @vpnremy\_support\_bot üzerinden yazın! 🫶
+      VPNRemy kullanmaya devam etmek için bir tarife seçin.
   # --------------------------------------------------------
   sub_expiring:
     text: |
-      ⏰ *Aboneliğiniz yakında sona eriyor* ⏰
+      *%<left>s*
 
-      Kalan gün: *%<days>s*. Aboneliğiniz *%<exp>s* tarihinde sona eriyor.
-
-      VPN'i kesintisiz kullanmak için aboneliğinizi /subscription komutuyla yenileyin.
-
-      Herhangi bir sorunuz varsa lütfen bize @vpnremy\_support\_bot üzerinden yazın! 🫶
+      Aboneliğiniz *%<exp>s* tarihine kadar geçerli. Şimdi yenileyin; satın alınan süre mevcut sürenize eklenir.
   # --------------------------------------------------------
   subscription:
     ico_yes: ✅
@@ -99,9 +89,10 @@ vpnremy_tr:
       plan_6_mo: 💵 6 Ay - 1614.00 RUB
       plan_12_mo: 💵 12 Ay - 2988.00 RUB
     text: |
-      *Aboneliğiniz:*
+      *Aboneliğiniz etkin*
 
-      Bitiş tarihi: *%<exp>s* %<ico>s (%<days>s aktif gün)
+      *%<exp>s* tarihine kadar geçerli. Kalan: *%<period>s*.
+
       Ödeme yaparak [Kullanım Koşulları](https://vpnremy.com/terms) ile anlaştığınızı kabul edersiniz.
   # --------------------------------------------------------
   payment_options:
@@ -111,14 +102,9 @@ vpnremy_tr:
       pm_stripe_subscription: 💳 Kart (abonelik)
       pm_pay2day: 🇷🇺 SBP (RUB)
     text: |
-      *Aboneliğiniz:*
+      *%<plan>s — %<price>s*
 
-      Bitiş tarihi: *%<exp>s* %<ico>s (%<days>s aktif gün)
-      Ödeme yaparak [Kullanım Koşulları](https://vpnremy.com/terms) ile anlaştığınızı kabul edersiniz.
-
-      Satın alıyorsunuz: *%<description>s*
-
-      Lütfen ödeme yöntemini seçin:
+      Ödeme yöntemini seçin.
   # --------------------------------------------------------
   plan_unknown:
     text: |
@@ -194,6 +180,7 @@ vpnremy_tr:
           - "VPNRemy profilini açın."
   # --------------------------------------------------------
   # Server labels. Host records are shared by all brands.
+      important: "VPN’i cihaz ayarlarından veya Android’de strongSwan üzerinden açıp kapatın. iPhone ve Mac yapılandırmasında isteğe bağlı otomatik etkinleştirme kapalıdır. Bağlantı kesilince sistem veya uygulama yeniden bağlanmayı deneyebilir. Dosyayı, kullanıcı adını ve parolayı paylaşmayın; bunlarla aboneliğiniz kullanılabilir."
   hosts:
     names:
       eu_nl_1: "🇳🇱 Hollanda"
@@ -216,44 +203,30 @@ vpnremy_tr:
   # --------------------------------------------------------
   config_apple:
     text: |
-      Lütfen dosyayı indirip cihazınıza kurun. Dosya kurulduktan sonra, sistem ayarlarında bir profilin kurulumunu onaylamanız gerekecektir.
+      *iPhone / iPad / Mac için "%<server>s" yapılandırması hazır*
   # --------------------------------------------------------
   config_android:
     text: |
-      Lütfen dosyayı indirin ve şu uygulama kullanılarak açın: https://play.google.com/store/apps/details?id=org.strongswan.android
-      Aşağıda listelenen kullanıcı adı ve şifre istenecektir.
+      *Android için "%<server>s" yapılandırması hazır*
 
-      Kullanıcı Adı:
-      `%<username>s`
+      Kullanıcı adı: `%<username>s`
 
-      Şifre:
-      `%<password>s`
+      Parola: `%<password>s`
 
-      (kopyalamak için tıklayın ^^)
+      Kullanıcı adını ve parolayı paylaşmayın; aboneliğinize erişim sağlarlar.
   # --------------------------------------------------------
   config_custom:
     text: |
-      *Özel Ayarlar*
+      *Windows için "%<server>s" bağlantısı*
 
-      Sistem ayarlarını kullanarak ve aşağıdaki kimlik bilgilerini kullanarak bağlanabilirsiniz:
+      Windows için dosya gerekmez; VPN sistemde yerleşiktir. Bu bilgileri VPN ayarlarına girin. Kopyalamak için değere dokunun.
 
-      Bağlantı Adı: `%<name>s`
+      Sunucu: `%<host>s`
+      Kullanıcı adı: `%<username>s`
 
-      Tür: `%<type>s`
+      Parola: `%<password>s`
 
-      Sunucu Hostu: `%<host>s`
-
-      Sunucu Kimliği: `%<host>s`
-
-      IPSec Tanımlayıcı: `%<username>s`
-
-      Kullanıcı Adı: `%<username>s`
-
-      Şifre: `%<password>s`
-
-      CA sertifikası: (boş bırakın, kullanılmaz)
-
-      Sunucu sertifikası: (boş bırakın, kullanılmaz)
+      Kullanıcı adını ve parolayı paylaşmayın: aboneliğinize erişim sağlarlar.
   # --------------------------------------------------------
   lang:
     text: |
@@ -296,16 +269,17 @@ vpnremy_tr:
     rates: "Her ödemeden: müşterileriniz için %<r1>s, müşterilerinizin müşterileri için %<r2>s, üçüncü seviye için %<r3>s."
     rates_fixed: "Müşterilerinizin ödemelerinden ödülün %<r1>s kadarını, onların müşterilerinden %<r2>s, üçüncü seviyeden %<r3>s alırsınız."
     text: |
-      *💰 Referans*
+      *Arkadaşlarınızı davet edin*
 
       Davet bağlantınız: `%<link>s`
-      Kopyalamak için dokunun ve arkadaşlarınızla paylaşın: yaptıkları her ödemeden kazanırsınız.
+      Kopyalamak için bağlantıya dokunun ve arkadaşlarınızla paylaşın.
 
-      %<rates>s
+      Davet edilenler: *%<people>s*
+      Bakiye: *%<available>s*
+      %<hold>s%<rates>s
+      Para çekme USDT ile yapılır. Para çekmek için desteğe yazın.
+
       %<terms>s
-      Bakiye: kullanılabilir *%<available>s*, beklemede *%<on_hold>s*.
-
-      İstatistikler, bakiye ve para çekme işlemleri kişisel hesabınızda.
   # --------------------------------------------------------
   referral_v2_inactive:
     text: |
@@ -398,43 +372,141 @@ vpnremy_tr:
       telegram_taken: "Bu Telegram zaten başka bir hesaba bağlı. Lütfen destekle iletişime geçin: @vpnremy_support_bot."
   # --------------------------------------------------------
   # the support link of /support
+    connect:
+      title: Bağlan
+      apple_note: Yapılandırmayı yükle
+      android_note: strongSwan yapılandırması
+      step_1: Yapılandırmayı indir
+    partner:
+      clicks: Bağlantınız üzerinden ziyaretler
+      sales: Üç seviyedeki ödemeler
+      link_clicks: "Bağlantınız üzerinden ziyaretler"
+      three_line_sales: "Üç seviyedeki ödemeler"
+      stats_explanation: "Ziyaretler yalnızca bağlantınız açıldığında sayılır. Ödemelere tekrar satın alımlar ve promosyon koduyla gelenler dahil üç referans seviyesindeki satın alımlar dahildir. Bu nedenle ödeme sayısı ziyaret sayısından fazla olabilir."
+    support:
+      empty: 7/24 buradayız, genellikle birkaç dakika içinde yanıt veririz. Yanıt bu sohbette
+        görünür. Yalnızca doğrulanmış e-posta adresine hesabınıza bağlantı içeren bildirim
+        gönderilir; yazışma metni ve ekler gönderilmez.
+      availability: "Destek 7/24 hizmet verir. Genellikle birkaç dakika içinde yanıtlarız."
+      quick_help: "Hızlı yardım"
+      instructions: "Bağlantı kılavuzları"
+      subscription_help: "Abonelik ve ödeme"
+      reply_email: "Yanıt sohbette görünür. Yalnızca doğrulanmış e-postanıza hesabınıza bağlantı içeren bildirim gönderilir; yazışma metni ve ekler gönderilmez."
+      reply_chat: "Yanıt burada, hesabınızdaki sohbette görünür."
+      category: "Talep kategorisi"
+      screenshots: "Ekran görüntüleri (isteğe bağlı)"
+      upload_help: "Mesaj başına her biri en fazla 5 MB olan 3 JPEG, PNG veya WebP görseli eklenebilir. Talep başına sınır 20 görsel ve 50 MB’tır. Kota dolunca metin göndermeye devam edebilirsiniz. Ekran görüntüleri talep silindiğinde veya 90 gün etkinlik olmadığında, hangisi önceyse silinir. Metin saklama kuralları değişmez."
+      secrets_warning: "Parola, bağlantı anahtarı veya ödeme bilgisi göndermeyin."
+      optional_context: "Bağlantı bilgileri (isteğe bağlı)"
+      configuration: "Yapılandırmanız (isteğe bağlı)"
+      server: "Yapılandırma sunucusu (isteğe bağlı)"
+      os: "İşletim sistemi (isteğe bağlı)"
+      browser: "Tarayıcı (isteğe bağlı)"
+      other: "Diğer"
+      context_help: "Abonelik durumunuzu ve dilinizi ekleriz. Parolalar, IP adresleri ve VPN oturum geçmişi talebe otomatik olarak eklenmez."
+      upload_invalid: "Talebiniz gönderilmedi. Görsel biçimini, boyutunu ve sayısını, talep kotasını ve seçilen yapılandırmayı kontrol edin. Görsel olmadan mesaj gönderebilirsiniz."
+      image: "Ekran görüntüsünü aç"
+      expired: "Ekran görüntülerinin saklama süresi doldu."
+      email_subject: "Destek talebinize yanıt verdi"
+      email_body: "Hesabınızda destek yanıtı var. Okumak için giriş yapın."
+      categories:
+        connection: Bağlantı
+        payment: Ödeme
+        other: Diğer
+    nav:
+      subscription: Abonelik
+    subscription:
+      title: Abonelik
+      pending: Tamamlanmamış ödeme
+      history: Ödeme geçmişi
+      resume: Ödemeye devam et
+      stripe_unavailable: Ödeme açılamadı. Daha sonra tekrar deneyin veya desteğe yazın.
   support:
     url: https://t.me/vpnremy_support_bot
+    text: |
+      *Destek*
+
+      7/24 buradayız, genellikle birkaç dakika içinde yanıt veririz. Bize yazın; bir insan yanıtlayacak.
   admin:
     referral:
       individual_percent: "Bireysel yüzde"
 
+      reset_hint: "Standart ve VIP profilleri ayarlardaki güncel ortak oranları kullanır. Son kişisel oranlarınız saklanır ve kişisel profile dönünce geri yüklenir. İlk seçimde üç oranı da doldurun. Kullanıcı kartında ortak oranlar salt okunurdur; değişiklikleri Ayarlar bölümünde yapın."
+      shared_settings: "Ayarlarda ortak oranları düzenle"
   vpn_devices:
     admin:
-      limit: "Kişisel cihaz sınırı"
-      limit_hint: "Boş bırakılırsa marka sınırı kullanılır. Sınırı azaltmak mevcut cihazları iptal etmez."
-      sessions: "%{count} etkin bağlantı. Her VPN kullanıcı adı için en fazla %{limit} eşzamanlı bağlantı."
+      limit: "Yapılandırma sınırı (uygulanmaz)"
+      limit_hint: "VPNRemy yapılandırma sayısını sınırlamaz. Eşzamanlı bağlantı kuralları değişmez."
+      sessions: "%{count} etkin bağlantı. Hesap başına en fazla %{limit} eşzamanlı bağlantı."
 
   device_registry:
-    title: "Cihazlarınız"
-    usage: "%{used} / %{limit} cihaz"
-    empty: "Henüz cihaz eklenmedi."
-    add: "Cihaz ekle"
+    title: "Yapılandırmalarınız"
+    usage: ""
+    empty: "Henüz yapılandırma oluşturulmadı."
+    add: "Yapılandırma ekle"
     choose_host: "Sunucu seçin"
     choose_platform: "Platform seçin"
-    issue: "Cihaz ayarlarını oluştur"
-    issue_hint: "Bu işlem ayrı bir kullanıcı adı ve parola oluşturur ve bir cihaz hakkı kullanır."
+    issue: "Yapılandırma oluştur"
+    issue_hint: "Ayrı bir kullanıcı adı ve parola oluşturulur. Verilen yapılandırma sayısı sınırsızdır. Tüm yapılandırmalardaki eşzamanlı bağlantılar hesabın bağlantı sınırı kapsamında birlikte sayılır."
     download_again: "Yeniden indir"
     add_direction: "Yön ekle"
-    direction_hint: "Başka bir sunucuda bu cihazın mevcut kullanıcı adını ve parolasını kullanın. Ek cihaz hakkı kullanılmaz."
-    delete: "Cihazı sil"
+    direction_hint: "Bu yapılandırmanın kullanıcı adı ve parolası başka bir sunucuda kullanılır. Yeni kimlik bilgileri oluşturulmaz."
+    delete: "Yapılandırmayı sil"
     confirm_delete: "Silmeyi onayla"
     delete_warning: "Kullanıcı adı ve parola iptal edilecek. Etkin bağlantıların kesilmesi sıraya alınacak."
-    legacy_warning: "Tüm eski profiller bu kullanıcı adını ve parolayı paylaşır. Eski bağlantıyı silmek tüm bu profillerin erişimini iptal eder. Etkin bağlantıların kesilmesi sıraya alınacak."
+    legacy_warning: "Eski yapılandırmalar aynı kullanıcı adı ve parolayı paylaşır. Eski bağlantıyı silmek hepsinin erişimini iptal eder. Etkin bağlantıların kesilmesi sıraya alınır."
     revoked_pending: "Kimlik bilgileri iptal edildi. Etkin bağlantıların kesilmesi bekleniyor."
-    limit_reached: "Cihaz sınırına ulaşıldı. Yer açmak için bir cihazı silin. Mevcut cihazlar çalışmaya devam eder."
+    limit_reached: "Yapılandırma oluşturulamadı. Daha sonra tekrar deneyin veya desteğe yazın."
     back: "Geri"
     legacy: "Eski bağlantı"
     name: "%{platform} · #%{id}"
-    not_ready: "Cihaz kurulumu hazırlanıyor. Lütfen daha sonra tekrar deneyin."
+    not_ready: "Yapılandırma bölümü hazırlanıyor. Daha sonra tekrar deneyin."
     platforms:
       iphone: "iPhone / iPad"
       android: "Android"
       custom: "Windows"
       mac: "macOS"
       linux: "Linux"
+    previous: "Geri"
+    next: "İleri"
+    pagination: "Yapılandırma sayfaları"
+    complete_legacy: "Yapılandırma bilgilerini tamamlayın"
+    open: "Yapılandırmayı aç"
+  bot_date_year: "%{day} %{month} %{year}"
+  config_linux:
+    text: |
+      *Linux için "%<server>s" bağlantısı*
+
+      Linux için dosya gerekmez. Bu bilgilerle NetworkManager üzerinden VPN bağlantısını kurun. Kopyalamak için değere dokunun.
+
+      Sunucu: `%<host>s`
+      Kullanıcı adı: `%<username>s`
+
+      Parola: `%<password>s`
+
+      Kullanıcı adını ve parolayı paylaşmayın: aboneliğinize erişim sağlarlar.
+  sub_expiring_trial:
+    text: |
+      *%<left>s*
+
+      VPNRemy hizmetini *%<exp>s* tarihine kadar ücretsiz kullanabilirsiniz. Önceden bir plan seçin.
+  faq:
+    vpn:
+      title: VPN bağlanmıyor
+      text: Aboneliğinizin etkin olduğunu kontrol edin. VPN bağlantısını kapatıp açın
+        ve başka bir sunucu deneyin. Yeniden indirmek için bağlantı menüsünden kayıtlı
+        yapılandırmanızı açın.
+    change:
+      title: Yapılandırmayı veya sunucuyu değiştir
+      text: Bağlantı menüsünden kayıtlı yapılandırmanızı seçerek aynı dosyayı ve bilgileri
+        alın. Başka bir sunucu için yeni yön ekleyin; kullanıcı adı ve parola değişmez.
+        Ayrı bilgiler için yeni yapılandırma oluşturun.
+    devices:
+      title: Kaç cihaz bağlanabilir
+      text: "iPhone, iPad, Android, Windows, macOS ve Linux için yapılandırmalar bağlantı menüsündedir. Verilen yapılandırma sayısı sınırsızdır. Tüm yapılandırmalardaki eşzamanlı bağlantılar hesabın bağlantı sınırı kapsamında birlikte sayılır."
+  config_iphone:
+    text: |
+      *iPhone için "%<server>s" yapılandırması hazır*
+  config_mac:
+    text: |
+      *Mac için "%<server>s" yapılandırması hazır*
