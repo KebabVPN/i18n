@@ -145,10 +145,13 @@ vpnremy_tr:
       iphone:
         title: "iPhone veya iPad ile bağlanma"
         steps:
-          - "Yukarıdaki profili indirin. Açılmazsa Dosyalar'a kaydedip oradan açın."
-          - "Ayarlar → İndirilen Profil'i açın. Görünmüyorsa Genel → VPN ve Aygıt Yönetimi'ne gidin."
-          - "Yükle'ye dokunun ve cihaz parolanızı girin."
-          - "Ayarlar → VPN bölümünde VPNRemy'yi açın."
+          - "İndirilen yapılandırma dosyasını Dosyalar uygulamasına kaydedin."
+          - "Dosyalar uygulamasını açın ve kaydettiğiniz yapılandırma dosyasına dokunun. Profil indirme izni istenirse İzin Ver’e dokunun."
+          - "Profil İndirildi onayında Kapat’a dokunun."
+          - "Ayarlar → Profil İndirildi’yi açın. Görünmüyorsa Genel → VPN ve Aygıt Yönetimi’ni açıp VPNRemy profilini seçin."
+          - "Yükle’ye dokunun, aygıt parolasını girin, ardından Yükle → Bitti’ye dokunun."
+          - "Ayarlar → VPN’i açın ve VPNRemy’yi elle açın."
+          - "İsteğe bağlı: VPNRemy ayarlarında İstek Üzerine Bağlan anahtarı varsa uygulamalar ağa eriştiğinde sistemin VPN’i açabilmesi için etkinleştirin. Varsayılan olarak kapalıdır."
       mac:
         title: "macOS ile bağlanma"
         steps:
@@ -180,7 +183,17 @@ vpnremy_tr:
           - "VPNRemy profilini açın."
   # --------------------------------------------------------
   # Server labels. Host records are shared by all brands.
-      important: "VPN’i cihaz ayarlarından veya Android’de strongSwan üzerinden açıp kapatın. iPhone ve Mac yapılandırmasında isteğe bağlı otomatik etkinleştirme kapalıdır. Bağlantı kesilince sistem veya uygulama yeniden bağlanmayı deneyebilir. Dosyayı, kullanıcı adını ve parolayı paylaşmayın; bunlarla aboneliğiniz kullanılabilir."
+      important: "VPN’i cihaz ayarlarından veya Android’de strongSwan üzerinden açıp kapatın. iPhone ve Mac yapılandırmasında isteğe bağlı bağlantı varsayılan olarak kapalıdır. Anahtar varsa isteğinize göre açabilirsiniz. Bu, her durumda otomatik bağlantı veya yeniden bağlantı garantisi vermez. Dosyayı, kullanıcı adını ve parolayı paylaşmayın; bunlarla aboneliğiniz kullanılabilir."
+    guide_iphone: |
+      *iPhone ve iPad’de bağlanma*
+
+      1. Yukarıdaki mesajdaki %<file>s dosyasını Dosyalar uygulamasına kaydedin.
+      2. Dosyalar uygulamasını açın ve kaydettiğiniz yapılandırma dosyasına dokunun. Profil indirme izni istenirse İzin Ver’e dokunun.
+      3. Profil İndirildi onayında Kapat’a dokunun.
+      4. Ayarlar → Profil İndirildi’yi açın. Görünmüyorsa Genel → VPN ve Aygıt Yönetimi’ni açıp VPNRemy profilini seçin.
+      5. Yükle’ye dokunun, aygıt parolasını girin, ardından Yükle → Bitti’ye dokunun.
+      6. Ayarlar → VPN’i açın ve VPNRemy’yi elle açın.
+      7. İsteğe bağlı: VPNRemy ayarlarında İstek Üzerine Bağlan anahtarı varsa uygulamalar ağa eriştiğinde sistemin VPN’i açabilmesi için etkinleştirin. Varsayılan olarak kapalıdır.
   hosts:
     names:
       eu_nl_1: "🇳🇱 Hollanda"
@@ -384,6 +397,22 @@ vpnremy_tr:
       three_line_sales: "Üç seviyedeki ödemeler"
       stats_explanation: "Ziyaretler yalnızca bağlantınız açıldığında sayılır. Ödemelere tekrar satın alımlar ve promosyon koduyla gelenler dahil üç referans seviyesindeki satın alımlar dahildir. Bu nedenle ödeme sayısı ziyaret sayısından fazla olabilir."
     support:
+      subscription_active_until: "Aboneliğiniz %{date} tarihine kadar etkin."
+      subscription_ended_on: "Aboneliğiniz %{date} tarihinde sona erdi."
+      renew: "Aboneliği yenile"
+      payment_history: "Ödeme geçmişi"
+      change_server: "Sunucuyu değiştir"
+      open_data: "Bağlantı bilgilerini aç"
+      download_again: "Yapılandırmayı yeniden indir"
+      open_configuration: "Yapılandırma seç"
+      upload_limit: "Her biri en fazla 5 MB olan en fazla 3 görsel"
+      upload_drop: "Daha fazla dosya eklemek için yeniden seçin veya buraya sürükleyip bırakın. Biçimler: JPEG, PNG, WebP."
+      upload_batch_invalid: "Yeni dosyalar eklenmedi. Her biri en fazla 5 MB olan JPEG, PNG veya WebP görselleri seçin. Toplam görsel sayısı 3’ü geçmemelidir. Önceden seçilen dosyalar korunur."
+      remove_image: "Kaldır"
+      upload_reselect: "Hata sonrasında görsellerinizi yeniden seçin. Form yeniden yüklendiğinde tarayıcı ekleri geri getiremez."
+      last_selection_help: "Bu, hesabınızda son açılan yapılandırmadır; mevcut VPN bağlantınız hakkında bilgi değildir. Bu alanları değiştirebilir veya temizleyebilirsiniz."
+      problem_os: "Sorun yaşanan cihazın işletim sistemi (isteğe bağlı)"
+      cabinet_browser: "Hesabınız için kullanılan tarayıcı (isteğe bağlı)"
       empty: 7/24 buradayız, genellikle birkaç dakika içinde yanıt veririz. Yanıt bu sohbette
         görünür. Yalnızca doğrulanmış e-posta adresine hesabınıza bağlantı içeren bildirim
         gönderilir; yazışma metni ve ekler gönderilmez.
@@ -436,7 +465,7 @@ vpnremy_tr:
   vpn_devices:
     admin:
       limit: "Yapılandırma sınırı (uygulanmaz)"
-      limit_hint: "VPNRemy yapılandırma sayısını sınırlamaz. Eşzamanlı bağlantı kuralları değişmez."
+      limit_hint: "Hesabınız tüm yapılandırmalarda toplam en fazla dokuz eşzamanlı bağlantıya izin verir. Verilen yapılandırma sayısı sınırsızdır."
       sessions: "%{count} etkin bağlantı. Hesap başına en fazla %{limit} eşzamanlı bağlantı."
 
   device_registry:
@@ -447,7 +476,7 @@ vpnremy_tr:
     choose_host: "Sunucu seçin"
     choose_platform: "Platform seçin"
     issue: "Yapılandırma oluştur"
-    issue_hint: "Ayrı bir kullanıcı adı ve parola oluşturulur. Verilen yapılandırma sayısı sınırsızdır. Tüm yapılandırmalardaki eşzamanlı bağlantılar hesabın bağlantı sınırı kapsamında birlikte sayılır."
+    issue_hint: "Ayrı bir kullanıcı adı ve parola oluşturulur. Hesabınız tüm yapılandırmalarda toplam en fazla dokuz eşzamanlı bağlantıya izin verir. Verilen yapılandırma sayısı sınırsızdır."
     download_again: "Yeniden indir"
     add_direction: "Yön ekle"
     direction_hint: "Bu yapılandırmanın kullanıcı adı ve parolası başka bir sunucuda kullanılır. Yeni kimlik bilgileri oluşturulmaz."
@@ -503,10 +532,56 @@ vpnremy_tr:
         Ayrı bilgiler için yeni yapılandırma oluşturun.
     devices:
       title: Kaç cihaz bağlanabilir
-      text: "iPhone, iPad, Android, Windows, macOS ve Linux için yapılandırmalar bağlantı menüsündedir. Verilen yapılandırma sayısı sınırsızdır. Tüm yapılandırmalardaki eşzamanlı bağlantılar hesabın bağlantı sınırı kapsamında birlikte sayılır."
+      text: "iPhone, iPad, Android, Windows, macOS ve Linux için yapılandırmalar bağlantı menüsündedir. Hesabınız tüm yapılandırmalarda toplam en fazla dokuz eşzamanlı bağlantıya izin verir. Verilen yapılandırma sayısı sınırsızdır."
   config_iphone:
     text: |
       *iPhone için "%<server>s" yapılandırması hazır*
   config_mac:
     text: |
       *Mac için "%<server>s" yapılandırması hazır*
+
+  public_guides:
+    title: "VPNRemy’ye nasıl bağlanılır"
+    intro: "Kurulum 2–3 dakika sürer. Yalnızca Android ve Linux ek uygulama gerektirir. iPhone, Mac ve Windows yerleşik VPN desteğine sahiptir."
+    home: "Ana sayfa"
+    other_platforms: "Diğer cihazlar"
+    obtain_title: "1. Adım. Yapılandırma alın"
+    obtain_intro: "Hesabınızdan veya Telegram botundan yapılandırma alın."
+    cabinet_title: "Web sitesindeki hesabınızda"
+    cabinet_steps:
+      - "app.vpnremy.com’u açıp Telegram veya e-posta ile giriş yapın. Uygun yeni kullanıcılara dokuz günlük ücretsiz deneme verilir."
+      - "Bağlan bölümünü açarak Yapılandırmalarınız listesini görüntüleyin. Kayıtlı bir yapılandırma seçin veya yeni bir yapılandırma ekleyip sunucuyu ve işletim sistemini seçin."
+      - "iPhone, iPad, Mac veya Android için yapılandırma dosyasını indirin. Windows veya Linux için sunucu, kullanıcı adı ve parolayı kopyalayın. Yeniden indirme aynı bilgileri kullanır."
+    bot_title: "Telegram botunda"
+    bot_steps:
+      - "Telegram’dan yapılandırma alın’a tıklayın, ardından botta Başlat’a basın. Liste boş veya abonelik süresi dolmuş olsa da Yapılandırmalarınız açılır. @vpnremy_bot’u doğrudan açarsanız Bağlan’ı seçin."
+      - "Kayıtlı bir yapılandırma seçin. Yeni bir yapılandırma oluşturmak için Yapılandırma ekle’yi seçip sunucuyu ve işletim sistemini belirleyin."
+      - "Bot yapılandırma dosyasını veya bağlantı bilgilerini gönderir. Kopyalamak için bir değere dokunun. Rehberin ayrı bir düğmesi vardır."
+    account_note: "Telegram ile giriş yaparsanız web sitesindeki ve bottaki hesabınız aynıdır."
+    cabinet_cta: "Hesabınızdan yapılandırma alın"
+    bot_cta: "Telegram’dan yapılandırma alın"
+    setup_title: "2. Adım. Cihazınızı kurun"
+    support_cabinet: "Hesabınızda destek"
+    support_chat: "Web sitesi sohbeti"
+    support_bot: "@vpnremy_support_bot"
+    platforms:
+      - id: ios
+        label: iOS
+        heading: "iPhone ve iPad’de VPNRemy’ye bağlanma"
+        setup_key: iphone
+      - id: android
+        label: Android
+        heading: "Android’de VPNRemy’ye bağlanma"
+        setup_key: android
+      - id: macos
+        label: macOS
+        heading: "macOS’te VPNRemy’ye bağlanma"
+        setup_key: mac
+      - id: windows
+        label: Windows
+        heading: "Windows’ta VPNRemy’ye bağlanma"
+        setup_key: custom
+      - id: linux
+        label: Linux
+        heading: "Linux’ta VPNRemy’ye bağlanma"
+        setup_key: linux

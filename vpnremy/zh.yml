@@ -145,10 +145,13 @@ vpnremy_zh:
       iphone:
         title: "在 iPhone 或 iPad 上连接"
         steps:
-          - "下载配置文件。如果无法打开，先保存到“文件”，再从中打开。"
-          - "打开“设置”→“已下载描述文件”。如果没有该选项，打开“通用”→“VPN 与设备管理”。"
-          - "点按“安装”并输入设备密码。"
-          - "在“设置”→“VPN”中打开 VPNRemy。"
+          - "将下载的配置文件保存到“文件”App。"
+          - "打开“文件”，轻点已保存的配置文件。如果系统询问是否允许下载描述文件，请轻点“允许”。"
+          - "在“已下载描述文件”确认窗口中轻点“关闭”。"
+          - "打开“设置”→“已下载描述文件”。如果没有此选项，请打开“通用”→“VPN 与设备管理”，选择 VPNRemy 描述文件。"
+          - "轻点“安装”，输入设备密码，然后轻点“安装”→“完成”。"
+          - "打开“设置”→“VPN”，手动开启 VPNRemy。"
+          - "可选：如果 VPNRemy 设置中有“按需连接”开关，可将其开启，让系统在应用访问网络时按需开启 VPN。此选项默认关闭。"
       mac:
         title: "在 macOS 上连接"
         steps:
@@ -180,7 +183,17 @@ vpnremy_zh:
           - "打开 VPNRemy 配置文件。"
   # --------------------------------------------------------
   # Server labels. Host records are shared by all brands.
-      important: "请在设备设置中开启或关闭 VPN；Android 请使用 strongSwan。iPhone 和 Mac 配置已关闭按需自动启用。连接中断后，系统或应用可能尝试重新连接。请勿分享文件、用户名或密码，持有这些信息的人可以使用您的订阅。"
+      important: "请在设备设置中开启或关闭 VPN；Android 请使用 strongSwan。iPhone 和 Mac 配置中的按需连接默认关闭。如果有此开关，您可自行开启。这不保证在所有情况下都能自动连接或重新连接。请勿分享文件、用户名或密码，持有这些信息的人可以使用您的订阅。"
+    guide_iphone: |
+      *在 iPhone 和 iPad 上连接*
+
+      1. 将上方消息中的 %<file>s 文件保存到“文件”App。
+      2. 打开“文件”，轻点已保存的配置文件。如果系统询问是否允许下载描述文件，请轻点“允许”。
+      3. 在“已下载描述文件”确认窗口中轻点“关闭”。
+      4. 打开“设置”→“已下载描述文件”。如果没有此选项，请打开“通用”→“VPN 与设备管理”，选择 VPNRemy 描述文件。
+      5. 轻点“安装”，输入设备密码，然后轻点“安装”→“完成”。
+      6. 打开“设置”→“VPN”，手动开启 VPNRemy。
+      7. 可选：如果 VPNRemy 设置中有“按需连接”开关，可将其开启，让系统在应用访问网络时按需开启 VPN。此选项默认关闭。
   hosts:
     names:
       eu_nl_1: "🇳🇱 荷兰"
@@ -384,6 +397,22 @@ vpnremy_zh:
       three_line_sales: "三级推荐网络的付款"
       stats_explanation: "只有打开您的链接才会计入访问数。付款包括重复购买及三级推荐网络的购买，也包括通过优惠码邀请的用户。因此付款数可能多于访问数。"
     support:
+      subscription_active_until: "您的订阅有效期至 %{date}。"
+      subscription_ended_on: "您的订阅已于 %{date} 到期。"
+      renew: "续订"
+      payment_history: "支付记录"
+      change_server: "更换服务器"
+      open_data: "打开连接信息"
+      download_again: "重新下载配置"
+      open_configuration: "选择配置"
+      upload_limit: "最多 3 张图片，每张不超过 5 MB"
+      upload_drop: "可再次选择文件或将文件拖放到此处以继续添加。格式：JPEG、PNG、WebP。"
+      upload_batch_invalid: "未添加新文件。请选择 JPEG、PNG 或 WebP 图片，每张不超过 5 MB，总数不超过 3 张。之前选择的文件已保留。"
+      remove_image: "移除"
+      upload_reselect: "发生错误后，请重新选择图片。表单重新加载时，浏览器无法恢复附件。"
+      last_selection_help: "这是您在账号中最后打开的配置，并非当前 VPN 连接信息。您可以修改或清空这些字段。"
+      problem_os: "出现问题的设备操作系统（可选）"
+      cabinet_browser: "访问账号所用的浏览器（可选）"
       empty: 全天候 24/7 服务，通常几分钟内回复。回复将在此聊天中显示。仅向已验证的邮箱发送包含个人中心链接的通知，不含聊天内容和附件。
       availability: "客服全天候 24/7 服务，通常几分钟内回复。"
       quick_help: "快速帮助"
@@ -434,7 +463,7 @@ vpnremy_zh:
   vpn_devices:
     admin:
       limit: "配置数量上限（不适用）"
-      limit_hint: "VPNRemy 不限制配置数量，同时连接规则保持不变。"
+      limit_hint: "每个账号的所有配置合计最多可同时建立九个连接。配置发放数量不限。"
       sessions: "当前连接数：%{count}。每个账户最多 %{limit} 个同时连接。"
 
   device_registry:
@@ -445,7 +474,7 @@ vpnremy_zh:
     choose_host: "选择服务器"
     choose_platform: "选择平台"
     issue: "创建配置"
-    issue_hint: "将生成独立的用户名和密码。 配置发放数量不限。所有配置的同时连接数合并计入账号的连接上限。"
+    issue_hint: "将生成独立的用户名和密码。每个账号的所有配置合计最多可同时建立九个连接。配置发放数量不限。"
     download_again: "再次下载"
     add_direction: "添加连接方向"
     direction_hint: "在另一服务器上使用此配置已有的用户名和密码，不会生成新的凭据。"
@@ -497,10 +526,56 @@ vpnremy_zh:
       text: 在连接菜单中选择已保存的配置，即可获取相同文件和登录信息。其他服务器可通过添加线路获得，用户名和密码不变。如需独立凭据，请创建新配置。
     devices:
       title: 可以连接多少设备
-      text: "连接菜单提供 iPhone、iPad、Android、Windows、macOS 和 Linux 配置。 配置发放数量不限。所有配置的同时连接数合并计入账号的连接上限。"
+      text: "连接菜单提供 iPhone、iPad、Android、Windows、macOS 和 Linux 配置。 每个账号的所有配置合计最多可同时建立九个连接。配置发放数量不限。"
   config_iphone:
     text: |
       *iPhone 的“%<server>s”配置已准备好*
   config_mac:
     text: |
       *Mac 的“%<server>s”配置已准备好*
+
+  public_guides:
+    title: "如何连接 VPNRemy"
+    intro: "设置约需 2–3 分钟。仅 Android 和 Linux 需要额外应用，iPhone、Mac 和 Windows 内置 VPN 支持。"
+    home: "首页"
+    other_platforms: "其他设备"
+    obtain_title: "第 1 步：获取配置"
+    obtain_intro: "在账号中或通过 Telegram 机器人获取配置。"
+    cabinet_title: "在网站账号中"
+    cabinet_steps:
+      - "打开 app.vpnremy.com，通过 Telegram 或邮箱登录。符合条件的新用户可免费试用九天。"
+      - "打开“连接”，查看“您的配置”列表。选择已保存的配置，或添加新配置并选择服务器和操作系统。"
+      - "iPhone、iPad、Mac 和 Android 请下载配置文件；Windows 和 Linux 请复制服务器地址、用户名和密码。再次下载仍使用相同凭据。"
+    bot_title: "在 Telegram 机器人中"
+    bot_steps:
+      - "点击“在 Telegram 中获取配置”，然后在机器人中点击“开始”。即使列表为空或订阅已到期，也会打开“您的配置”列表。如果直接打开 @vpnremy_bot，请选择“连接”。"
+      - "选择已保存的配置。如需创建新配置，请选择“添加配置”，然后选择服务器和操作系统。"
+      - "机器人会发送配置文件或连接信息。轻点数值即可复制。使用单独的按钮打开指南。"
+    account_note: "使用 Telegram 登录时，网站与机器人使用同一账号。"
+    cabinet_cta: "在账号中获取配置"
+    bot_cta: "在 Telegram 中获取配置"
+    setup_title: "第 2 步：设置设备"
+    support_cabinet: "账号内支持"
+    support_chat: "网站聊天"
+    support_bot: "@vpnremy_support_bot"
+    platforms:
+      - id: ios
+        label: iOS
+        heading: "在 iPhone 和 iPad 上连接 VPNRemy"
+        setup_key: iphone
+      - id: android
+        label: Android
+        heading: "在 Android 上连接 VPNRemy"
+        setup_key: android
+      - id: macos
+        label: macOS
+        heading: "在 macOS 上连接 VPNRemy"
+        setup_key: mac
+      - id: windows
+        label: Windows
+        heading: "在 Windows 上连接 VPNRemy"
+        setup_key: custom
+      - id: linux
+        label: Linux
+        heading: "在 Linux 上连接 VPNRemy"
+        setup_key: linux

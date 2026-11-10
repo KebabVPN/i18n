@@ -249,10 +249,13 @@ vpnremy_en:
       iphone:
         title: "Connect on iPhone or iPad"
         steps:
-          - "Download the profile. If it does not open, save it to Files and open it there."
-          - "Open Settings → Profile Downloaded. If you do not see it, open General → VPN & Device Management."
-          - "Tap Install and enter your device passcode."
-          - "Open Settings → VPN and turn on VPNRemy."
+          - "Save the downloaded configuration file to the Files app."
+          - "Open Files and tap the saved configuration file. If asked to allow the profile download, tap Allow."
+          - "In the Profile Downloaded confirmation, tap Close."
+          - "Open Settings → Profile Downloaded. If it is missing, open General → VPN & Device Management and select the VPNRemy profile."
+          - "Tap Install, enter your device passcode, then tap Install → Done."
+          - "Open Settings → VPN and turn on VPNRemy manually."
+          - "Optional: if the VPNRemy settings show a Connect On Demand switch, enable it to let the system turn on VPN when apps access the network. It is off by default."
       mac:
         title: "Connect on macOS"
         steps:
@@ -282,15 +285,17 @@ vpnremy_en:
           - "Enter the server address in the connection details. Leave the certificate field empty."
           - "Choose EAP authentication, enter the username and password, select Request an inner IP address, and save."
           - "Turn on the VPNRemy profile."
-      important: "Turn VPN on and off in your device settings or in strongSwan on Android. On-demand activation is disabled in the iPhone and Mac configuration. After a connection drops, the system or app may try to reconnect. Do not share the file, username or password: they give access to your subscription."
+      important: "Turn VPN on and off in your device settings or in strongSwan on Android. On-demand connections are disabled by default in the iPhone and Mac configuration. You can enable them if the switch is available. This does not guarantee automatic connection or reconnection in every situation. Do not share the file, username or password: they give access to your subscription."
     guide_iphone: |
-      *How to connect on iPhone*
+      *How to connect on iPhone or iPad*
 
-      1. Tap the file %<file>s above and allow the profile to download
-      2. Open Settings → "Profile Downloaded" → "Install"
-      3. Turn the VPN on: Settings → VPN → VPNRemy
-
-      As soon as you connect, the bot will confirm it.
+      1. Save the file %<file>s from the message above to the Files app.
+      2. Open Files and tap the saved configuration file. If asked to allow the profile download, tap Allow.
+      3. In the Profile Downloaded confirmation, tap Close.
+      4. Open Settings → Profile Downloaded. If it is missing, open General → VPN & Device Management and select the VPNRemy profile.
+      5. Tap Install, enter your device passcode, then tap Install → Done.
+      6. Open Settings → VPN and turn on VPNRemy manually.
+      7. Optional: if the VPNRemy settings show a Connect On Demand switch, enable it to let the system turn on VPN when apps access the network. It is off by default.
     guide_mac: |
       *How to connect on Mac*
 
@@ -508,6 +513,22 @@ vpnremy_en:
       three_line_sales: "Payments across three levels"
       stats_explanation: "Visits are counted only when your link is opened. Payments include repeat purchases and purchases across three referral levels, including people invited with a promo code. Payments can therefore outnumber visits."
     support:
+      subscription_active_until: "Your subscription is active until %{date}."
+      subscription_ended_on: "Your subscription ended on %{date}."
+      renew: "Renew subscription"
+      payment_history: "Payment history"
+      change_server: "Change server"
+      open_data: "Open connection details"
+      download_again: "Download configuration again"
+      open_configuration: "Choose configuration"
+      upload_limit: "Up to 3 images, 5 MB each"
+      upload_drop: "Add more files by choosing again or dropping them here. Formats: JPEG, PNG, WebP."
+      upload_batch_invalid: "The new files were not added. Choose JPEG, PNG or WebP images up to 5 MB each, with no more than 3 images in total. Previously selected files are kept."
+      remove_image: "Remove"
+      upload_reselect: "Choose your images again after an error: the browser cannot restore attachments when the form reloads."
+      last_selection_help: "This is the last configuration opened in your account, not information about your current VPN connection. You can change or clear these fields."
+      problem_os: "Operating system of the affected device (optional)"
+      cabinet_browser: "Browser used for your account (optional)"
       empty: We are here 24/7 and usually reply within a few minutes. The reply will appear
         in this chat. Only a verified email address receives a notification linking to your
         account, without conversation text or attachments.
@@ -554,7 +575,7 @@ vpnremy_en:
   vpn_devices:
     admin:
       limit: "Configuration issuance limit (not applied)"
-      limit_hint: "VPNRemy does not limit configuration issuance. Simultaneous connection rules are unchanged."
+      limit_hint: "Your account allows up to nine simultaneous connections across all configurations. Configuration issuance is unlimited."
       sessions: "%{count} active sessions. Up to %{limit} simultaneous sessions per account."
 
   device_registry:
@@ -565,7 +586,7 @@ vpnremy_en:
     choose_host: "Choose a server"
     choose_platform: "Choose a platform"
     issue: "Issue configuration"
-    issue_hint: "This creates a separate login and password. Configuration issuance is unlimited. Simultaneous connections across all configurations count towards the account’s connection limit."
+    issue_hint: "This creates a separate login and password. Your account allows up to nine simultaneous connections across all configurations. Configuration issuance is unlimited."
     download_again: "Download again"
     add_direction: "Add direction"
     direction_hint: "Use this configuration’s existing login and password on another server. No new credentials are created."
@@ -608,7 +629,7 @@ vpnremy_en:
         Open Connect and choose a saved configuration to get its file or credentials. Use Add direction for another server with the same credentials. Create a new configuration only if you need a separate username and password. Existing configurations keep working.
     devices:
       title: How many devices can I connect
-      text: "You can create configurations for iPhone and iPad, Android, Windows, macOS and Linux in Connect. Configuration issuance is unlimited. Simultaneous connections across all configurations count towards the account’s connection limit."
+      text: "You can create configurations for iPhone and iPad, Android, Windows, macOS and Linux in Connect. Your account allows up to nine simultaneous connections across all configurations. Configuration issuance is unlimited."
   bot_date_year: "%{day} %{month} %{year}"
   config_linux:
     text: |
@@ -627,3 +648,49 @@ vpnremy_en:
       *%<left>s*
 
       You can use VPNRemy for free until *%<exp>s*. Choose a plan in advance.
+
+  public_guides:
+    title: "How to connect VPNRemy"
+    intro: "Setup takes 2–3 minutes. Only Android and Linux need an extra app. iPhone, Mac and Windows have built-in VPN support."
+    home: "Home"
+    other_platforms: "Other devices"
+    obtain_title: "Step 1. Get a configuration"
+    obtain_intro: "Get a configuration in your account or in the Telegram bot."
+    cabinet_title: "In your account on the website"
+    cabinet_steps:
+      - "Open app.vpnremy.com and sign in with Telegram or email. Eligible new users get a nine-day free trial."
+      - "Open Connect to view Your configurations. Choose a saved configuration, or add a new one and select its server and operating system."
+      - "Download the configuration file for iPhone, iPad, Mac or Android, or copy the server, username and password for Windows or Linux. Downloading again uses the same credentials."
+    bot_title: "In the Telegram bot"
+    bot_steps:
+      - "Click Get a configuration in Telegram, then press Start in the bot. Your configurations opens even if the list is empty or your subscription has expired. If you open @vpnremy_bot directly, choose Connect."
+      - "Choose a saved configuration. To create a new one, choose Add configuration and select the server and operating system."
+      - "The bot sends a configuration file or connection details. Tap a value to copy it. Open the guide with its separate button."
+    account_note: "Your account on the website and in the bot is the same if you sign in with Telegram."
+    cabinet_cta: "Get a configuration in your account"
+    bot_cta: "Get a configuration in Telegram"
+    setup_title: "Step 2. Set up your device"
+    support_cabinet: "Support in your account"
+    support_chat: "Website chat"
+    support_bot: "@vpnremy_support_bot"
+    platforms:
+      - id: ios
+        label: iOS
+        heading: "How to connect VPNRemy on iPhone and iPad"
+        setup_key: iphone
+      - id: android
+        label: Android
+        heading: "How to connect VPNRemy on Android"
+        setup_key: android
+      - id: macos
+        label: macOS
+        heading: "How to connect VPNRemy on macOS"
+        setup_key: mac
+      - id: windows
+        label: Windows
+        heading: "How to connect VPNRemy on Windows"
+        setup_key: custom
+      - id: linux
+        label: Linux
+        heading: "How to connect VPNRemy on Linux"
+        setup_key: linux
